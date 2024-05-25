@@ -52,8 +52,8 @@ header {
   }
   
 /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #90939a;
+  .topnav a:active {
+    background-color: #ddd;
     color: white;
   }
   
@@ -295,6 +295,36 @@ div.scroll-container img {
     border-style: solid;
     border-radius: 500px;
     padding: 10px;
+  }
+
+  h13 { 
+    text-align: center;
+    text-decoration: underline;
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    display: inherit; 
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  h14 { 
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    display: inherit; 
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
    /* apply styles to footer */
