@@ -92,9 +92,100 @@ div.scroll-container img {
 }
 
   /* About section */
-  
+
   h2 { 
     text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 0;
+    display: inherit; 
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  h3 { 
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    display: inherit; 
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  h4 { 
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 0;
+    display: inherit; 
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+
+  /* apply styles to unordered lists */
+  ul li {
+    list-style-type: square;
+    list-style: square;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    display: list-item;
+  }
+
+  h5 { 
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 0;
+    display: inherit; 
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  h6 { 
+    text-align: center;
+    text-decoration: underline;
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    display: inherit; 
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+
+  h7 { 
+    text-align: left;
     text-decoration: none;
     color: #ffffff;
     font-family: Helvetica, Arial, sans-serif;
