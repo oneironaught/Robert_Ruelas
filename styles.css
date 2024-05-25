@@ -150,7 +150,7 @@ div.scroll-container img {
     font-weight: bold;
     font-size: 18px;
     margin: 0;
-    display: list-item;
+    display: inherit;
   }
 
   h5 { 
@@ -181,11 +181,88 @@ div.scroll-container img {
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-
+    border: white;
+    background-color: gray;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 500px;
+    padding: 10px;
   }
 
   h7 { 
-    text-align: left;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    display: inherit; 
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }  
+
+  h8 { 
+    text-align: center;
+    text-decoration: underline;
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    display: inherit; 
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: white;
+    background-color: gray;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 500px;
+    padding: 10px;
+  }
+
+  h9 { 
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    display: inherit; 
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  h10 { 
+    text-align: center;
+    text-decoration: underline;
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    display: inherit; 
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: white;
+    background-color: gray;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 500px;
+    padding: 10px;
+  }
+
+  h11 { 
+    text-align: center;
     text-decoration: none;
     color: #ffffff;
     font-family: Helvetica, Arial, sans-serif;
@@ -199,6 +276,27 @@ div.scroll-container img {
     margin-bottom: 10px;
   }
   
+  h12 { 
+    text-align: center;
+    text-decoration: underline;
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    display: inherit; 
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: white;
+    background-color: gray;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 500px;
+    padding: 10px;
+  }
+
    /* apply styles to footer */
   
    footer.footer {
