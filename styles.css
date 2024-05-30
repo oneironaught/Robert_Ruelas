@@ -78,53 +78,82 @@ header {
   }  
  
 /* apply styles to main body of images */
-body {
+
+
+/* apply styles to main body of images */
+div.slider {
   display: flex;
-  flex-direction: column;
+}
+
+div.slider img {
+  width: 100%;
+  height: 300px;
+  transition: all 0.5s ease;
 }
 
 /* Position text in the middle of the page/image */
 
-.scroll-container {
+div.scroll-container {
   background-color: #000000;
   overflow: auto;
   white-space: nowrap;
   padding: 10px;
-  position: flex;
-  flex-direction: column;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: auto;
+  white-space: nowrap;
+  display: inline;
 }
 
-.scroll-container img {
+div.scroll-container img {
   padding: 10px;
   scroll-behavior: auto;
 }
 
-.scroll-container :hover {
+div.scroll-container :hover {
   background-color: #000000;
   color: white;
   font-weight: bold;
   font-size: 20px;
-  cursor: auto;
-} 
+}
+
 
 /* Apply styles to inner image */
 
-.container {
-  position: relative;
-  align-items: center;
-  width: 35%;
+div.container {
+  display: relative;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #000000;
   overflow: hidden;
-  transition: 0.3s;
-  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+ 
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   text-align: center;
 }
 
+
 .image {
   opacity: 1;
+  display: block;
   width: 100%;
   height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
+}
+
+.img:active {
+  opacity: 0.3;
+  transition: 0.3s;
+  transform: scale(1.5);
 }
 
 .middle {
@@ -138,11 +167,11 @@ body {
   text-align: center;
 }
 
-.container:hover .image {
+div.container:hover .image {
   opacity: 0.3;
 }
 
-.container:hover .middle {
+div.container:hover .middle {
   opacity: 1;
 }
 

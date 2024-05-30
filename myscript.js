@@ -1,20 +1,16 @@
-/*Image scrolling */
-var sliderImages = document.querySelectorAll('.slider img');
+('Slider function does not throw error with multiple images', () => {
+  // Arrange
+  const sliderImages = [
+    document.createElement('img'),
+    document.createElement('img'),
+    document.createElement('img'),
+  ];
 
-var i = 0;
+  // Act
+  slider();
 
-function slider(){
-  for(var j = 0; j < sliderImages.length; j++){
-    sliderImages[j].style.opacity = 0;
-  }
-  sliderImages[i].style.opacity = 1;
-
-  if(i < sliderImages.length - 1){
-    i++; 
-  } else { 
-    i = 0;
-  }
-
-}
-
-setInterval(slider, 2000);
+  // Assert
+  expect(sliderImages[0].style.opacity).toBe('1');
+  expect(sliderImages[1].style.opacity).toBe('0');
+  expect(sliderImages[2].style.opacity).toBe('0');
+});
