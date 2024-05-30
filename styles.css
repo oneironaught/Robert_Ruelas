@@ -417,6 +417,36 @@ div.container:hover .middle {
     margin-bottom: 10px;
   }
 
+  /* apply styles to projects section */
+  .row {
+    margin: 8px -16px;
+  }
+  
+  /* Add padding BETWEEN each column */
+  .row,
+  .row > .column {
+    padding: 8px;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* Clear floats after rows */ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+  .content {
+    background-color: white;
+    padding: 10px;
+  }
+
    /* apply styles to footer */
   
    footer.footer {
@@ -424,7 +454,7 @@ div.container:hover .middle {
     margin: auto;
     width: 100%;
     bottom: 0;
-    position: fixed;
+    position: relative;
     left: 0;
     background: #1c1c1c;
     padding: 10px 15px 10px 15px !important;
