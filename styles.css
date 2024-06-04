@@ -339,12 +339,16 @@ header {
   display: flex;
   flex-wrap: wrap;
 }
+
+/* Create four equal columns that sits next to each other */
 .column {
   flex: 1;
-  max-width: 25%;
+  max-width: 35%;
   box-sizing: border-box;
   padding: 10px;
+  height: 100%;
 }
+
 .container {
   position: relative;
 }
@@ -355,6 +359,7 @@ header {
     width: 100%;
     height: auto;
 }
+
 .middle {
     position: absolute;
     top: 50%;
@@ -364,12 +369,6 @@ header {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.container {
-  position: relative;
-  display: inline-block;
-  margin: right;
 }
 
 .container:hover .center {
