@@ -77,110 +77,30 @@ header {
     padding-top: 60px;
   }  
  
-/* apply styles to main body of images */
+/* apply styles to main body */
 
-
-/* apply styles to main body of images */
-div.slider {
-  display: flex;
-}
-
-div.slider img {
+.existing-container {
   width: 100%;
-  height: 300px;
-  transition: all 0.5s ease;
+  height: 100vh; /* Full height of the viewport */
+  background-color: black; /* Background color for visibility */
+  position: relative; /* Ensure positioning context for centering */
 }
-
-/* Position text in the middle of the page/image */
-
-div.scroll-container {
-  background-color: #000000;
-  overflow: auto;
-  white-space: nowrap;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 10px;
-  overflow: auto;
-  white-space: nowrap;
-  display: inline;
-}
-
-div.scroll-container img {
-  padding: 10px;
-  scroll-behavior: auto;
-}
-
-div.scroll-container :hover {
-  background-color: #000000;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-
-/* Apply styles to inner image */
-
-div.container {
-  display: relative;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 10px;
-  background-color: #000000;
-  overflow: hidden;
+.centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -10%;
+  bottom: 1%;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  position: relative;
- 
 }
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-}
-
-
-.image {
-  opacity: 1;
-  display: block;
-  width: 100%;
+.image-container img {
+  max-width: 100%;
   height: auto;
+  display: block;
 }
-
-.img:active {
-  opacity: 0.3;
-  transition: 0.3s;
-  transform: scale(1.5);
-}
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-div.container:hover .image {
-  opacity: 0.3;
-}
-
-div.container:hover .middle {
-  opacity: 1;
-}
-
-.text {
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
-}
-
 /* About section */
 
   h2 { 
@@ -228,19 +148,15 @@ div.container:hover .middle {
     margin-bottom: 10px;
   }
 
-
   /* apply styles to unordered lists */
-  ul li {
-    list-style-type: square;
-    list-style: square;
-    text-align: center;
-    text-decoration: none;
-    color: #ffffff;
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    font-size: 18px;
+  ul {
+    list-style-type: disc; /* Adds bullet points */
     margin: 0;
-    display: inherit;
+    padding-left: 40px; /* Adds some space before the bullet points */
+  }
+
+  li {
+    margin-bottom: 10px; /* Adds space between list items */
   }
 
   h5 { 
@@ -417,37 +333,106 @@ div.container:hover .middle {
     margin-bottom: 10px;
   }
 
-  /* apply styles to projects section */
-  .row {
-    margin: 8px -16px;
-  }
-  
-  /* Add padding BETWEEN each column */
-  .row,
-  .row > .column {
-    padding: 8px;
-  }
-  
-  /* Create four equal columns that floats next to each other */
-  .column {
-    float: left;
-    width: 25%;
-  }
-  
-  /* Clear floats after rows */ 
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Content */
-  .content {
-    background-color: white;
-    padding: 10px;
-  }
+/* Three image containers (use 25% for four, and 50% for two, etc) */
 
-   /* apply styles to footer */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  flex: 1;
+  max-width: 25%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.container {
+  position: relative;
+}
+
+/* Style the counter cards */
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.container {
+  position: relative;
+  display: inline-block;
+  margin: right;
+}
+
+.container:hover .center {
+  opacity: 1;
+  visibility: visible;
+}
+
+.text {
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+}
+
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Apply styles to photos section */
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100vw;
+}
+.slider {
+  display: flex;
+}
+
+
+.photos {
+  display: block;
+  height: 400px;
+  width: 600px;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.container:hover .middle {
+  opacity: 1;
+  visibility: visible;
+}
+
+.text {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+}
+
+
+/* apply styles to footer */
   
    footer.footer {
     padding: 0px 15px;
@@ -471,7 +456,7 @@ div.container:hover .middle {
     color: #808080;
   }
   
-  a:hover {
+  .footer a:hover {
     text-decoration: none;
     color: #ffebdc;
     font-size: 18px;
