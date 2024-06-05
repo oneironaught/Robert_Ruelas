@@ -85,6 +85,7 @@ header {
   background-color: black; /* Background color for visibility */
   position: relative; /* Ensure positioning context for centering */
 }
+
 .centered-content {
   display: flex;
   justify-content: center;
@@ -96,11 +97,13 @@ header {
   width: 100%;
   height: 100%;
 }
+
 .image-container img {
   max-width: 100%;
   height: auto;
   display: block;
 }
+
 /* About section */
 
   h2 { 
@@ -174,6 +177,10 @@ header {
     margin-bottom: 10px;
   }
 
+  .logo-container {
+    text-align: center;
+  }
+
   h6 { 
     text-align: center;
     text-decoration: underline;
@@ -182,7 +189,7 @@ header {
     font-weight: bold;
     font-size: 18px;
     margin: 0;
-    display: inherit; 
+    display: inline-block; 
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
@@ -191,7 +198,7 @@ header {
     background-color: gray;
     border-width: 5px;
     border-style: solid;
-    border-radius: 500px;
+    border-radius: 50px;
     padding: 10px;
   }
 
@@ -218,7 +225,7 @@ header {
     font-weight: bold;
     font-size: 18px;
     margin: 0;
-    display: inherit; 
+    display: inline-block; 
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
@@ -227,7 +234,7 @@ header {
     background-color: gray;
     border-width: 5px;
     border-style: solid;
-    border-radius: 500px;
+    border-radius: 50px;
     padding: 10px;
   }
 
@@ -254,7 +261,7 @@ header {
     font-weight: bold;
     font-size: 18px;
     margin: 0;
-    display: inherit; 
+    display: inline-block; 
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
@@ -263,7 +270,7 @@ header {
     background-color: gray;
     border-width: 5px;
     border-style: solid;
-    border-radius: 500px;
+    border-radius: 50px;
     padding: 10px;
   }
 
@@ -290,7 +297,7 @@ header {
     font-weight: bold;
     font-size: 18px;
     margin: 0;
-    display: inherit; 
+    display: inline-block; 
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
@@ -299,7 +306,7 @@ header {
     background-color: gray;
     border-width: 5px;
     border-style: solid;
-    border-radius: 500px;
+    border-radius: 50px;
     padding: 10px;
   }
 
@@ -399,6 +406,7 @@ header {
   box-sizing: border-box;
   width: 100vw;
 }
+
 .slider {
   display: flex;
 }
@@ -409,6 +417,7 @@ header {
   height: 400px;
   width: 600px;
 }
+
 .center {
   position: absolute;
   top: 50%;
@@ -419,6 +428,7 @@ header {
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
+
 .container:hover .middle {
   opacity: 1;
   visibility: visible;
@@ -428,6 +438,13 @@ header {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 10px;
+}
+
+/* Contact Section */
+
+.contact-form {
+  text-align: center;
+  color: #ffffff;
 }
 
 
