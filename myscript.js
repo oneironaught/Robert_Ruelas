@@ -14,3 +14,11 @@
   expect(sliderImages[1].style.opacity).toBe('0');
   expect(sliderImages[2].style.opacity).toBe('0');
 });
+
+// Google Capthca 
+  function onClick(e) {
+    e.preventDefault();
+    grecaptcha.enterprise.ready(async () => {
+      const token = await grecaptcha.enterprise.execute('6LcTPvEpAAAAAFpUM_cZh5EWZzAFzYAoA_jW2cMZ', {action: 'LOGIN'});
+    });
+  }

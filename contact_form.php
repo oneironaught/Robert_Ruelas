@@ -1,13 +1,40 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Google reCAPTCHA verification
-    $recaptchaSecret = '6LcTPvEpAAAAAKHEJgjs1q-ld86B-ZYwGPAn6dz5'; // Add your secret key here
+    // Google reCAPTCHA Enterprise verification
+    $apiKey = 'https://recaptchaenterprise.googleapis.com/v1/projects/my-project-6774-1717554360401/assessments?key=API_KEY'; // Replace with your API key
+    $projectID = 'my-project-6774-1717554360401'; // Replace with your project ID
     $recaptchaResponse = $_POST['g-recaptcha-response'];
+    $siteKey = '6LcTPvEpAAAAAFpUM_cZh5EWZzAFzYAoA_jW2cMZ'; // Replace with your site key
+    $expectedAction = 'USER_ACTION'; // Replace with your expected action
 
-    $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecret&response=$recaptchaResponse");
+    $url = "https://recaptchaenterprise.googleapis.com/v1/projects/$projectID/assessments?key=$apiKey";
+    $data = array(
+        'event' => array(
+            'token' => $recaptchaResponse,
+            'expectedAction' => $expectedAction,
+            'siteKey' => $siteKey
+        )
+    );
+
+    $options = array(
+        'http' => array(
+            'header'  => "Content-type: application/json\r\n",
+            'method'  => 'POST',
+            'content' => json_encode($data)
+        )
+    );
+
+    $context  = stream_context_create($options);
+    $response = file_get_contents($url, false, $context);
+
+    if ($response === false) {
+        echo "Failed to verify CAPTCHA.";
+        exit;
+    }
+
     $responseKeys = json_decode($response, true);
 
-    if(intval($responseKeys["success"]) !== 1) {
+    if (!isset($responseKeys['tokenProperties']['valid']) || !$responseKeys['tokenProperties']['valid']) {
         echo "Please complete the CAPTCHA.";
         exit;
     }
