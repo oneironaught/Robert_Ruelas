@@ -1,78 +1,73 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Google reCAPTCHA Enterprise verification
-    $apiKey = 'https://recaptchaenterprise.googleapis.com/v1/projects/my-project-6774-1717554360401/assessments?key=API_KEY'; // Replace with your API key
-    $projectID = 'my-project-6774-1717554360401'; // Replace with your project ID
-    $recaptchaResponse = $_POST['g-recaptcha-response'];
-    $siteKey = '6LcTPvEpAAAAAFpUM_cZh5EWZzAFzYAoA_jW2cMZ'; // Replace with your site key
-    $expectedAction = 'USER_ACTION'; // Replace with your expected action
+require 'vendor/autoload.php';
 
-    $url = "https://recaptchaenterprise.googleapis.com/v1/projects/$projectID/assessments?key=$apiKey";
-    $data = array(
-        'event' => array(
-            'token' => $recaptchaResponse,
-            'expectedAction' => $expectedAction,
-            'siteKey' => $siteKey
-        )
+// Include Google Cloud dependencies using Composer
+use Google\Cloud\RecaptchaEnterprise\V1\RecaptchaEnterpriseServiceClient;
+use Google\Cloud\RecaptchaEnterprise\V1\Event;
+use Google\Cloud\RecaptchaEnterprise\V1\Assessment;
+use Google\Cloud\RecaptchaEnterprise\V1\TokenProperties\InvalidReason;
+
+/**
+  * Create an assessment to analyze the risk of a UI action.
+  * @param string $recaptchaKey The reCAPTCHA key associated with the site/app
+  * @param string $token The generated token obtained from the client.
+  * @param string $project Your Google Cloud Project ID.
+  * @param string $action Action name corresponding to the token.
+  */
+function create_assessment(
+  string $recaptchaKey,
+  string $token,
+  string $project,
+  string $action
+): void {
+  // Create the reCAPTCHA client.
+  // TODO: Cache the client generation code (recommended) or call client.close() before exiting the method.
+  $client = new RecaptchaEnterpriseServiceClient();
+  $projectName = $client->projectName($project);
+
+  // Set the properties of the event to be tracked.
+  $event = (new Event())
+    ->setSiteKey($recaptchaKey)
+    ->setToken($token);
+
+  // Build the assessment request.
+  $assessment = (new Assessment())
+    ->setEvent($event);
+
+  try {
+    $response = $client->createAssessment(
+      $projectName,
+      $assessment
     );
 
-    $options = array(
-        'http' => array(
-            'header'  => "Content-type: application/json\r\n",
-            'method'  => 'POST',
-            'content' => json_encode($data)
-        )
-    );
-
-    $context  = stream_context_create($options);
-    $response = file_get_contents($url, false, $context);
-
-    if ($response === false) {
-        echo "Failed to verify CAPTCHA.";
-        exit;
+    // Check if the token is valid.
+    if ($response->getTokenProperties()->getValid() == false) {
+      printf('The CreateAssessment() call failed because the token was invalid for the following reason: ');
+      printf(InvalidReason::name($response->getTokenProperties()->getInvalidReason()));
+      return;
     }
 
-    $responseKeys = json_decode($response, true);
-
-    if (!isset($responseKeys['tokenProperties']['valid']) || !$responseKeys['tokenProperties']['valid']) {
-        echo "Please complete the CAPTCHA.";
-        exit;
-    }
-
-    // Input sanitization and validation
-    function sanitize_input($data) {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
-
-    $name = sanitize_input($_POST['name']);
-    $email = sanitize_input($_POST['email']);
-    $subject = sanitize_input($_POST['subject']);
-    $message = sanitize_input($_POST['message']);
-
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Invalid email format.";
-        exit;
-    }
-
-    // Prevent email header injection
-    $patterns = array("/\r/", "/\n/", "/%0A/", "/%0D/");
-    $email = preg_replace($patterns, "", $email);
-    $subject = preg_replace($patterns, "", $subject);
-
-    $to = "bobbyruelas@gmail.com"; // Replace with your email address
-    $headers = "From: " . $email . "\r\n" .
-               "Reply-To: " . $email . "\r\n" .
-               "X-Mailer: PHP/" . phpversion();
-
-    $mailBody = "Name: $name\nEmail: $email\n\nMessage:\n$message";
-
-    if (mail($to, $subject, $mailBody, $headers)) {
-        echo "Message sent successfully.";
+    // Check if the expected action was executed.
+    if ($response->getTokenProperties()->getAction() == $action) {
+      // Get the risk score and the reason(s).
+      // For more information on interpreting the assessment, see:
+      // https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment
+      printf('The score for the protection action is:');
+      printf($response->getRiskAnalysis()->getScore());
     } else {
-        echo "Failed to send message.";
+      printf('The action attribute in your reCAPTCHA tag does not match the action you are expecting to score');
     }
+  } catch (exception $e) {
+    printf('CreateAssessment() call failed with the following error: ');
+    printf($e);
+  }
 }
+
+// TODO: Replace the token and reCAPTCHA action variables before running the sample.
+create_assessment(
+   '6LcTPvEpAAAAAFpUM_cZh5EWZzAFzYAoA_jW2cMZ',
+   '6LcTPvEpAAAAAKHEJgjs1q-ld86B-ZYwGPAn6dz5',
+   'my-project-6774-1717554360401',
+   'signup'
+);
 ?>

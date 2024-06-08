@@ -1,7 +1,8 @@
 {
     "event": {
-      "token": "TOKEN",
-      "expectedAction": "USER_ACTION",
+      "token": "6LcTPvEpAAAAAKHEJgjs1q-ld86B-ZYwGPAn6dz5",
+      "expectedAction": "signup",
       "siteKey": "6LcTPvEpAAAAAFpUM_cZh5EWZzAFzYAoA_jW2cMZ"
     }
   }
+
