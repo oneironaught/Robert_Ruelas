@@ -14,6 +14,7 @@
 	<!--<link rel="shortcut icon" href="https://f4.bcbits.com/img/a1418076414_3.jpg"> -->
     <!--PHP Captcha Script-->
     <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcTPvEpAAAAAFpUM_cZh5EWZzAFzYAoA_jW2cMZ"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <!--Header and Nav-->
 <header>
@@ -523,6 +524,8 @@ High school diploma</h12></div>
 <!--Contact Form-->
 <div class="contact-form">
 <br>
+<form action="your_form_processing_script" method="post">
+<!-- Your form fields go here -->
 <form action="contact_form.php" method="POST">
     <label for="name">Name:</label><br>
     <input type="text" id="name" name="name" required><br><br>
@@ -537,7 +540,8 @@ High school diploma</h12></div>
     <textarea id="message" name="message" rows="5" required></textarea><br><br>
     <div class="g-recaptcha" data-sitekey="6LcTPvEpAAAAAFpUM_cZh5EWZzAFzYAoA_jW2cMZ"></div><br> <!-- Add your site key here -->
     <input type="submit" value="Send Message">
-</form></div>
+</form>
+</div>
 
 <!-- Replace the variables below. -->
 <script>
