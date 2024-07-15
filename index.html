@@ -14,7 +14,7 @@
 	<!--<link rel="shortcut icon" href="https://f4.bcbits.com/img/a1418076414_3.jpg"> -->
     <!--PHP Captcha Script-->
     <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcTPvEpAAAAAFpUM_cZh5EWZzAFzYAoA_jW2cMZ"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <!--Header and Nav-->
 <header>
@@ -549,6 +549,16 @@ High school diploma</h12></div>
       document.getElementById("demo-form").submit();
     }
   </script>
+   <script>
+    function onClick(e) {
+      e.preventDefault();
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6LcTPvEpAAAAAKHEJgjs1q-ld86B-ZYwGPAn6dz5', {action: 'submit'}).then(function(token) {
+            // Add your logic to submit to your backend server here.
+        });
+      });
+    }
+</script>
 <button class="g-recaptcha"
 data-sitekey="6LcTPvEpAAAAAFpUM_cZh5EWZzAFzYAoA_jW2cMZ"
 data-callback='onSubmit'
