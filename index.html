@@ -522,50 +522,49 @@ High school diploma</h12></div>
 <br>If you have any questions, feedback, or would like to get in touch with me, 
 <br>please use the form below or reach out through any of the provided contact details.</h3>
 <!--Contact Form-->
-<div class="contact-form">
-<br>
-<form action="your_form_processing_script" method="post">
-<!-- Your form fields go here -->
-<form action="contact_form.php" method="POST">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required><br><br>
-  
-  <label for="subject">Subject:</label><br>
-  <input type="text" id="subject" name="subject" required><br><br>
-  
-  <label for="message">Message:</label><br>
-  
-    <textarea id="message" name="message" rows="5" required></textarea><br><br>
-    <div class="g-recaptcha" data-sitekey="6LcTPvEpAAAAAKHEJgjs1q-ld86B-ZYwGPAn6dz5"></div><br> <!-- Add your site key here -->
-    <input type="submit" value="Send Message">
-</form>
-</div>
+<!DOCTYPE html>
+    <div class="contact-form">
+        <br>
+        <form id="demo-form" action="contact_form.php" method="POST">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
 
-<!-- Replace the variables below. -->
-<script>
-    function onSubmit(token) {
-      document.getElementById("demo-form").submit();
-    }
-  </script>
-   <script>
-    function onClick(e) {
-      e.preventDefault();
-      grecaptcha.ready(function() {
-        grecaptcha.execute('6LcTPvEpAAAAAKHEJgjs1q-ld86B-ZYwGPAn6dz5', {action: 'submit'}).then(function(token) {
-            // Add your logic to submit to your backend server here.
-        });
-      });
-    }
-</script>
-<button class="g-recaptcha"
-data-sitekey="6LcTPvEpAAAAAKHEJgjs1q-ld86B-ZYwGPAn6dz5"
-data-callback='onSubmit'
-data-action='submit'>
-Submit
-</button>
-</div>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="subject">Subject:</label><br>
+            <input type="text" id="subject" name="subject" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+            <div class="g-recaptcha" data-sitekey="6LcTPvEpAAAAAKHEJgjs1q-ld86B-ZYwGPAn6dz5"></div><br> <!-- Add your site key here -->
+
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
+
+    <script>
+        function onSubmit(token) {
+            document.getElementById("demo-form").submit();
+        }
+    </script>
+    <script>
+        function onClick(e) {
+            e.preventDefault();
+            grecaptcha.ready(function() {
+                grecaptcha.execute('6LcTPvEpAAAAAKHEJgjs1q-ld86B-ZYwGPAn6dz5', {action: 'submit'}).then(function(token) {
+                    // Add your logic to submit to your backend server here.
+                });
+            });
+        }
+    </script>
+    <button class="g-recaptcha"
+            data-sitekey="6LcTPvEpAAAAAKHEJgjs1q-ld86B-ZYwGPAn6dz5"
+            data-callback='onSubmit'
+            data-action='submit'>
+        Submit
+    </button>
 
 <!--Footer-->
 <br>
