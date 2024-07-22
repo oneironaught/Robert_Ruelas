@@ -522,49 +522,25 @@ High school diploma</h12></div>
 <br>If you have any questions, feedback, or would like to get in touch with me, 
 <br>please use the form below or reach out through any of the provided contact details.</h3>
 <!--Contact Form-->
-<!DOCTYPE html>
     <div class="contact-form">
         <br>
-        <form id="demo-form" action="contact_form.php" method="POST">
-            <label for="name">Name:</label><br>
+        <form action="contact.php" method="post" id="contactForm">
+            <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br><br>
-
-            <label for="email">Email:</label><br>
+            
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email" required><br><br>
-
-            <label for="subject">Subject:</label><br>
-            <input type="text" id="subject" name="subject" required><br><br>
-
+            
             <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+            
+            <input type="submit" value="Submit">
 
-            <div class="g-recaptcha" data-sitekey="6LcTPvEpAAAAAFpUM_cZh5EWZzAFzYAoA_jW2cMZ"></div><br> <!-- Add your site key here -->
-
-            <input type="submit" value="Send Message">
+            <form action="contact.php" method="post" id="contactForm">
+                <input type="text" id="honeypot" name="honeypot" style="display:none">
+                <!-- Other form fields -->
+                <input type="hidden" name="startTime" value="<?php echo time(); ?>">
         </form>
-    </div>
-
-    <script>
-        function onSubmit(token) {
-            document.getElementById("demo-form").submit();
-        }
-    </script>
-    <script>
-        function onClick(e) {
-            e.preventDefault();
-            grecaptcha.ready(function() {
-                grecaptcha.execute('6LcTPvEpAAAAAKHEJgjs1q-ld86B-ZYwGPAn6dz5', {action: 'submit'}).then(function(token) {
-                    // Add your logic to submit to your backend server here.
-                });
-            });
-        }
-    </script>
-    <button class="g-recaptcha"
-            data-sitekey="6LcTPvEpAAAAAFpUM_cZh5EWZzAFzYAoA_jW2cMZ"
-            data-callback='onSubmit'
-            data-action='submit'>
-        Submit
-    </button>
 
 <!--Footer-->
 <br>
