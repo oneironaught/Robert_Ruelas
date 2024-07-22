@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
     // Prepare email
-    $to = "your-email@example.com";
+    $to = "bobbyruelas@gmail.com";
     $subject = "New Contact Form Submission";
     $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
     $headers = "From: $email";
