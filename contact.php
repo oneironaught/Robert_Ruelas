@@ -16,6 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Invalid email format";
         exit;
     }
+    // Create a new Postfix instance
+    $mail = new Postfix(true);
 
     try {
         //Server settings
