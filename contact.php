@@ -16,7 +16,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Invalid email format";
         exit;
     }
+
+    try {
+        //Server settings
+        $mail->isSMTP();                                          
+        $mail->Host       = 'smtp.google.com';                    // Set the SMTP server to send through
+        $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+        $mail->Username   = 'bobbyruelas@gmail.com';               // SMTP username
+        $mail->Password   = 'dopme5-xetqid-qehcoX';                  // SMTP password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; PHPMailer::ENCRYPTION_SMTPS also accepted
+        $mail->Port       = 587;                                    // TCP port to connect to
     
+        
     // Prepare email
     $to = "bobbyruelas@gmail.com";
     $subject = "New Contact Form Submission";
