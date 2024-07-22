@@ -22,16 +22,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         //Server settings
         $mail->isSMTP();                                          
-        $mail->Host       = 'smtp.google.com';                    // Set the SMTP server to send through
+        $mail->Host       = 'smtp.me.com';                    // Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-        $mail->Username   = 'bobbyruelas@gmail.com';               // SMTP username
-        $mail->Password   = 'dopme5-xetqid-qehcoX';                  // SMTP password
-        $mail->SMTPSecure = Postfix::ENCRYPTION_STARTTLS;         // Enable TLS encryption; PHPMailer::ENCRYPTION_SMTPS also accepted
+        $mail->Username   = 'bobbyruelas@me.com';               // SMTP username
+        $mail->Password   = 'Bhp1}snipers';                  // SMTP password
+        $mail->SMTPSecure = Postfix::ENCRYPTION_STARTTLS;         // Enable TLS encryption; Postfix::ENCRYPTION_SMTPS also accepted
         $mail->Port       = 587;                                    // TCP port to connect to
     
         
     // Prepare email
-    $to = "bobbyruelas@gmail.com";
+    $to = "bobbyruelas@me.com";
     $subject = "New Contact Form Submission";
     $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
     $headers = "From: $email";
