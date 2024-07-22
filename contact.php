@@ -36,6 +36,14 @@ if ($timeTaken < 5) {
     echo "Form submitted too quickly. Spam detected.";
     exit;
 }
+
+myhostname = your.robertruelas.com
+mydomain = https://robertruelas.com
+myorigin = $mydomain
+inet_interfaces = all
+mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain
+relayhost = 
+
 }
 ?>
 
