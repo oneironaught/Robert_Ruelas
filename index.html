@@ -12,9 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!--Favicon-->
 	<!--<link rel="shortcut icon" href="https://f4.bcbits.com/img/a1418076414_3.jpg"> -->
-    <!--PHP Captcha Script-->
-    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcTPvEpAAAAAFpUM_cZh5EWZzAFzYAoA_jW2cMZ"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+      <!-- Calendly widget script -->
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
 </head>
 <!--Header and Nav-->
 <header>
@@ -515,34 +514,17 @@ High school diploma</h12></div>
 <br>
 <br>
 <br>
-<h2>Contact</h2>
+    <!-- Contact section for Calendly -->
+    <section id="contact" class="text-center py-5">
+        <div class="container">
+            <h2>Contact</h2>
+            <h3>Thank you for visiting! I'd love to hear from you! 
+                <br>If you have any questions, feedback, or would like to get in touch with me, 
+                <br>please use the form below or reach out <a href="mailto:bobbyruelas@me.com" style="color: gray;">via Email</a> <h3>
+    <div class="calendly-inline-widget" data-url="https://calendly.com/bobbyruelas" style="min-width:320px;height:630px;"></div></section>
+
 <br>
 <br>
-<h3>Thank you for visiting! I'd love to hear from you! 
-<br>If you have any questions, feedback, or would like to get in touch with me, 
-<br>please use the form below or reach out through any of the provided contact details.</h3>
-<!--Contact Form-->
-    <div class="contact-form">
-        <br>
-        <form action="contact.php" method="post" id="contactForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-            
-            <input type="submit" value="Submit">
-
-            <form action="contact.php" method="post" id="contactForm">
-                <input type="text" id="honeypot" name="honeypot" style="display:none">
-                <!-- Other form fields -->
-                <input type="hidden" name="startTime" value="<?php echo time(); ?>">
-        </form>
-
-<!--Footer-->
 <br>
 <br>
 <br>

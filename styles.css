@@ -440,13 +440,17 @@ header {
   padding: 10px;
 }
 
-/* Contact Section */
-
-.contact-form {
-  text-align: center;
-  color: #ffffff;
+/* apply styles for contact form */
+#contact .form-control {
+  border-radius: 0;
 }
 
+#contact button {
+  background-color: #007bff;
+  border: none;
+  padding: 0.5em 2em;
+  color: white;
+}
 
 /* apply styles to footer */
   
