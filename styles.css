@@ -379,7 +379,7 @@ header h1 {
 /* Main photo section container */
 .photo-section {
   width: 100%; /* Ensures the section is responsive */
-  max-width: 1200px; /* Set max width as per your design */
+  max-width: 1450px; /* Set max width as per your design */
   margin: 0 auto; /* Center the section horizontally */
   padding: 20px; /* Padding for spacing around the content */
   box-sizing: border-box;
@@ -407,6 +407,46 @@ header h1 {
 .slider {
   display: flex; /* Aligns containers horizontally */
   flex-wrap: nowrap; /* Prevents wrapping */
+  animation: marquee 60s linear infinite; /* Auto scroll horizontally */
+}
+
+/* Keyframes for scrolling effect */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%); /* Start fully off to the right */
+  }
+  100% {
+    transform: translateX(-100%); /* Scroll to fully off the left */
+  }
+}
+
+/* Optional: Customize the appearance of the container */
+.container {
+  margin-right: 20px;
+  flex: 0 0 auto; /* Prevents flexbox items from shrinking */
+}
+
+/* Ensures the images have a fixed size */
+.photos {
+  max-width: 150px;
+  height: auto;
+  display: block;
+}
+
+/* Pause marquee on hover */
+.scroll-container:hover .slider {
+  animation-play-state: paused;
+}
+
+/* Enlarge image on hover */
+.container:hover .photos {
+  transform: scale(1.2); /* Enlarges image by 20% */
+  transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+
+/* Optional: Add a slight shadow to the image when enlarged */
+.container:hover .photos {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Style for each image container */
@@ -417,7 +457,7 @@ header h1 {
 }
 
 .photos {
-  max-width: 200px; /* Control image size */
+  max-width: 300px; /* Control image size */
   height: auto;
   display: block;
 }
@@ -428,7 +468,7 @@ header h1 {
 
 .text {
   font-size: 14px;
-  color: #333;
+  color: white;
 }
 
 /* Contact Section */
