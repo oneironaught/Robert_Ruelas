@@ -407,20 +407,20 @@ header h1 {
 .slider {
   display: flex; /* Aligns containers horizontally */
   flex-wrap: nowrap; /* Prevents wrapping */
-  animation: marquee 60s linear infinite; /* Auto scroll horizontally */
+  animation: scroll 20s linear infinite; /* Auto scroll horizontally */
 }
 
-/* Keyframes for scrolling effect */
-@keyframes marquee {
+/* Keyframes for infinite scrolling */
+@keyframes scroll {
   0% {
-    transform: translateX(100%); /* Start fully off to the right */
+    transform: translateX(0); /* Start from the first item */
   }
   100% {
-    transform: translateX(-100%); /* Scroll to fully off the left */
+    transform: translateX(-100%); /* Move to the end */
   }
 }
 
-/* Optional: Customize the appearance of the container */
+/* Customizing the appearance of the container */
 .container {
   margin-right: 20px;
   flex: 0 0 auto; /* Prevents flexbox items from shrinking */

@@ -45,3 +45,19 @@ if (scrollContainer) {
         scrollContainer.scrollLeft += evt.deltaY;
     });
 }
+
+// Photo scroll container //
+const slider = document.querySelector('.slider');
+let speed = 10; // Initial scroll speed
+
+// Function to change the scroll speed (animation duration)
+function changeSpeed(newSpeed) {
+    const slider = document.querySelector('.slider');
+    slider.style.animationDuration = `${newSpeed}s`;
+  }
+  
+  // Example: Change the speed after 5 seconds
+  setTimeout(() => {
+    changeSpeed(40); // Slower speed (longer duration = slower)
+  }, 5000);
+  
