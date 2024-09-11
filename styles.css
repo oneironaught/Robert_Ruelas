@@ -519,3 +519,79 @@ footer.footer a {
 footer.footer a:hover {
   color: #fff;
 }
+
+/* Media Queries */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .navbar-brand {
+      margin-left: 0; /* Align the brand logo properly in very small devices */
+  }
+
+  .navbar-nav {
+      flex-direction: column; /* Stack navbar items vertically */
+      align-items: center; /* Center-align the nav items */
+      width: 100%; /* Full width nav items */
+  }
+
+  .service-item {
+      padding: 10px; /* Less padding as space is at a premium */
+  }
+
+  .navbar-toggler {
+      margin-right: 15px; /* Ensure toggle button is not too close to the edge */
+  }
+}
+
+/* Small devices (landscape phones, 576px to 768px) */
+@media (max-width: 767.98px) {
+  .navbar {
+      font-size: 0.9rem; /* Slightly smaller font size for navigation links */
+  }
+
+  .service-item {
+      padding: 15px; /* More padding for clickable area */
+  }
+
+  #introduction, #services, #testimonials, #about, #contact {
+      padding: 20px; /* Consistent padding for section content */
+  }
+
+  .display-4 {
+      font-size: 2.5rem; /* Smaller headings in smaller devices */
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .navbar-nav {
+      margin-right: auto; /* This will align the navbar items to the right */
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .navbar {
+      font-size: 1.1rem; /* Increase the font size for better readability on large screens */
+  }
+
+  .navbar-brand {
+      margin-left: 30px; /* Increase margin for better visual balance */
+  }
+
+  .service-item {
+      padding: 20px; /* More padding to use the additional space effectively */
+  }
+
+  .display-4 {
+      font-size: 3rem; /* Larger headers for larger displays */
+  }
+
+  #introduction, #services, #testimonials, #about, #contact {
+      padding: 40px; /* Increase padding for section content for better spacing */
+  }
+
+  .container {
+      max-width: 1200px; /* Optionally adjust the max-width of containers for better content alignment */
+  }
+}
