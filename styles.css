@@ -564,18 +564,8 @@ footer.footer a:hover {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  .navbar {
-      padding: 0.5rem 1rem; /* Reduce padding on the navbar itself */
-      flex-wrap: wrap; /* Allow items to wrap within the navbar */
-  }
-
   .navbar-brand {
       margin-left: 0; /* Align the brand logo properly in very small devices */
-      max-width: 100%; /* Ensure the logo doesn't overflow */
-  }
-
-  .navbar-toggler {
-      margin-right: 15px; /* Ensure toggle button is not too close to the edge */
   }
 
   .navbar-nav {
@@ -584,8 +574,12 @@ footer.footer a:hover {
       width: 100%; /* Full width nav items */
   }
 
-  .nav-item {
-      margin: 5px 0; /* Add margin to prevent items from clumping together */
+  .service-item {
+      padding: 10px; /* Less padding as space is at a premium */
+  }
+
+  .navbar-toggler {
+      margin-right: 15px; /* Ensure toggle button is not too close to the edge */
   }
 }
 
@@ -593,31 +587,18 @@ footer.footer a:hover {
 @media (max-width: 767.98px) {
   .navbar {
       font-size: 0.9rem; /* Slightly smaller font size for navigation links */
-      padding: 0.5rem 1rem; /* Maintain navbar padding for small devices */
-  }
-
-  .navbar-brand {
-      margin-left: 0;
-      padding: 0.5rem 0; /* Adjust padding for the brand logo */
   }
 
   .service-item {
       padding: 15px; /* More padding for clickable area */
   }
 
-  .navbar-nav {
-      flex-direction: column; /* Stack nav items vertically */
-      align-items: center; /* Center-align the nav items */
-      width: 100%;
+  #introduction, #services, #testimonials, #about, #contact {
+      padding: 20px; /* Consistent padding for section content */
   }
 
-  .nav-item {
-      padding: 0.5rem; /* Make nav items easier to click */
-      width: 100%; /* Make nav items take up the full width */
-  }
-
-  .navbar-toggler {
-      margin-right: 15px; /* Ensure the toggle button has room */
+  .display-4 {
+      font-size: 2.5rem; /* Smaller headings in smaller devices */
   }
 }
 
@@ -625,11 +606,6 @@ footer.footer a:hover {
 @media (min-width: 768px) {
   .navbar-nav {
       margin-right: auto; /* This will align the navbar items to the right */
-      flex-direction: row; /* Revert to row layout for larger screens */
-  }
-
-  .navbar-toggler {
-      margin-right: 15px; /* Ensure toggle button is well positioned */
   }
 }
 
