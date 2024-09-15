@@ -517,15 +517,16 @@ header h1 {
   box-sizing: border-box;
 }
 
-/* Footer */
+/* Footer Section */
 #contact, footer.footer {
-  padding-bottom: 50px; /* Add extra padding to the bottom */
+  padding-bottom: 50px; /* Extra padding to the bottom */
 }
 
 /* Font Awesome Icon Styling for Social Links */
 .fa {
   width: 25px;
   height: 25px;
+  transition: transform 0.3s ease; /* Add a slight hover effect for icons */
 }
 
 /* Color adjustment for social media icons */
@@ -566,68 +567,64 @@ header h1 {
 }
 
 .social-icons a {
-  color: white;
+  color: inherit; /* Use the colors defined in .fa classes */
   font-size: 25px;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icons a:hover {
   color: #ddd;
+  transform: scale(1.1); /* Slight scaling effect on hover */
 }
 
-/* Styles for Footer */
-
+/* Footer Styles */
 footer.footer {
   background-color: #1c1c1c;
   padding: 20px 0;
   text-align: center;
   color: #999;
   width: 100%; /* Ensures footer spans the full width */
-  padding: 20px;
   box-sizing: border-box;
+  font-size: 18px;
 }
 
 footer.footer a {
   color: #999;
   padding: 0 10px;
+  text-decoration: none;
 }
 
 footer.footer a:hover {
   color: #fff;
 }
 
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .social-icons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .fa {
+    width: 20px;
+    height: 20px;
+  }
+
+  footer.footer a {
+    padding: 5px 0;
+  }
+}
+
 /* Media Queries */
 
+/* Styles for phones */
 @media (max-width: 575.98px) {
-  /* Styles for phones */
   body {
-      font-size: 14px;
+      font-size: 0.875rem; /* 14px */
   }
   .container {
-      width: 100%;
       padding: 10px;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-  /* Styles for small devices */
-  body {
-      font-size: 16px;
-  }
-  .container {
-      width: 100%;
-      padding: 15px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  /* Styles for tablets */
-  body {
-      font-size: 18px;
-  }
-  .container {
-      width: 100%;
-      padding: 20px;
+      max-width: 100%;
   }
   .image {
       width: 100%;
@@ -635,29 +632,67 @@ footer.footer a:hover {
   }
 }
 
+/* Styles for small devices (576px - 767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body {
+      font-size: 1rem; /* 16px */
+  }
+  .container {
+      padding: 15px;
+      max-width: 100%;
+  }
+  .image {
+      width: 100%;
+      height: auto;
+  }
+}
+
+/* Styles for tablets (768px - 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  body {
+      font-size: 1.125rem; /* 18px */
+  }
+  .container {
+      padding: 20px;
+      max-width: 95%;
+  }
+  .image {
+      width: 100%;
+      height: auto;
+  }
+}
+
+/* Styles for desktops (992px - 1199.98px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  /* Styles for desktops */
   body {
-      font-size: 20px;
+      font-size: 1.25rem; /* 20px */
   }
   .container {
-      width: 90%;
       padding: 25px;
+      max-width: 90%;
+  }
+  .image {
+      width: 100%;
+      height: auto;
   }
 }
 
+/* Styles for large desktops (1200px and above) */
 @media (min-width: 1200px) {
-  /* Styles for large desktops */
   body {
-      font-size: 22px;
+      font-size: 1.375rem; /* 22px */
   }
   .container {
-      width: 85%;
       padding: 30px;
+      max-width: 85%;
+  }
+  .image {
+      width: 100%;
+      height: auto;
   }
 }
 
-/* Show hamburger only on small screens */
+/* Hamburger menu - show only on small screens */
 @media (max-width: 768px) {
   .hamburger {
       display: block;
