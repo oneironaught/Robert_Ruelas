@@ -1,63 +1,44 @@
-// Request persistent storage using the standardized API
-navigator.storage.persisted().then(persistent => {
-    if (!persistent) {
-        console.log('Requesting persistent storage...');
-        navigator.storage.persist().then(granted => {
-            if (granted) {
-                console.log('Persistent storage granted');
+// Toggle for Experience section //
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.accordion-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const accordionContent = button.closest('.accordion-item').querySelector('.accordion-content');
+            if (!accordionContent) {
+                console.error('Accordion content not found for this button.');
+                return;
+            }
+
+            button.classList.toggle('active');
+
+            if (button.classList.contains('active')) {
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
             } else {
-                console.log('Persistent storage not granted');
+                accordionContent.style.maxHeight = 0;
             }
         });
-    } else {
-        console.log('Persistent storage has already been granted');
+    });
+});
+
+// Photo scroll container
+const slider = document.querySelector('.slider');
+if (slider) {
+    let speed = 10; // Initial scroll speed
+
+    // Function to change the scroll speed (animation duration)
+    function changeSpeed(newSpeed) {
+        slider.style.animationDuration = `${newSpeed}s`;
     }
-});
 
-// JavaScript for Accordion Interactivity
-document.querySelectorAll('.accordion-button').forEach(button => {
-    button.addEventListener('click', () => {
-        const accordionContent = button.nextElementSibling;
-
-        button.classList.toggle('active');
-
-        if (button.classList.contains('active')) {
-            // Ensure smooth transition by setting transition on maxHeight
-            accordionContent.style.transition = 'max-height 0.3s ease';
-            
-            // Set the maxHeight to the scrollHeight for a smooth expansion
-            accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-        } else {
-            // Set the maxHeight to 0 to collapse
-            accordionContent.style.maxHeight = 0;
-
-            // Ensure transition is smooth on collapse as well
-            accordionContent.style.transition = 'max-height 0.3s ease';
-        }
-    });
-});
-
-// Checks if scroll container exists before adding the event listener
-const scrollContainer = document.querySelector('.scroll-container');
-if (scrollContainer) {
-    scrollContainer.addEventListener('wheel', (evt) => {
-        evt.preventDefault();
-        scrollContainer.scrollLeft += evt.deltaY;
-    });
+    // Example: Change the speed after 5 seconds
+    setTimeout(() => {
+        changeSpeed(40); // Slower speed (longer duration = slower)
+    }, 5000);
 }
 
-// Photo scroll container //
-const slider = document.querySelector('.slider');
-let speed = 10; // Initial scroll speed
-
-// Function to change the scroll speed (animation duration)
-function changeSpeed(newSpeed) {
-    const slider = document.querySelector('.slider');
-    slider.style.animationDuration = `${newSpeed}s`;
-  }
-  
-  // Example: Change the speed after 5 seconds
-  setTimeout(() => {
-    changeSpeed(40); // Slower speed (longer duration = slower)
-  }, 5000);
-  
+// Hamburger for nav bar (smaller screens)
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    if (navLinks) {
+        navLinks.classList.toggle('active');
+    }
+}

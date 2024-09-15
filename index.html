@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +20,10 @@
     <div class="topnav">
         <!-- "Main" title -->
         <h1 id="logo">Robert Ruelas</h1>
+        <button class="hamburger" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
         <!-- Navigation bar -->
         <nav class="nav-links">
             <a href="#"><i class="fa fa-fw fa-home"></i> Home</a>   
@@ -31,7 +35,6 @@
             <a href="#photos"><i class="fa fa-fw fa-picture-o"></i> Photos</a>
             <a href="#contact"><i class="fa fa-fw fa-vcard"></i> Contact</a>
         </nav>
-    </div>
 </header>
           
 <!--Home Section-->
@@ -139,33 +142,35 @@
 <br>
 <br>
 <br>
-<!-- Experience section-->       
-<div class="#experience" id="experience">
-<h2>Experience</h2>
-<div class="experience-section">
-    <!-- Apple Job -->
-    <div class="experience-card">
-        <div class="experience-logo">
-            <img src="assets/images/apple_logo.jpeg" alt="Apple logo">
-        </div>
-        <div class="experience-info">
-            <h6>Apple</h6>
-            <p>Genius</p>
-            <p>Houston, TX | April 2018 - Present</p>
-            <button class="accordion-button">View Duties</button>
-            <div class="accordion-content">
-                <ul>
-                    <li>Exceptional technical customer support for Apple products</li>
-                    <li>Hardware repairs and replacements</li>
-                    <li>Software-related assistance, including setup, configuration, and updates</li>
-                    <li>Accurate and confidential record-keeping to track trends and improve processes</li>
-                    <li>Collaborate and mentor team</li>
-                    <li>Proficient in SwiftUI</li>
-                    <li>ACMT and ACiT Certified</li>
-                </ul>
+<!-- Experience section-->
+<div id="experience">
+    <h2>Experience</h2>
+    <div class="experience-section">
+        <!-- Apple Job -->
+        <div class="experience-card">
+            <div class="experience-logo">
+                <img src="assets/images/apple_logo.jpeg" alt="Apple logo">
+            </div>
+            <div class="experience-info">
+                <h6>Apple</h6>
+                <p>Genius</p>
+                <p>Houston, TX | April 2018 - Present</p>
+                <div class="accordion-item">
+                    <button class="accordion-button">View Duties</button>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>Exceptional technical customer support for Apple products</li>
+                            <li>Hardware repairs and replacements</li>
+                            <li>Software-related assistance, including setup, configuration, and updates</li>
+                            <li>Accurate and confidential record-keeping to track trends and improve processes</li>
+                            <li>Collaborate and mentor team</li>
+                            <li>Proficient in SwiftUI</li>
+                            <li>ACMT and ACiT Certified</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
     <!-- Starbucks Job -->
     <div class="experience-card">
@@ -176,6 +181,7 @@
             <h6>Starbucks</h6>
             <p>Shift Supervisor</p>
             <p>Houston, TX | March 2007 - June 2018</p>
+            <div class="accordion-item">
             <button class="accordion-button">View Duties</button>
             <div class="accordion-content">
                 <ul>
@@ -188,6 +194,7 @@
             </div>
         </div>
     </div>
+    </div>
 
     <!-- Shape of Behavior Job -->
     <div class="experience-card">
@@ -198,6 +205,7 @@
             <h6>Shape of Behavior</h6>
             <p>Behavior Analysis Interventionist</p>
             <p>Sugarland, TX | April 2017 - April 2018</p>
+            <div class="accordion-item">
             <button class="accordion-button">View Duties</button>
             <div class="accordion-content">
                 <ul>
@@ -209,6 +217,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <!--Education section-->
@@ -260,13 +269,17 @@
             <h6>Behavioral Therapist</h6>
             <p>Rio Grande Valley Behavioral Consultants</p>
             <p>Edinburg, TX | March 2014 - May 2015</p>
+            <div class="accordion-item">
             <button class="accordion-button">View Details</button>
-        <div class="accordion-content">
-            <p>Implemented a Behavior Intervention Plan and worked with a client diagnosed with Autism Spectrum Disorder.</p>
-            <p>Utilized naturalistic observation, verbal operants, reinforcement, and collected and input data.</p>
-            <p>During my time, the client successfully learned over 80 verbal operants and showed exponential improvement in social situations.</p>
+            <div class="accordion-content">
+            <ul>    
+            <li>Implemented a Behavior Intervention Plan and worked with a client diagnosed with Autism Spectrum Disorder.</li>
+            <li>Utilized naturalistic observation, verbal operants, reinforcement, and collected and input data.</li>
+            <li>During my time, the client successfully learned over 80 verbal operants and showed exponential improvement in social situations.</li>
+            </ul>
         </div>
     </div>
+</div>
 </div>
 
     <div class="education-card">
@@ -274,11 +287,15 @@
             <h6>Research Assistant</h6>
             <p>University of Texas Pan American</p>
             <p>Edinburg, TX | Jan 2014 - May 2014</p>
-        <button class="accordion-button">View Details</button>
-        <div class="accordion-content">
-            <p>Observed two fish species: The Opaline Gourami and the Three-Spot Gourami using sampling methods including Focal Animal Sampling, All Occurrence Sampling, Scan Sampling (Behavior), and Scan Sampling (Location).</p>
-            <p>Each sample was divided into three sets of samples at one-minute intervals, except for Focal Sampling, which followed a random sample sequence.</p>
+            <div class="accordion-item">
+            <button class="accordion-button">View Details</button>
+            <div class="accordion-content">
+            <ul>    
+            <li>Observed two fish species: The Opaline Gourami and the Three-Spot Gourami using sampling methods including Focal Animal Sampling, All Occurrence Sampling, Scan Sampling (Behavior), and Scan Sampling (Location).</li>
+            <li>Each sample was divided into three sets of samples at one-minute intervals, except for Focal Sampling, which followed a random sample sequence.</li>
+            </ul>
         </div>
+    </div>
     </div>
     </div>
 
@@ -287,12 +304,16 @@
             <h6>Research Assistant</h6>
             <p>University of Texas Pan American</p>
             <p>Edinburg, TX | May 2013 - Aug 2013</p>
-        <button class="accordion-button">View Details</button>
-        <div class="accordion-content">
-            <p>Participated in bilingual quasi-interviews and administered questionnaires on physical and mental abuse in intimate relationships.</p>
-            <p>Assisted with quantitative and qualitative data analysis and completed data entry using Microsoft Excel.</p>
+            <div class="accordion-item">
+            <button class="accordion-button">View Details</button>
+            <div class="accordion-content">
+            <ul>    
+            <li>Participated in bilingual quasi-interviews and administered questionnaires on physical and mental abuse in intimate relationships.</li>
+            <li>Assisted with quantitative and qualitative data analysis and completed data entry using Microsoft Excel.</li>
+            </ul>
         </div>
     </div>
+</div>
 </div>
 </div>
 <!-- Portfolio Gallery Grid -->
@@ -518,6 +539,8 @@
 <br>
 <br>
 <br>
+</div>
+</div>
 <!--Contact Section-->
 <div class="#contact" id="contact">
 <br>
@@ -536,16 +559,16 @@
             <h2>Contact</h2>
             <h3>Thank you for visiting! I'd love to hear from you! 
                 <br>If you have any questions, feedback, or would like to get in touch with me, 
-                <br>please use the form below or reach out <a href="mailto:bobbyruelas@me.com" style="color: gray;">via Email</a><h3>
-    <div class="calendly-inline-widget" data-url="https://calendly.com/bobbyruelas" style="min-width:320px;height:630px;"></div></section>
-
+                <br>please use the form below or reach out <a href="mailto:bobbyruelas@me.com" style="color: gray;">via Email</a></h3>
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/bobbyruelas"></div>
 <br>
 <br>
 <br>
 <br>
 <br>
 <br>
-</div>
+        </div>
+</section>
 </body>
 
 <!-- Footer Class-->
