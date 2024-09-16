@@ -1,8 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 /* Reset for scoped elements within the body to avoid global conflicts */
 body, h1, h2, h3, h4, h5, h6, ul, p {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -23,13 +28,6 @@ a:hover {
 
 
 /* Flexbox for topnav container */
-.topnav {
-  display: flex;
-  flex-direction: column; /* Align items vertically */
-  align-items: center; /* Center items horizontally */
-  padding: 20px;
-  background-color: #333;
-}
 
 #logo {
   font-size: 40px;
@@ -85,11 +83,15 @@ header h1 {
 
 /* Navigation Styles */
 .topnav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #1a1a1a; /* Dark gray */
-  padding: 10px;
+  padding: 20px;
   display: flex;
   justify-content: center;
   gap: 20px;
+  width: 100%;
 }
 
 .topnav a {
@@ -119,6 +121,7 @@ header h1 {
 
 .centered-content img {
   max-width: 70%;
+  width: auto;
   height: auto;
   display: inline-block;
 }
