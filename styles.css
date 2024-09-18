@@ -422,40 +422,51 @@ header h1 {
 }
 
 /* Main photo section container */
+/* Base styling for the photo section */
 .photo-section {
-  width: 100%; /* Make the section take the full width of the viewport */
-  max-width: 1200px; /* Limit the max width on large screens */
+  width: 100%; /* Full width of the viewport */
+  max-width: 1200px; /* Limit the maximum width on larger screens */
   margin: 0 auto; /* Center the section */
-  padding: 20px; /* Add padding around the section */
-  box-sizing: border-box; /* Include padding in width calculations */
+  padding: 20px; /* Padding around the section */
+  box-sizing: border-box;
 }
 
-/* Responsive heading */
+/* Center and style the heading */
 .photo-section h2 {
-  font-size: 2rem; /* Make the heading responsive */
+  font-size: 2rem; /* Responsive heading size */
   text-align: center;
   margin-bottom: 20px;
 }
 
-/* Image container */
-.container {
-  display: inline-block; /* Keep images in a row */
-  margin-right: 15px; /* Space between images */
-  flex: 0 0 auto; /* Prevent flexbox from shrinking the container */
-}
-
 /* Scroll container */
 .scroll-container {
-  display: flex;
-  overflow-x: hidden; /* Hide overflow */
-  white-space: nowrap; /* Keep items on one line */
+  overflow-x: auto; /* Allow horizontal scroll */
+  overflow-y: hidden; /* Hide vertical overflow */
+  white-space: nowrap; /* Prevent wrapping */
   width: 100%; /* Full width of the container */
+  max-width: 100vw; /* Limit scroll container to viewport width */
+  scroll-snap-type: x mandatory; /* Optional: Adds snap to scrolling */
+}
+
+/* Image container */
+.photo-container {
+  display: inline-block;
+  margin-right: 15px; /* Space between images */
+  scroll-snap-align: start; /* Snap to the start of the image */
+}
+
+/* Images should be responsive */
+.photos {
+  width: 100%; /* Make the image responsive */
+  max-width: 300px; /* Max width for large screens */
+  height: auto; /* Keep the aspect ratio */
 }
 
 /* The slider that will scroll continuously */
 .slider {
   display: flex;
-  animation: scroll 20s linear infinite;
+  width: max-content; /* Let the slider adapt to the size of its content */
+  animation: scroll 30s linear infinite; /* Adjust the animation duration */
 }
 
 /* Keyframes for infinite scrolling */
@@ -464,22 +475,8 @@ header h1 {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(calc(-100% + 100vw)); /* Scroll only up to viewport width */
   }
-}
-
-/* Customizing the appearance of the container */
-/* Style for each image container */
-.photo-container {
-  flex: 0 0 auto; /* Prevents shrinking and wrapping */
-  margin-right: 20px; /* Space between images */
-  scroll-snap-align: start; /* Optional: enables snap scrolling */
-}
-
-/* Ensures the images have a fixed size */
-.photos {
-  max-width: 300px; /* Control image size */
-  height: auto;
 }
 
 /* Pause marquee on hover */
@@ -760,35 +757,38 @@ footer.footer a:hover {
     max-width: 300px;
   }
 
-
-  /* Media query for small screens */
+/* Media query Photos section for tablets and smaller screens */
 @media (max-width: 768px) {
   .photos {
-    max-width: 30vw; /* Adjust image size for smaller screens */
+    max-width: 45vw; /* Take up 45% of the viewport width for medium screens */
   }
 
-  /* Slower scroll speed on smaller screens */
-  .slider {
-    animation: scroll 40s linear infinite;
+  .photo-section h2 {
+    font-size: 1.5rem; /* Smaller heading size */
   }
 }
 
-/* Media query for extra small screens (e.g., phones) */
+/* Media query for extra small screens (phones) */
 @media (max-width: 480px) {
   .photos {
-    max-width: 40vw; /* Even smaller images for mobile devices */
-  }
-
-  .slider {
-    animation: scroll 30s linear infinite; /* Slow down scroll for small screens */
+    max-width: 70vw; /* Take up 70% of the viewport width for small screens */
   }
 
   .container {
-    margin-right: 10px; /* Reduce space between images on small screens */
+    margin-right: 10px; /* Reduce the space between images */
   }
-}
 
-/* Responsive Design */
+  .photo-section h2 {
+    font-size: 1.2rem; /* Smaller heading size */
+  }
+
+  .scroll-container {
+    padding-bottom: 10px; /* Ensure there's some space below */
+  }
+}  
+
+
+/* Responsive Design for Contact and Calendly Widget */
 @media (max-width: 768px) {
   #contact h2 {
     font-size: 24px; /* Adjust font size for smaller screens */

@@ -63,3 +63,13 @@ function toggleMenu() {
         navLinks.classList.toggle('active');
     }
 }
+
+const scrollContainer = document.querySelector('.scroll-container');
+
+// Set the scroll container's width to match the viewport width
+scrollContainer.style.maxWidth = window.innerWidth + 'px';
+
+// Update the scroll container's width on window resize
+window.addEventListener('resize', () => {
+  scrollContainer.style.maxWidth = window.innerWidth + 'px';
+});
