@@ -423,59 +423,63 @@ header h1 {
 
 /* Main photo section container */
 .photo-section {
-  width: 100%; /* Ensures the section is responsive */
-  max-width: 1450px; /* Set max width */
-  margin: 0 auto; /* Centers the section horizontally */
-  padding: 20px; /* Padding for spacing around the content */
-  box-sizing: border-box;
+  width: 100%; /* Make the section take the full width of the viewport */
+  max-width: 1200px; /* Limit the max width on large screens */
+  margin: 0 auto; /* Center the section */
+  padding: 20px; /* Add padding around the section */
+  box-sizing: border-box; /* Include padding in width calculations */
 }
 
-/* Scroll container with horizontal scroll */
+/* Responsive heading */
+.photo-section h2 {
+  font-size: 2rem; /* Make the heading responsive */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Image container */
+.container {
+  display: inline-block; /* Keep images in a row */
+  margin-right: 15px; /* Space between images */
+  flex: 0 0 auto; /* Prevent flexbox from shrinking the container */
+}
+
+/* Scroll container */
 .scroll-container {
-  overflow-x: auto; /* Enables horizontal scroll */
-  white-space: wrap; /* Prevents wrapping of items */
-  width: 100%; /* Makes sure it fits within the container */
-  box-sizing: border-box;
   display: flex;
+  overflow-x: hidden; /* Hide overflow */
+  white-space: nowrap; /* Keep items on one line */
+  width: 100%; /* Full width of the container */
 }
 
-.scroll-container::-webkit-scrollbar {
-  height: 8px; /* Custom scrollbar height */
-}
-
-.scroll-container::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-}
-
-/* Slider ensures that the containers align horizontally */
+/* The slider that will scroll continuously */
 .slider {
-  display: flex; /* Aligns containers horizontally */
-  flex-wrap: nowrap; /* Prevents wrapping */
-  animation: scroll 20s linear infinite; /* Auto scroll horizontally */
+  display: flex;
+  animation: scroll 20s linear infinite;
 }
 
 /* Keyframes for infinite scrolling */
 @keyframes scroll {
   0% {
-    transform: translateX(0); /* Start from the first item */
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%); /* Move to the end */
+    transform: translateX(-100%);
   }
 }
 
 /* Customizing the appearance of the container */
-.container {
-  margin-right: 20px;
-  flex: 0 0 auto; /* Prevents flexbox items from shrinking */
+/* Style for each image container */
+.photo-container {
+  flex: 0 0 auto; /* Prevents shrinking and wrapping */
+  margin-right: 20px; /* Space between images */
+  scroll-snap-align: start; /* Optional: enables snap scrolling */
 }
 
 /* Ensures the images have a fixed size */
 .photos {
-  max-width: 150px;
+  max-width: 300px; /* Control image size */
   height: auto;
-  display: block;
 }
 
 /* Pause marquee on hover */
@@ -484,29 +488,17 @@ header h1 {
 }
 
 /* Enlarge image on hover */
-.container:hover .photos {
+.photo-container:hover .photos {
   transform: scale(1.2); /* Enlarges image by 20% */
   transition: transform 0.3s ease-in-out; /* Smooth animation */
 }
 
 /* Optional: Add a slight shadow to the image when enlarged */
-.container:hover .photos {
+.photo-container:hover .photos {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Style for each image container */
-.container {
-  flex: 0 0 auto; /* Prevents shrinking and wrapping */
-  margin-right: 20px; /* Space between images */
-  scroll-snap-align: start; /* Optional: enables snap scrolling */
-}
-
-.photos {
-  max-width: 300px; /* Control image size */
-  height: auto;
-  display: block;
-}
-
+/* Styles for the Text Field */
 .center {
   text-align: center;
 }
@@ -647,7 +639,7 @@ footer.footer a:hover {
 /* Media Queries */
 
 /* Styles for phones */
-@media (max-width: 575.98px) {
+@media (max-width: 768px) {
   body {
       font-size: 0.875rem; /* 14px */
   }
@@ -662,7 +654,7 @@ footer.footer a:hover {
 }
 
 /* Styles for small devices (576px - 767.98px) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media (min-width: 576px) and (max-width: 768px) {
   body {
       font-size: 1rem; /* 16px */
   }
@@ -756,4 +748,31 @@ footer.footer a:hover {
     max-width: 300px;
   }
 
- 
+
+  /* Media query for small screens */
+@media (max-width: 768px) {
+  .photos {
+    max-width: 30vw; /* Adjust image size for smaller screens */
+  }
+
+  /* Slower scroll speed on smaller screens */
+  .slider {
+    animation: scroll 40s linear infinite;
+  }
+}
+
+/* Media query for extra small screens (e.g., phones) */
+@media (max-width: 480px) {
+  .photos {
+    max-width: 40vw; /* Even smaller images for mobile devices */
+  }
+
+  .slider {
+    animation: scroll 30s linear infinite; /* Slow down scroll for small screens */
+  }
+
+  .container {
+    margin-right: 10px; /* Reduce space between images on small screens */
+  }
+}
+
