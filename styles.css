@@ -509,17 +509,20 @@ header h1 {
 }
 
 /* Contact Section */
-
 #contact {
   padding: 20px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
 }
 
 #contact h2 {
   font-size: 30px;
   text-align: center;
   margin: 20px 0;
-  color: #d3d3d3; /* Light gray */
+  color: white; /* Darker color for readability */
 }
 
 #contact h3 {
@@ -527,18 +530,27 @@ header h1 {
   text-align: center;
   line-height: 1.8;
   margin: 0 20px;
-  color: #d3d3d3; /* Light gray */
+  color: white; /* Slightly darker gray for readability */
+}
+
+.contact-container {
+  display: block; /* Use block layout to center the content */
+  text-align: center;
+  max-width: 800px; /* Limit the width of text for better readability */
+  margin: 0 auto; /* Center the content */
 }
 
 .calendly-inline-widget {
   width: 100%; /* Full width */
-  height: auto; /* Let the height adjust dynamically */
-  min-height: 630px; /* Minimum height to prevent cut-off */
+  max-width: 600px; /* Limit the widget width */
+  min-height: 630px; /* Ensure it doesn't cut off */
   box-sizing: border-box;
+  margin: 20px auto; /* Center and add space above and below */
+  border: none; /* Remove default border */
 }
 
 /* Footer Section */
-#contact, footer.footer {
+footer.footer {
   padding-bottom: 50px; /* Extra padding to the bottom */
 }
 
@@ -776,3 +788,17 @@ footer.footer a:hover {
   }
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  #contact h2 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  #contact h3 {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .calendly-inline-widget {
+    min-height: 500px; /* Adjust widget height for smaller screens */
+  }
+}
