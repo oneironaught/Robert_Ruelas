@@ -292,18 +292,19 @@ header h1 {
 
 .education-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   background-color: #333;
   border-radius: 10px;
+  max-width: auto !important;
+  max-height: auto !important;
+  min-height: auto !important;
+  max-width: auto !important;
   padding: 20px;
-  width: 300px;
   gap: 20px;
-  min-height: 250px;
   margin: 0 auto;
   transition: transform 0.3s, box-shadow 0.3s;
-  flex-grow: 1;
 }
 
 .education-card:hover {
