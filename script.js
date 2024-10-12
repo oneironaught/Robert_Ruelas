@@ -1,75 +1,40 @@
-// Toggle for Experience section //
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.accordion-button').forEach(button => {
-        button.addEventListener('click', () => {
-            const accordionContent = button.closest('.accordion-item').querySelector('.accordion-content');
-            if (!accordionContent) {
-                console.error('Accordion content not found for this button.');
-                return;
-            }
+// AOS Initialization (Animate on Scroll)
+AOS.init();
 
-            button.classList.toggle('active');
-
-            if (button.classList.contains('active')) {
-                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-            } else {
-                accordionContent.style.maxHeight = 0;
-            }
-        });
-    });
-});
-
-// Photo scroll container
-const slider = document.querySelector('.slider');
-if (slider) {
-    let speed = 10; // Initial scroll speed
-
-    // Function to change the scroll speed (animation duration)
-    function changeSpeed(newSpeed) {
-        slider.style.animationDuration = `${newSpeed}s`;
-    }
-
-    // Example: Change the speed after 5 seconds
-    setTimeout(() => {
-        changeSpeed(40); // Slower speed (longer duration = slower)
-    }, 5000);
-}
-
-// Function to change scroll speed based on screen width
-function adjustScrollSpeed() {
-    const slider = document.querySelector('.slider');
-    const screenWidth = window.innerWidth;
-  
-    if (screenWidth < 480) {
-      // Slower speed for very small screens (e.g., phones)
-      slider.style.animationDuration = '60s';
-    } else if (screenWidth < 768) {
-      // Medium speed for tablets
-      slider.style.animationDuration = '40s';
-    } else {
-      // Normal speed for larger screens
-      slider.style.animationDuration = '20s';
-    }
-  }
-  
-  // Call adjustScrollSpeed on page load and when the window is resized
-  window.addEventListener('load', adjustScrollSpeed);
-  window.addEventListener('resize', adjustScrollSpeed);
-
-// Hamburger for nav bar (smaller screens)
+// Toggle Mobile Navigation Menu
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
-    if (navLinks) {
-        navLinks.classList.toggle('active');
+    navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+}
+
+// Dark Mode Toggle Functionality
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
+
+// Back to Top Button Functionality
+const backToTopBtn = document.getElementById('backToTopBtn');
+
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopBtn.style.display = 'block';
+    } else {
+        backToTopBtn.style.display = 'none';
     }
 }
 
-const scrollContainer = document.querySelector('.scroll-container');
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+}
 
-// Set the scroll container's width to match the viewport width
-scrollContainer.style.maxWidth = window.innerWidth + 'px';
-
-// Update the scroll container's width on window resize
-window.addEventListener('resize', () => {
-  scrollContainer.style.maxWidth = window.innerWidth + 'px';
-});
+// Toggle the mobile menu
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('open'); // Toggle the 'open' class to show/hide the menu
+}

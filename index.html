@@ -1,612 +1,125 @@
 <!DOCTYPE html>
-<lang="en">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robert Ruelas</title>
     <!-- Linking CSS -->
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <!-- Linking javascript -->
-    <script src="script.js"></script>
+    <!-- Linking JavaScript -->
+    <script src="script.js" defer></script>
     <!-- Load an icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-    <!-- Calendly widget script -->
+    <!--Calendly-->
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- AOS Animation Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </head>
-<!--Header and Nav-->
-<header>
-    <div class="topnav">
-        <!-- "Main" title -->
-        <h1 id="logo">Robert Ruelas</h1>
-        <button class="hamburger" onclick="toggleMenu()">
-            <i class="fa fa-bars"></i>
-          </button>
-        </div>
-        <!-- Navigation bar -->
-        <nav class="nav-links">
-            <a href="#"><i class="fa fa-fw fa-home"></i> Home</a>   
-            <a href="#about"><i class="fa fa-fw fa-book"></i> About</a>
-            <a href="#skills"><i class="fa fa-fw fa-pencil-square-o"></i> Skills</a>
-            <a href="#experience"><i class="fa fa-fw fa-handshake-o"></i> Experience</a>
-            <a href="#education"><i class="fa fa-fw fa-graduation-cap"></i> Education</a>
-            <a href="#projects"><i class="fa fa-fw fa-suitcase"></i> Projects</a>
-            <a href="#photos"><i class="fa fa-fw fa-picture-o"></i> Photos</a>
-            <a href="#contact"><i class="fa fa-fw fa-vcard"></i> Contact</a>
-        </nav>
-</header>
-          
-<!--Home Section-->
+
 <body>
-<body style="background-color:black;">
+    <!-- Dark Mode Toggle Button -->
+    <button id="dark-mode-toggle" class="dark-mode-toggle">Toggle Dark Mode</button>
 
-<!--Content-->
-<div class="existing-container">  
-  <div class="centered-content">
-      <div class="image-container">
-          <img src="assets/images/Black White Minimalist SImple Monogram Typography Logo-2.png" alt="Centered Image">
-      </div>
-  </div>
-</div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to Robert Ruelas' Portfolio</h1>
+            <p>Your one-stop solution for software development and technical consulting.</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+            <a href="#about" class="cta-button">About me</a>
+            <a href="#skills" class="cta-button">Skills</a>
+            <a href="#experience" class="cta-button">Experience</a>
 
-<!--About me section-->       
-<div class="#about" id="about">  
-       <h2>About Me</h2>
-        <br>
-        <br>
-        <h3>
-        My name is Robert Ruelas. I am a Technical Consultant and Software Developer that can help troubleshoot
-        <br> 
-        your hardware or elevate your next project. I'm also the co-founder and creative director of And Venus,
-        <br>
-        a musical project that provides insight into the psychology of music.<br>
-        <br>
-        My objective is to obtain a challenging and rewarding position in the technical industry, leveraging my exceptional
-        <br> 
-        hardware and software skills, strong problem solving, and leadership experience to provide outstanding results that will
-        <br> 
-        contribute to the success of your team.<br> 
-        <br>
-        As you will note, I am a college graduate from The University of Texas Pan American, and intend on
-        <br>
-        pursuing a Masters of Science in Human-Computer Interaction and Human Factors. I have more than 10
-        <br>
-        years of technical hardware/software experience and over 10 years of customer service.    
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-</h3>
-</div>
 
-<!--Skills section-->
-<div class="#skills" id="skills">  
-<h2>Skills</h2>
-<br>
-<h3>
-  <ul>
-    <ul>Effective team management and leadership skills</ul>
-    <ul>Excellent communication and organization skills</ul>
-    <ul>Ability to work independently and as part of a team</ul>
-    <ul>Mentorship</ul>
-    <ul>Exceptional technical customer support for Apple products</ul>
-    <ul>Strong attention to detail and accuracy</ul>
-    <ul>Software-related assistance, including setup, configuration, updates, and conflict resolution</ul>
-    <ul>Front End Developer</ul>
-    <ul>Experienced in repairing Mac and iPhone hardware</ul>
-    <ul>ACMT and ACiT</ul>
-    <ul>Proficient in:</ul> 
-        <ol>HTML, CSS, Javascript</ol>
-        <ol>Python and SwiftUI</ol>
-        <ol>Proficient in macOS and Microsoft</ol>
-        <ol>Proficient in iOS and Android OS</ol>
-        <ol>Proficient in SPSS and R</ol>
-  </ul>    
-</h3>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-<!-- Experience section-->
-<div class="#experience" id="experience">
-    <h2>Experience</h2>
-    <div class="experience-section">
-        <!-- Apple Job -->
-        <div class="experience-card">
-            <div class="experience-logo">
-                <img src="assets/images/apple_logo.jpeg" alt="Apple logo">
-            </div>
-            <div class="experience-info">
-                <h6>Apple</h6>
-                <p>Genius</p>
-                <p>Houston, TX | April 2018 - Present</p>
-                <div class="accordion-item">
-                    <button class="accordion-button">View Duties</button>
-                    <div class="accordion-content">
-                        <ul>
-                            <li>Exceptional technical customer support for Apple products</li>
-                            <li>Hardware repairs and replacements</li>
-                            <li>Software-related assistance, including setup, configuration, and updates</li>
-                            <li>Accurate and confidential record-keeping to track trends and improve processes</li>
-                            <li>Collaborate and mentor team</li>
-                            <li>Proficient in SwiftUI</li>
-                            <li>ACMT and ACiT Certified</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </div>
-
-    <!-- Starbucks Job -->
-    <div class="experience-card">
-        <div class="experience-logo">
-            <img src="assets/images/starbucks_logo.jpeg" alt="Starbucks logo">
-        </div>
-        <div class="experience-info">
-            <h6>Starbucks</h6>
-            <p>Shift Supervisor</p>
-            <p>Houston, TX | March 2007 - June 2018</p>
-            <div class="accordion-item">
-            <button class="accordion-button">View Duties</button>
-            <div class="accordion-content">
-                <ul>
-                    <li>Customer service and customer connection</li>
-                    <li>Cash management and maintaining food quality control</li>
-                    <li>Ensuring a clean and positive work environment</li>
-                    <li>Mentoring employees for growth and advancement within the company</li>
-                    <li>Organizing and maintaining product flow in accordance with the planogram</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    </div>
-
-    <!-- Shape of Behavior Job -->
-    <div class="experience-card">
-        <div class="experience-logo">
-            <img src="assets/images/the_shape_of_behavior_logo.jpeg" alt="Shape of Behavior logo">
-        </div>
-        <div class="experience-info">
-            <h6>Shape of Behavior</h6>
-            <p>Behavior Analysis Interventionist</p>
-            <p>Sugarland, TX | April 2017 - April 2018</p>
-            <div class="accordion-item">
-            <button class="accordion-button">View Duties</button>
-            <div class="accordion-content">
-                <ul>
-                    <li>Applied Behavioral Analysis (ABA) and Analytical Problem Solving</li>
-                    <li>Day Treatments, Preference Assessment, Parent Training, Social Skills</li>
-                    <li>Shadowing & Inclusion, EEG Biofeedback, Speech Therapy, Autism Therapy</li>
-                    <li>Data Collection Implementation (Catalyst Program)</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<!--Education section-->
-<div class="#education" id="education">
-<h2>Education</h2>
-<br>
-<br>
-<!-- University Education -->
-<div class="education-section">
-    <a href="https://www.utrgv.edu" target="_blank">
-    <div class="education-card">
-        <div class="education-logo">
-            <img src="assets/images/utpa_logo.jpeg" alt="UTPA Logo">
-        </div>
-        <div class="education-info">
-            <h6>University of Texas Pan American</h6>
-            <p>Edinburg, TX</p>
-            <p>B.A. Psychology</p>  
-        </div>
-    </div>
-</a>
-<!-- High School Education -->
-    <a href="https://whs.wisd.us" target="_blank"> 
-    <div class="education-card">
-        <div class="education-logo">
-            <img src="assets/images/whs_logo.jpeg" alt="Weslaco High School Logo">
-        </div>
-        <div class="education-info">
-            <h6>Weslaco High School</h6>
-            <p>Weslaco, TX</p>
-            <p>High School Diploma</p>
-        </div>
-    </div>
-</a>
-</div>
-</div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<!-- Educational Experience Section with Accordion -->
-<h2>Educational Experience</h2>
-<div class="education-section">
-<div class="education-card">
-    <div class="education-info">
-            <h6>Behavioral Therapist</h6>
-            <p>Rio Grande Valley Behavioral Consultants</p>
-            <p>Edinburg, TX | March 2014 - May 2015</p>
-            <div class="accordion-item">
-            <button class="accordion-button">View Details</button>
-            <div class="accordion-content">
-            <ul>    
-            <li>Implemented a Behavior Intervention Plan and worked with a client diagnosed with Autism Spectrum Disorder.</li>
-            <li>Utilized naturalistic observation, verbal operants, reinforcement, and collected and input data.</li>
-            <li>During my time, the client successfully learned over 80 verbal operants and showed exponential improvement in social situations.</li>
-            </ul>
-        </div>
-    </div>
-</div>
-</div>
-
-    <div class="education-card">
-        <div class="education-info">
-            <h6>Research Assistant</h6>
-            <p>University of Texas Pan American</p>
-            <p>Edinburg, TX | Jan 2014 - May 2014</p>
-            <div class="accordion-item">
-            <button class="accordion-button">View Details</button>
-            <div class="accordion-content">
-            <ul>    
-            <li>Observed two fish species: The Opaline Gourami and the Three-Spot Gourami using sampling methods including Focal Animal Sampling, All Occurrence Sampling, Scan Sampling (Behavior), and Scan Sampling (Location).</li>
-            <li>Each sample was divided into three sets of samples at one-minute intervals, except for Focal Sampling, which followed a random sample sequence.</li>
-            </ul>
-        </div>
-    </div>
-    </div>
-    </div>
-
-    <div class="education-card">
-        <div class="education-info">
-            <h6>Research Assistant</h6>
-            <p>University of Texas Pan American</p>
-            <p>Edinburg, TX | May 2013 - Aug 2013</p>
-            <div class="accordion-item">
-            <button class="accordion-button">View Details</button>
-            <div class="accordion-content">
-            <ul>    
-            <li>Participated in bilingual quasi-interviews and administered questionnaires on physical and mental abuse in intimate relationships.</li>
-            <li>Assisted with quantitative and qualitative data analysis and completed data entry using Microsoft Excel.</li>
-            </ul>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<!-- Portfolio Gallery Grid -->
-<div class="#projects" id="projects">
-<h2>Projects</h2>
-<!--Projects content-->
-<br>    
-<div class="row">
-  <div class="column">
-      <div class="container">
-          <a href="https://andvenus.com"><img src="assets/images/and_venus.jpeg" alt="and_venus" class="image">
-          <div class="middle">
-              <div class="text">
-                  <h3>And Venus</h3>
-                  <p>This is my bands official website. It was created using HTML, CSS, and Javascript</p>
-              </div>
-          </div>
-          </a>
-      </div>
-  </div>
-  <div class="column">
-    <div class="container">
-        <a href="https://oneironaught.github.io/password-generator/"><img src="assets/images/password_generator.jpeg" alt="password_generator" class="image">
-        <div class="middle">
-            <div class="text">
-                <h3>Password Generator</h3>
-                <p>This is a mini Password Generator that I created using HTML, CSS, and Javascript</p>
-            </div>
-        </div>
-        </a>
-    </div>
-</div>
-  <div class="column">
-      <div class="container">
-          <a href="https://oneironaught.github.io/run-buddy/"><img src="assets/images/run_buddy.jpeg" alt="run_buddy" class="image">
-          <div class="middle">
-              <div class="text">
-                  <h3>Run Buddy Inc.,</h3>
-                  <p>This is a sample gym website that I created using HTML, CSS, and Javascript</p>
-              </div>
-          </div>
-          </a>
-      </div>
-  </div>
-  <div class="row">
-    <div class="column">
-        <div class="container">
-            <a href="https://horiseon.on.fleek.co"><img src="assets/images/horiseon.png" alt="Horiseon" class="image">
-            <div class="middle">
-                <div class="text">
-                    <h3>Horiseon</h3>
-                    <p>This is a sample website that I created using HTML, CSS, and Javascript</p>
-                </div>
-            </div>
-            </a>
-        </div>
-    </div>
-  <div class="column">
-        <div class="container">
-            <a href="https://oneironaught.github.io/Hasbulla-Fan-Page/"><img src="assets/images/hasbulla.jpeg" alt="hasbulla" class="image">
-            <div class="middle">
-                <div class="text">
-                    <h3>Hasbulla</h3>
-                    <p>My first basic website that I uploaded to GitHub. I used HTML and CSS</p>
-                </div>
-            </div>
-            </a>
-        </div>
-    </div>
-    <div class="column">
-      <div class="container">
-          <a href="https://sant-andreu-jazz.on.fleek.co"><img src="assets/images/alba.jpg" alt="alba" class="image">
-          <div class="middle">
-              <div class="text">
-                  <h3>All that Jazz</h3>
-                  <p>This is a skeleton for a fan website utilizing hyperlinks and a Buy Now button. I used HTML and CSS</p>
-              </div>
-          </div>
-          </a>
-      </div>
-  </div>
-</div>
-</div>  
-<!-- END GRID -->
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<!--Images section-->
-<div class="#photos" id="photos">
-<div class="photo-section">
-    <h2>Photos</h2>
-    <div class="scroll-container">
-      <div class="slider">
-        <div class="photo-container">
-            <a href="assets/images/self_1.jpeg" aria-label="Link to full-size image of the Waterwall in Houston, TX">
-                <img src="assets/images/self_1.jpeg" alt="Waterwall in Houston, TX" class="photos">
-              </a>
-              <div class="center">
-                <div class="text">Waterwall<br>Houston, TX</div>
-              </div>
-            </div>
-            <div class="photo-container">
-                <a href="assets/images/self_2.jpg"aria-label="Link to full-size image of Robert in studio">
-                    <img src="assets/images/self_2.jpg" alt="Studio 956" class="photos">
-                </a>
-                <div class="center">
-                    <div class="text">Studio 956</div>
-                </div>
-            </div>
-            <div class="photo-container">
-              <a href="assets/images/self_3.jpg" aria-label="Link to full-size image of Robert in front of the Effiel Tower">
-                  <img src="assets/images/self_3.jpg" alt="Effiel Tower in Paris, France" class="photos">
-              </a>
-              <div class="center">
-                  <div class="text">Effiel Tower</div>
-              </div>
-          </div>
-          <div class="photo-container">
-            <a href="assets/images/self_4.jpg" aria-label="Link to full-size image of Robert perfoming at Red 7 outdoor stage">
-                <img src="assets/images/self_4.jpg" alt="Red 7 Outdoor Stage" class="photos">
-            </a>
-            <div class="center">
-                <div class="text">Red 7<br>Outdoor Stage</div>
-            </div>
-        </div>
-        <div class="photo-container">
-          <a href="assets/images/self_5.jpg" aria-label="Link to full-size image of Robert performing at Red 7 indoor stage">
-              <img src="assets/images/self_5.jpg" alt="Red 7 Indoor Stage" class="photos">
-          </a>
-          <div class="center">
-              <div class="text">Red 7 <br>Indoor Stage</div>
-          </div>
-      </div>
-      <div class="photo-container">
-        <a href="assets/images/self_6.jpg" aria-label="Link to full-size image of Robert performing at Red 7 indoor stage">
-            <img src="assets/images/self_6.jpg" alt="Red 7 Logo Image in background" class="photos">
-        </a>
-        <div class="center">
-            <div class="text">Red 7 Logo</div>
-        </div>
-    </div>
-    <div class="photo-container">
-      <a href="assets/images/self_7.jpg" aria-label="Link to full-size image of Robert rehearsing with band And Venus">
-          <img src="assets/images/self_7.jpg" alt="Rehearsal solo image" class="photos">
-      </a>
-      <div class="center">
-          <div class="text">Rehearsal</div>
-      </div>
-  </div>
-  <div class="photo-container">
-    <a href="assets/images/self_8.jpg" aria-label="Link to full-size image of Robert performing at Cine El Rey in McAllen, TX">
-        <img src="assets/images/self_8.jpg" alt="Cine El Rey in McAllen, TX" class="photos">
-    </a>
-    <div class="center">
-        <div class="text">Live at Cine el Rey<br>McAllen, TX</div>
-    </div>
-</div>
-<div class="photo-container">
-  <a href="assets/images/self_9.jpg" aria-label="Link to full-size image of Robert performing Thunderbird Coffee Shop in Austin, TX">
-      <img src="assets/images/self_9.jpg" alt="Thunderbird Coffee Shop in Austin, TX" class="photos">
-  </a>
-  <div class="center">
-      <div class="text">Live at Thunderbird Coffee<br>Austin, TX</div>
-  </div>
-</div>
-<div class="photo-container">
-  <a href="assets/images/self_10.jpg" aria-label="Link to full-size image of Robert performing in front of the Effiel Tower in Paris, France">
-      <img src="assets/images/self_10.jpg" alt="Robert performing live in front of Effiel Tower" class="photos">
-  </a>
-  <div class="center">
-      <div class="text">Live in Paris</div>
-  </div>
-</div>
-<div class="photo-container">
-  <a href="assets/images/self_11.jpeg" aria-label="Link to full-size image of Robert as a child in 1990">
-      <img src="assets/images/self_11.jpeg" alt="Childhood photo of Robert" class="photos">
-  </a>
-  <div class="center">
-      <div class="text">1990</div>
-  </div>
-</div>
-<div class="photo-container">
-  <a href="assets/images/gatos_team_photo.jpeg" aria-label="Link to full-size image of Robert and his baseball team Los Gatos">
-      <img src="assets/images/gatos_team_photo.jpeg" alt="Los Gatos Team Photo" class="photos">
-  </a>
-  <div class="center">
-      <div class="text">Los Gatos Team Photo</div>
-  </div>
-</div>
-<div class="photo-container">
-  <a href="assets/images/gatos_practice.jpeg" aria-label="Link to full-size image of Roberts baseball helmet during practice with baseball team Los Gatos">
-      <img src="assets/images/gatos_practice.jpeg" alt="Gatos Practice" class="photos">
-  </a>
-  <div class="center">
-      <div class="text">Los Gatos Practice</div>
-  </div>
-</div>
-</div>
-</div>  
-</div>
-</div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<!--Contact Section-->
-<div id="contact">
-    <section class="text-center py-5 contact-container">
-        <h2>Contact</h2>
-        <h3>
-            Thank you for visiting! I'd love to hear from you! 
-            <br>If you have any questions, feedback, or would like to get in touch with me, 
-            <br>please use the form below or reach out 
-            <a href="mailto:bobbyruelas@me.com" style="color: gray;">via Email</a>
-        </h3>
-        <div class="calendly-inline-widget" data-url="https://calendly.com/bobbyruelas" style="min-width:320px;height:630px;"></div>
     </section>
-</div>
+
+    <!--About me section-->
+    <div class="content-section" id="about" data-aos="fade-up">
+        <h2>About Me</h2>
+        <p>My name is Robert Ruelas. I am a Technical Consultant and Software Developer that can help troubleshoot
+            your hardware or elevate your next project. I'm also the co-founder and creative director of And Venus, a musical project that provides insight into the psychology of music.
+        </p>
+    </div>
+
+    <!-- Skills section -->
+    <div class="content-section" id="skills" data-aos="fade-up">
+        <h2>Skills</h2>
+        <ul>
+            <li>Effective team management and leadership skills</li>
+            <li>Excellent communication and organization skills</li>
+            <li>Front End Developer (HTML, CSS, Javascript)</li>
+            <li>Experienced in repairing Mac and iPhone hardware</li>
+            <li>ACMT and ACiT certified</li>
+        </ul>
+    </div>
+
+    <!-- Experience section -->
+    <div class="content-section" id="experience" data-aos="fade-up">
+        <h2>Experience</h2>
+        <div class="experience-card">
+            <h3>Apple</h3>
+            <p>Genius</p>
+            <p>April 2018 - Present</p>
+        </div>
+    </div>
+
+    <!-- Education section -->
+    <div class="content-section" id="education" data-aos="fade-up">
+        <h2>Education</h2>
+        <p>B.A. Psychology from the University of Texas Pan American</p>
+    </div>
+
+    <!-- Projects section -->
+    <div class="content-section" id="projects" data-aos="fade-up">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <img src="assets/images/and_venus.jpeg" alt="And Venus" class="image">
+            <div class="text">
+                <h3>And Venus</h3>
+                <p>My band's official website. Created using HTML, CSS, and Javascript.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Photos section -->
+    <div class="content-section" id="photos" data-aos="fade-up">
+        <h2>Photos</h2>
+        <img src="assets/images/self_1.jpeg" alt="Robert Photo" class="photos" loading="lazy">
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container">
+        <div id="contact" class="content-section">
+            <h2>Contact</h2>
+            <h3>Thank you for visiting! I'd love to hear from you! 
+                <br>If you have any questions, feedback, or would like to get in touch with me, 
+                <br>please use the form below or reach out <a href="mailto:bobbyruelas@me.com" style="color: gray;">via Email</a>.
+            </h3>
+            <div class="calendly-inline-widget" data-url="https://calendly.com/bobbyruelas" style="min-width:320px;height:630px;"></div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button onclick="topFunction()" id="backToTopBtn" title="Go to top">Top</button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/rruelas87/"><i class="fa fa-linkedin-square"></i></a>
+            <a href="https://www.facebook.com/bobby.ruelas/"><i class="fa fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/andvenus/"><i class="fa fa-instagram"></i></a>
+        </div>
+        <p>© 2024 Robert Ruelas</p>
+    </footer>
 </body>
 
-<!-- Footer Class-->
-<footer class="footer">
-    <!-- Social Media Icons -->
-    <div class="social-icons" style="text-align: center;">
-        <a href="https://www.linkedin.com/in/rruelas87/" aria-label="LinkedIn">
-            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.facebook.com/bobby.ruelas/" aria-label="Facebook">
-            <i class="fa fa-facebook-square" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.instagram.com/andvenus/" aria-label="Instagram">
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-        </a>      
-        <a href="https://github.com/oneironaught" aria-label="GitHub">
-            <i class="fa fa-github" aria-hidden="true"></i>
-        </a>
-        <a href="https://music.apple.com/us/artist/and-venus/1335594997" aria-label="Apple Music">
-            <i class="fa fa-apple" aria-hidden="true"></i>
-        </a>
-        <a href="https://open.spotify.com/artist/4CPEqoLO6sSiU3TS6Gygc0?si=2FRH7YnhRWy9Jrrlctkzew" aria-label="Spotify">
-            <i class="fa fa-spotify" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.youtube.com/@bobbyruelas" aria-label="YouTube">
-            <i class="fa fa-youtube-play" aria-hidden="true"></i>
-        </a>
-    </div>
-
-    <br>
-
-    <div style="text-align: center;">
-        <a href="terms.html" style="color:#999999;">Terms of Use</a>
-        <span style="color:#999999;"> | </span>
-        <a href="privacy.html" style="color:#999999;">Privacy Policy</a>
-    </div>
-
-    <br>
-
-    <div style="text-align: center;">
-        <span style="color:#999999;">© 2024 Robert Ruelas</span>
-    </div>
-
-    <br>
-</footer>
 </html>
-
-
