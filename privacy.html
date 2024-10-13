@@ -1,150 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robert Ruelas</title>
-    <!--Linking HTML-->
-    <link rel="stylesheet" type="text/html" href="index.html">
     <!-- Linking CSS -->
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <!-- Linking javascript -->
-    <script src="script.js"></script>
+    <!-- Linking JavaScript -->
+    <script src="script.js" defer></script>
     <!-- Load an icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--Favicon-->
+    <!--Calendly-->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- AOS Animation Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </head>
-<!--Header and Nav-->
-<header>
-    <div class="topnav">
-        <!-- "Main" title -->
-        <h1 id="logo">Robert Ruelas</h1>
-        <!-- Navigation bar -->
-        <nav class="nav-links">
-            <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>   
-            <a href="index.html#about"><i class="fa fa-fw fa-book"></i> About</a>
-            <a href="index.html#skills"><i class="fa fa-fw fa-pencil-square-o"></i> Skills</a>
-            <a href="index.html#experience"><i class="fa fa-fw fa-handshake-o"></i> Experience</a>
-            <a href="index.html#education"><i class="fa fa-fw fa-graduation-cap"></i> Education</a>
-            <a href="index.html#projects"><i class="fa fa-fw fa-suitcase"></i> Projects</a>
-            <a href="index.html#photos"><i class="fa fa-fw fa-picture-o"></i> Photos</a>
-            <a href="index.html#contact"><i class="fa fa-fw fa-vcard"></i> Contact</a>
-        </nav>
-    </div>
-</header>
 
-<!--Content-->
-<div class="centered-content">
-<br>
-<br>    
-<h2>Privacy Policy
-<br>
-<br>
-Effective Date: 09/12/2024</h2>
-<br>
-<br>
-<p>
-At robertruelas.com (“we,” “our,” “us”), your privacy is very important to us. This Privacy Policy outlines the types of information we collect, how we use it, and the measures we take to ensure your data is protected.
-<br>
-<br>
-1. <u>Information We Collect</u>
-<br>
-We may collect the following types of information when you visit or interact with our website:
-<br>
-- Personal Information: Information you provide voluntarily, such as your name, email address, or other contact details, when you subscribe to our newsletter, fill out forms, or contact us directly.<br>
-- Non-Personal Information: Data that does not identify you personally, such as your IP address, browser type, device information, and website usage data (e.g., pages visited, time spent on the site).
-<br>
-<br>
-2. <u>How We Use Your Information</u>
-<br>
-We may use the information we collect for the following purposes:<br>
-- To improve our website’s functionality and user experience.<br>
-- To send newsletters or promotional materials if you have opted in to receive them.<br>
-- To respond to your inquiries or provide support.<br>
-- To analyze trends, traffic, and user behavior on our website.<br>
-- To comply with legal obligations or protect our rights.<br>
-<br>
-3. <u>Cookies and Tracking Technologies</u>
-<br>
-We use cookies and similar tracking technologies to collect non-personal information about your browsing activities. Cookies help us to personalize your experience, analyze traffic, and improve the website. You can choose to disable cookies through your browser settings; however, doing so may limit some features of the website.
-<br>
-<br>
-4. Third-Party Services
-<br>
-We may use third-party service providers to assist with website analytics, marketing, or other functionalities. These third-party providers may have access to your information solely for the purpose of performing their services on our behalf and are obligated not to disclose or use it for any other purpose.
-<br>
-<br>
-5. Data Security
-<br>
-We take reasonable precautions to protect your personal information from unauthorized access, disclosure, or alteration. However, please be aware that no method of transmission over the Internet or method of electronic storage is 100% secure.
-<br>
-<br>
-6. Your Rights
-<br>
-You have the right to:
-<br>
-- Access, correct, or delete your personal information.<br>
-- Opt-out of receiving communications from us at any time.<br>
-- Request information about how we handle your data.<br>
-*If you would like to exercise any of these rights, 
-<br>please contact us <a href="mailto:bobbyruelas@gmail.com" style="color: gray;">via Email</a>*
-<br>
-<br>
-7. Children’s Privacy
-<br>
-Our website is not intended for individuals under the age of 13. We do not knowingly collect personal information from children under 13. If we learn that we have collected such information, we will take steps to delete it.
-<br>
-<br>
-8. Changes to This Privacy Policy
-<br>
-We reserve the right to update or modify this Privacy Policy at any time. Changes will be effective immediately upon posting to the website. We encourage you to review this policy periodically.
-<br>
-<br>
-9. Contact Us
-<br>
-If you have any questions or concerns about this Privacy Policy,
-<br>
-<a href="mailto:bobbyruelas@gmail.com" style="color: gray;">please email us here </a></p><br>
-<br>
-<br>
+<body>
+    <!-- Dark Mode Toggle Button -->
+    <button id="dark-mode-toggle" class="dark-mode-toggle">Toggle Dark Mode</button>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to Robert Ruelas' Portfolio</h1>
+            <p>Your one-stop solution for software development and technical consulting.</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+            <a href="#about" class="cta-button">About me</a>
+            <a href="#skills" class="cta-button">Skills</a>
+            <a href="#experience" class="cta-button">Experience</a>
+            <a href="#education" class="cta-button">Education</a>
+            <a href="#projects" class="cta-button">Projects</a>
+            <a href="#photos" class="cta-button">Photos</a>
+        </div>
+    </section>
+
+   <!--Content-->
+<class="centered-content">
+    <br>
+    <br>    
+    <h4>Privacy Policy
+    <br>
+    <br>
+    Effective Date: 09/12/2024
+    <br>
+    <br>
+    <p>
+    At robertruelas.com (“we,” “our,” “us”), your privacy is very important to us. This Privacy Policy outlines the types of information we collect, how we use it, and the measures we take to ensure your data is protected.
+    <br>
+    <br>
+    1. <u>Information We Collect</u>
+    <br>
+    We may collect the following types of information when you visit or interact with our website:
+    <br>
+    - Personal Information: Information you provide voluntarily, such as your name, email address, or other contact details, when you subscribe to our newsletter, fill out forms, or contact us directly.<br>
+    - Non-Personal Information: Data that does not identify you personally, such as your IP address, browser type, device information, and website usage data (e.g., pages visited, time spent on the site).
+    <br>
+    <br>
+    2. <u>How We Use Your Information</u>
+    <br>
+    We may use the information we collect for the following purposes:<br>
+    - To improve our website’s functionality and user experience.<br>
+    - To send newsletters or promotional materials if you have opted in to receive them.<br>
+    - To respond to your inquiries or provide support.<br>
+    - To analyze trends, traffic, and user behavior on our website.<br>
+    - To comply with legal obligations or protect our rights.<br>
+    <br>
+    3. <u>Cookies and Tracking Technologies</u>
+    <br>
+    We use cookies and similar tracking technologies to collect non-personal information about your browsing activities. Cookies help us to personalize your experience, analyze traffic, and improve the website. You can choose to disable cookies through your browser settings; however, doing so may limit some features of the website.
+    <br>
+    <br>
+    4. Third-Party Services
+    <br>
+    We may use third-party service providers to assist with website analytics, marketing, or other functionalities. These third-party providers may have access to your information solely for the purpose of performing their services on our behalf and are obligated not to disclose or use it for any other purpose.
+    <br>
+    <br>
+    5. Data Security
+    <br>
+    We take reasonable precautions to protect your personal information from unauthorized access, disclosure, or alteration. However, please be aware that no method of transmission over the Internet or method of electronic storage is 100% secure.
+    <br>
+    <br>
+    6. Your Rights
+    <br>
+    You have the right to:
+    <br>
+    - Access, correct, or delete your personal information.<br>
+    - Opt-out of receiving communications from us at any time.<br>
+    - Request information about how we handle your data.<br>
+    *If you would like to exercise any of these rights, 
+    <br>please contact us <a href="mailto:bobbyruelas@gmail.com" style="color: gray;">via Email</a>*
+    <br>
+    <br>
+    7. Children’s Privacy
+    <br>
+    Our website is not intended for individuals under the age of 13. We do not knowingly collect personal information from children under 13. If we learn that we have collected such information, we will take steps to delete it.
+    <br>
+    <br>
+    8. Changes to This Privacy Policy
+    <br>
+    We reserve the right to update or modify this Privacy Policy at any time. Changes will be effective immediately upon posting to the website. We encourage you to review this policy periodically.
+    <br>
+    <br>
+    9. Contact Us
+    <br>
+    If you have any questions or concerns about this Privacy Policy,
+    <br>
+    <a href="mailto:bobbyruelas@gmail.com" style="color: gray;">please email us here </a></p></h4><br>
+    <br>
+    <br>    
+    
+    <!-- Back to Top Button -->
+    <button onclick="topFunction()" id="backToTopBtn" title="Go to top">Home</button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/rruelas87/"><i class="fa fa-linkedin-square"></i></a>
+            <a href="https://www.facebook.com/bobby.ruelas/"><i class="fa fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/andvenus/"><i class="fa fa-instagram"></i></a>
+        </div>
+        <p>© 2024 Robert Ruelas</p>
+    </footer>
 </body>
 
-<!-- Footer Class-->
-<footer class="footer">
-    <!-- Social Media Icons -->
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/in/rruelas87/" aria-label="LinkedIn">
-            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.facebook.com/bobby.ruelas/" aria-label="Facebook">
-            <i class="fa fa-facebook-square" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.instagram.com/andvenus/" aria-label="Instagram">
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-        </a>      
-        <a href="https://github.com/oneironaught" aria-label="GitHub">
-            <i class="fa fa-github" aria-hidden="true"></i>
-        </a>
-        <a href="https://music.apple.com/us/artist/and-venus/1335594997" aria-label="Apple Music">
-            <i class="fa fa-apple" aria-hidden="true"></i>
-        </a>
-        <a href="https://open.spotify.com/artist/4CPEqoLO6sSiU3TS6Gygc0?si=2FRH7YnhRWy9Jrrlctkzew" aria-label="Spotify">
-            <i class="fa fa-spotify" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.youtube.com/@bobbyruelas" aria-label="YouTube">
-            <i class="fa fa-youtube-play" aria-hidden="true"></i>
-        </a>
-    </div>
-
-<br>
-<div style="text-align: center;">
-<a href="terms.html"><span style="color:#999999;"> |&nbsp; </span>Terms of Use |&nbsp;</span>
-</a>
-<a href="privacy.html"><span style="color:#999999;"> |&nbsp; </span>Privacy Policy<span style="color:#999999;"> |&nbsp; </span>
-</a>
-</div>
-<br>
-<div style="text-align: center;"><span style="color:#999999;"><a href="index.html">© 2024 Robert Ruelas</span></a></div><br>
-</footer>
 </html>

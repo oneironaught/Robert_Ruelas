@@ -55,6 +55,12 @@ h1, h2, h3 {
   color: white;
 }
 
+h4 {
+  margin-bottom: 10px;
+  background-color: #3c5f93;
+  color: white;
+}
+
 /* Text Paragraphs */
 p {
   margin-bottom: 20px;
