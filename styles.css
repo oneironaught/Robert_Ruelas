@@ -239,6 +239,15 @@ body.dark-mode #contact {
 }
 
 /* Projects Section */
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap; /* Ensure items wrap to the next line if necessary */
+  justify-content: flex-start; /* Align items from left to right */
+  gap: 20px; /* Space between the project cards */
+  padding: 20px;
+}
+
 .project-card {
   display: inline-block;
   width: 30%;
@@ -248,9 +257,9 @@ body.dark-mode #contact {
 }
 
 .project-card img {
-  width: 100%;
-  height: auto;
-  max-width: 300px;
+  width: 100%; /* Ensure the image takes full width of the container */
+  height: 200px; /* Fix the height for uniformity */
+  object-fit: cover; /* Ensure the image scales properly and is cropped */
   border-radius: 8px;
   transition: transform 0.5s ease;
 }
@@ -293,5 +302,18 @@ body.dark-mode #contact {
 @media screen and (max-width: 480px) {
   .content-section {
     padding: 30px 15px; /* Further reduce padding on very small screens */
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .project-card {
+    width: 45%; /* Make cards wider on tablets */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project-card {
+    width: 100%; /* On smaller screens, make each card take full width */
   }
 }
