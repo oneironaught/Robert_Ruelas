@@ -8,36 +8,57 @@
 /* Body Styling */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f9; /* Soft background color */
-  color: white; /* Dark text for better contrast */
+  background-color: #f4f4f9;
+  color: white;
   line-height: 1.6;
   margin: 0;
   padding: 0;
 }
 
-/* Container for content centering */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Section Styling */
+/* Full-width sections with padding and background color */
 .content-section {
+  width: 100vw; /* Full width of the viewport */
+  padding: 60px 20px; /* Inner padding for content */
   text-align: center;
+  box-sizing: border-box; /* Include padding in width calculations */
 }
 
+/* Specific section background colors */
+#about {
+  background-color: #e0e7f3; /* Light blue */
+}
+
+#skills {
+  background-color: #d1d9e6; /* Muted blue */
+}
+
+#experience {
+  background-color: #bac8de; /* Soft gray-blue */
+}
+
+#education {
+  background-color: #aabbd4; /* Light blue-gray */
+}
+
+#projects {
+  background-color: #91a7c7; /* Light medium blue */
+}
+
+/* Ensure no unwanted margin between sections */
+.content-section + .content-section {
+  margin-top: 0;
+}
+
+/* Heading Styles */
 h1, h2, h3 {
-  color: white; /* Make headings stand out */
+  margin-bottom: 20px;
+  color: white;
 }
 
+/* Text Paragraphs */
 p {
-  color: white; /* Slightly lighter text color */
-}
-
-section {
-  margin-bottom: 50px;
-  padding: 60px 20px;
+  margin-bottom: 20px;
+  color: white;
 }
 
 /* Hero Section */
@@ -61,6 +82,8 @@ section {
   display: inline-block;
   padding: 12px 30px;
   background-color: #ff6b6b;
+  border: #111;
+  border-style: solid;
   color: white;
   font-size: 18px;
   text-decoration: none;
@@ -78,52 +101,7 @@ section {
   100% { opacity: 1; }
 }
 
-/* Navbar Styling */
-.topnav {
-  position: sticky;
-  top: 0;
-  background-color: #182c69; /* Dark blue background for navbar */
-  z-index: 1000;
-  width: 100%;
-  padding: 10px 0;
-}
 
-.nav-links {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  background-color: #182c69;
-}
-
-.nav-links a {
-  color: white;
-  padding: 14px 20px;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.nav-links a:hover {
-  background-color: #ff4c4c; /* Highlight link on hover */
-}
-
-/* Hamburger Menu */
-.hamburger {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  display: none; /* Hidden on larger screens */
-}
-
-.hamburger i {
-  font-size: 28px;
-  color: white;
-  padding: 10px;
-}
-
-.hamburger:hover i {
-  color: #ff6b6b;
-}
 
 /* Section Colors for Better Contrast */
 #about {
@@ -154,15 +132,17 @@ section {
   background-color: #3c5f93;
 }
 
+/* Ensure full-width background colors with no gaps */
 #about, #skills, #experience, #education, #projects, #photos, #contact {
-  margin: 50px;
-  padding: auto;
+  width: 100vw;
+  margin: 0;
+  padding: 60px 0; /* Padding to add space inside the section */
 }
 
 /* Calendly Widget */
 .calendly-inline-widget {
   width: 100%;
-  height: 630px;
+  height: auto;
   display: block;
 }
 
@@ -171,6 +151,32 @@ body.dark-mode {
   background-color: #121212;
   color: #e0e0e0;
 }
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode p {
+  color: #e0e0e0;
+}
+
+body.dark-mode.hero-section {
+  background-color: #10204d;
+}
+
+body.dark-mode.content-section {
+  background-color: #182c69;
+  color: #e0e0e0;
+}
+
+/* Dark Mode Section Backgrounds */
+body.dark-mode #about,
+body.dark-mode #skills,
+body.dark-mode #experience,
+body.dark-mode #education,
+body.dark-mode #projects,
+body.dark-mode #photos,
+body.dark-mode #contact {
+  background-color: #000; /* Change sections to black in dark mode */
+}
+
+/* Dark Mode Toggle */
 
 .dark-mode-toggle {
   position: fixed;
@@ -212,6 +218,7 @@ body.dark-mode {
   color: white;
   padding: 20px 0;
   text-align: center;
+  width: 100vw; /* Ensure footer also spans the full width */
 }
 
 .social-icons a {
@@ -270,39 +277,15 @@ body.dark-mode {
   transform: scale(1.05);
 }
 
-/* Responsive Navbar and Images */
+/* Responsive Adjustments for Sections */
 @media screen and (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .nav-links.open {
-    display: block;
-    background-color: #182c69;
-    padding: 10px 0;
-    text-align: center;
-  }
-
-  .nav-links a {
-    display: block;
-    padding: 10px;
-  }
-
-  .project-card, .photo-container {
-    width: 45%; /* Increase size on tablets */
-  }
-
-  .hamburger i {
-    font-size: 32px;
+  .content-section {
+    padding: 40px 20px; /* Reduce padding on smaller screens */
   }
 }
 
 @media screen and (max-width: 480px) {
-  .project-card, .photo-container {
-    width: 100%;
+  .content-section {
+    padding: 30px 15px; /* Further reduce padding on very small screens */
   }
 }
