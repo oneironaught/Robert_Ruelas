@@ -272,24 +272,71 @@ body.dark-mode #contact {
   color: #ff4c4c;
 }
 
-/* Photos Section */
-.photo-container {
-  display: inline-block;
-  width: 22%;
-  margin: 10px;
-  vertical-align: top;
+/* Photos Container */
+.photos-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to the next line if necessary */
+  justify-content: space-between; /* Ensure even spacing between items */
+  gap: 20px; /* Add spacing between photos */
+  padding: 20px;
 }
 
+/* Photo Container */
+.photo-container {
+  width: calc(25% - 20px); /* Four photos per row with space in between */
+  position: relative;
+  cursor: pointer; /* Make it look clickable */
+}
+
+/* Photo Image */
 .photos {
   width: 100%;
-  height: auto;
-  max-width: 250px;
+  height: 200px; /* Fixed height for uniformity */
+  object-fit: cover; /* Ensure the image scales and crops properly */
   border-radius: 8px;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 
 .photos:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Slight enlarge on hover */
+}
+
+/* Modal for Enlarging Photos */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth fade-in/fade-out transition */
+}
+
+.modal.show {
+  opacity: 1; /* Show the modal */
+}
+
+.modal-content {
+  max-width: 50%; /* Ensure the image doesn't exceed screen width */
+  max-height: 50%; /* Ensure the image doesn't exceed screen height */
+  transform: scale(0); /* Start with the image scaled down */
+  transition: transform 0.3s ease; /* Smooth enlarge animation */
+}
+
+.modal-content.show {
+  transform: scale(1); /* Enlarge the image when the modal is shown */
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 /* Responsive Adjustments for Sections */
@@ -309,11 +356,45 @@ body.dark-mode #contact {
 @media screen and (max-width: 768px) {
   .project-card {
     width: 45%; /* Make cards wider on tablets */
+    padding: 40px 20px; /* Reduce padding on smaller screens */
+
   }
 }
 
 @media screen and (max-width: 480px) {
   .project-card {
     width: 100%; /* On smaller screens, make each card take full width */
+    padding: 30px 15px; /* Further reduce padding on very small screens */
+
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .photo-container {
+    width: calc(50% - 20px); /* Two photos per row on tablets */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .photo-container {
+    width: 100%; /* Full width for each photo on mobile */
+  }
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    max-width: 85%; /* Reduce width on smaller screens */
+    max-height: 85%; /* Reduce height on smaller screens */
+    padding-top: 1050px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-content {
+    max-width: 95%; /* Further reduce width on mobile screens */
+    max-height: 95%; /* Further reduce height on mobile screens */
+    padding-top: 600px;
   }
 }
