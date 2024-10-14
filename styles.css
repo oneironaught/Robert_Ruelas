@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+/* Apply flexbox to make the footer stick to the bottom */
+html, body {
+  height: 100%; /* Ensure the body takes the full height of the screen */
+  margin: 0;
+}
+
 /* Body Styling */
 body {
   font-family: 'Arial', sans-serif;
@@ -21,6 +27,7 @@ body {
   padding: 60px 20px; /* Inner padding for content */
   text-align: center;
   box-sizing: border-box; /* Include padding in width calculations */
+  flex: 1;
 }
 
 /* Specific section background colors */
@@ -199,47 +206,55 @@ body.dark-mode #contact {
   background-color: #ff4c4c;
 }
 
-/* Back to Top Button */
-#backToTopBtn {
-  display: none;
-  position: fixed;
+/* Accordion Button Styling */
+.accordion-button {
+  background-color: #1c2f73; /* Button background color */
+  color: white; /* Button text color */
+  cursor: pointer;
+  padding: 10px;
+  width: 80px; /* Full width button */
+  text-align: left; /* Align text to the left */
+  border: round;
+  border-style: solid;
+  outline: none;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
   bottom: 20px;
   right: 30px;
   font-size: 18px;
-  background-color: #333;
+  background-color: #ff6b6b;
   color: white;
   padding: 15px;
   border-radius: 50%;
   cursor: pointer;
   z-index: 99;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
 }
 
-#backToTopBtn:hover {
-  background-color: #ff4c4c;
+.accordion-button:hover {
+  background-color: #ff4c4c; /* Change color on hover */
 }
 
-/* Footer */
-.footer {
-  background-color: #182c69;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-  width: 100vw; /* Ensure footer also spans the full width */
+/* Accordion Content Styling */
+.accordion-content {
+  padding: 0 18px;
+  max-height: 0; /* Hidden by default */
+  overflow: hidden; /* Hide overflowing content */
+  transition: max-height 0.3s ease-out; /* Smooth animation */
+  background-color: #a2a8b0;
+  margin-top: 10px;
 }
 
-.social-icons a {
-  margin: 0 10px;
-  color: white;
-  text-decoration: none;
-  font-size: 24px;
+.accordion-item.active .accordion-content {
+  max-height: 300px; /* Adjust as needed to fit the content */
 }
 
-.social-icons a:hover {
-  color: #ff6b6b;
+.accordion-item.active .accordion-button {
+  background-color: #ff6b6b; /* Active button color */
 }
 
 /* Projects Section */
-
 .projects-container {
   display: flex;
   flex-wrap: wrap; /* Ensure items wrap to the next line if necessary */
@@ -338,6 +353,55 @@ body.dark-mode #contact {
   height: auto;
   border-radius: 8px;
 }
+
+/* Footer Styling */
+.footer {
+  background-color: #182c69;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  position: relative; /* Ensure it stays at the bottom of the content */
+}
+
+/* Social Icons in Footer */
+.social-icons a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+/* Social Icons Hover Effect */
+.social-icons a:hover {
+  color: #ff6b6b;
+}
+
+/* Home Button Styling */
+#backToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  font-size: 18px;
+  background-color: #ff6b6b;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 99;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#backToTopBtn:hover {
+  background-color: #ff4c4c;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 
 /* Responsive Adjustments for Sections */
 @media screen and (max-width: 768px) {

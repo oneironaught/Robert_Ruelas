@@ -94,3 +94,27 @@ function toggleMenu() {
       closeModal(); // Close the modal if clicked outside the image
     }
   });
+
+
+
+  // Get all accordion buttons
+  const accordionButtons = document.querySelectorAll('.accordion-button');
+
+  // Loop through each button to add a click event listener
+  accordionButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      // Toggle the active class on the parent .accordion-item
+      const accordionItem = button.parentElement;
+      accordionItem.classList.toggle('active');
+
+      // Get the accordion content
+      const content = accordionItem.querySelector('.accordion-content');
+
+      // Check if the accordion item is active, adjust maxHeight accordingly
+      if (accordionItem.classList.contains('active')) {
+        content.style.maxHeight = content.scrollHeight + 'px'; // Expand content
+      } else {
+        content.style.maxHeight = 0; // Collapse content
+      }
+    });
+  });
