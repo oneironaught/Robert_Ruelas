@@ -8,6 +8,7 @@
 /* Apply flexbox to make the footer stick to the bottom */
 html, body {
   height: 100%; /* Ensure the body takes the full height of the screen */
+  width: 100%;
   margin: 0;
 }
 
@@ -402,19 +403,6 @@ body.dark-mode #contact {
   position: relative; /* Ensure it stays at the bottom of the content */
 }
 
-/* Social Icons in Footer */
-.social-icons a {
-  margin: 0 10px;
-  color: white;
-  text-decoration: none;
-  font-size: 24px;
-}
-
-/* Social Icons Hover Effect */
-.social-icons a:hover {
-  color: #ff6b6b;
-}
-
 /* Home Button Styling */
 #backToTopBtn {
   position: fixed;
@@ -440,136 +428,273 @@ body.dark-mode #contact {
   100% { opacity: 1; }
 }
 
+/* Media Queries */
 
-/* Responsive Adjustments for Sections */
-@media screen and (max-width: 768px) {
-  @media (max-width: 768px) {
-  .content-section {
-    padding: 40px 20px; /* Reduce padding on smaller screens */
+@media (max-width: 992px) {
+  /* Styles for screens between 768px and 992px */
+  .hero-section {
+    padding: 30px; /* Increase padding for smaller screens */
+    text-align: center; /* Center all text content */
   }
-}
-}
 
-@media screen and (max-width: 480px) {
-  .content-section {
-    padding: 30px 15px; /* Further reduce padding on very small screens */
+  h1 {
+    font-size: 2.2rem; /* Reduce headline size */
   }
-}
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .project-card {
-    width: 45%; /* Make cards wider on tablets */
-    padding: 40px 20px; /* Reduce padding on smaller screens */
-
+  p {
+    font-size: 1rem; /* Adjust paragraph size */
   }
-}
 
-@media screen and (max-width: 480px) {
-  .project-card {
-    width: 100%; /* On smaller screens, make each card take full width */
-    padding: 30px 15px; /* Further reduce padding on very small screens */
-
+  .cta-button {
+    font-size: 16px;
+    padding: 10px 25px;
   }
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .photo-container {
-    width: calc(50% - 20px); /* Two photos per row on tablets */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .photo-container {
-    width: 100%; /* Full width for each photo on mobile */
-  }
-}
-
-/* Adjustments for smaller screens */
-@media screen and (max-width: 768px) {
-  /* General Reset for Margin and Padding */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Apply flexbox to make the footer stick to the bottom */
-html, body {
-  height: 100%; /* Ensure the body takes the full height of the screen */
-  width: 100%;
-  margin: 0;
-}
 
   .social-icons {
     display: flex;
     justify-content: center; /* Center the icons */
     gap: 50px; /* Space between icons */
     position: absolute; /* Ensure it's positioned relative to the hero section */
-    bottom: 200px; /* Place at the bottom of the hero section */
+    bottom: 230px; /* Place at the bottom of the hero section */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust centering alignment */
   }
+}
 
-  .dark-mode-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    left: 20px;
-    background-color: #111;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
+@media (max-width: 768px) {
+  /* Styles for screens between 481px and 768px */
+  .hero-section {
+    height: auto; /* Allow dynamic height adjustment */
+    padding: 20px; /* Add padding for better spacing */
   }
 
-  .modal-content {
-    max-width: 85%; /* Reduce width on smaller screens */
-    max-height: 85%; /* Reduce height on smaller screens */
-    padding-top: 1050px;
+  h1 {
+    font-size: 1.8rem; /* Further reduce headline size */
   }
-}
 
-@media screen and (max-width: 480px) {
+  p {
+    font-size: 0.9rem; /* Reduce paragraph size */
+  }
 
-  /* General Reset for Margin and Padding */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  .cta-button {
+    font-size: 14px;
+    margin: 10px 5px; /* Reduce button spacing */
+  }
 
-/* Apply flexbox to make the footer stick to the bottom */
-html, body {
-  height: 100%; /* Ensure the body takes the full height of the screen */
-  margin: 0;
-}
-
-.dark-mode-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  left: 20px;
-  background-color: #111;
-  color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-}
   .social-icons {
     display: flex;
     justify-content: center; /* Center the icons */
     gap: 50px; /* Space between icons */
     position: absolute; /* Ensure it's positioned relative to the hero section */
-    bottom: 30px; /* Place at the bottom of the hero section */
+    bottom: 130px; /* Place at the bottom of the hero section */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust centering alignment */
   }
 
-  .modal-content {
-    max-width: 90%; /* Further reduce width on mobile screens */
-    max-height: 90%; /* Further reduce height on mobile screens */
-    padding-top: 600px;
+  .hero-section {
+    padding-bottom: 100px; /* Add padding to accommodate icons */
+  }
+}
+
+@media (max-width: 488px) {
+  /* Styles for screens 480px and narrower */
+  .hero-content {
+    max-width: 100%; /* Content takes up full width */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Compact headline size */
+  }
+
+  p {
+    font-size: 0.8rem; /* Smaller paragraph size */
+  }
+
+  .cta-button {
+    font-size: 12px;
+    padding: 8px 20px; /* Reduce padding */
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    gap: 50px; /* Space between icons */
+    position: absolute; /* Ensure it's positioned relative to the hero section */
+    bottom: 600px; /* Place at the bottom of the hero section */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust centering alignment */
+  }
+
+  .social-icons a {
+    font-size: 18px; /* Smaller icon size */
+  }
+
+  .hero-section {
+    padding-bottom: 100px; /* Add padding to accommodate icons */
+  }
+}
+
+@media (max-width: 430px) {
+  /* Styles for screens 480px and narrower */
+  .hero-content {
+    max-width: 100%; /* Content takes up full width */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Compact headline size */
+  }
+
+  p {
+    font-size: 0.8rem; /* Smaller paragraph size */
+  }
+
+  .cta-button {
+    font-size: 12px;
+    padding: 8px 20px; /* Reduce padding */
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    gap: 50px; /* Space between icons */
+    position: absolute; /* Ensure it's positioned relative to the hero section */
+    bottom: 550px; /* Place at the bottom of the hero section */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust centering alignment */
+  }
+
+  .social-icons a {
+    font-size: 18px; /* Smaller icon size */
+  }
+
+  .hero-section {
+    padding-bottom: 100px; /* Add padding to accommodate icons */
+  }
+}
+
+@media (max-width: 415px) {
+  /* Styles for screens 480px and narrower */
+  .hero-content {
+    max-width: 100%; /* Content takes up full width */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Compact headline size */
+  }
+
+  p {
+    font-size: 0.8rem; /* Smaller paragraph size */
+  }
+
+  .cta-button {
+    font-size: 12px;
+    padding: 8px 20px; /* Reduce padding */
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    gap: 50px; /* Space between icons */
+    position: absolute; /* Ensure it's positioned relative to the hero section */
+    bottom: 500px; /* Place at the bottom of the hero section */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust centering alignment */
+  }
+
+  .social-icons a {
+    font-size: 18px; /* Smaller icon size */
+  }
+
+  .hero-section {
+    padding-bottom: 100px; /* Add padding to accommodate icons */
+  }
+}
+
+@media (max-width: 390px) {
+  /* Adjust hero section */
+  .hero-section {
+    padding: 20px;
+    height: auto; /* Allow content to determine height */
+  }
+
+  /* Hero content */
+  .hero-content {
+    max-width: 100%; /* Full width for small screens */
+  }
+
+  h1 {
+    font-size: 1.4rem; /* Smaller font for headlines */
+  }
+
+  p {
+    font-size: 0.8rem; /* Smaller font for paragraphs */
+  }
+
+  .cta-button {
+    font-size: 12px; /* Smaller buttons */
+    padding: 8px 16px; /* Reduce padding */
+    margin: 5px 2px; /* Smaller margins */
+  }
+
+  /* Social icons */
+  .social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    gap: 50px; /* Space between icons */
+    position: absolute; /* Ensure it's positioned relative to the hero section */
+    bottom: 500px; /* Place at the bottom of the hero section */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust centering alignment */
+  }
+
+  .social-icons a {
+    font-size: 18px; /* Reduce icon size */
+  }
+  .hero-section {
+    padding-bottom: 100px; /* Add padding to accommodate icons */
+  }
+}
+
+@media (max-width: 375px) {
+  /* Adjust hero section */
+  .hero-section {
+    padding: 20px;
+    height: auto; /* Allow content to determine height */
+  }
+
+  /* Hero content */
+  .hero-content {
+    max-width: 100%; /* Full width for small screens */
+  }
+
+  h1 {
+    font-size: 1.4rem; /* Smaller font for headlines */
+  }
+
+  p {
+    font-size: 0.8rem; /* Smaller font for paragraphs */
+  }
+
+  .cta-button {
+    font-size: 12px; /* Smaller buttons */
+    padding: 8px 16px; /* Reduce padding */
+    margin: 5px 2px; /* Smaller margins */
+  }
+
+  /* Social icons */
+  .social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    gap: 50px; /* Space between icons */
+    position: absolute; /* Ensure it's positioned relative to the hero section */
+    bottom: 300px; /* Place at the bottom of the hero section */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust centering alignment */
+  }
+  .social-icons a {
+    font-size: 18px; /* Reduce icon size */
+  }
+  .hero-section {
+    padding-bottom: 100px; /* Add padding to accommodate icons */
   }
 }
