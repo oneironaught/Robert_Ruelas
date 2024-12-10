@@ -443,9 +443,11 @@ body.dark-mode #contact {
 
 /* Responsive Adjustments for Sections */
 @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
   .content-section {
     padding: 40px 20px; /* Reduce padding on smaller screens */
   }
+}
 }
 
 @media screen and (max-width: 480px) {
@@ -486,6 +488,42 @@ body.dark-mode #contact {
 
 /* Adjustments for smaller screens */
 @media screen and (max-width: 768px) {
+  /* General Reset for Margin and Padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply flexbox to make the footer stick to the bottom */
+html, body {
+  height: 100%; /* Ensure the body takes the full height of the screen */
+  width: 100%;
+  margin: 0;
+}
+
+  .social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    gap: 50px; /* Space between icons */
+    position: absolute; /* Ensure it's positioned relative to the hero section */
+    bottom: 200px; /* Place at the bottom of the hero section */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust centering alignment */
+  }
+
+  .dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    left: 20px;
+    background-color: #111;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+
   .modal-content {
     max-width: 85%; /* Reduce width on smaller screens */
     max-height: 85%; /* Reduce height on smaller screens */
@@ -494,9 +532,44 @@ body.dark-mode #contact {
 }
 
 @media screen and (max-width: 480px) {
+
+  /* General Reset for Margin and Padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply flexbox to make the footer stick to the bottom */
+html, body {
+  height: 100%; /* Ensure the body takes the full height of the screen */
+  margin: 0;
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  left: 20px;
+  background-color: #111;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+  .social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    gap: 50px; /* Space between icons */
+    position: absolute; /* Ensure it's positioned relative to the hero section */
+    bottom: 30px; /* Place at the bottom of the hero section */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust centering alignment */
+  }
+
   .modal-content {
-    max-width: 95%; /* Further reduce width on mobile screens */
-    max-height: 95%; /* Further reduce height on mobile screens */
+    max-width: 90%; /* Further reduce width on mobile screens */
+    max-height: 90%; /* Further reduce height on mobile screens */
     padding-top: 600px;
   }
 }
