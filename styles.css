@@ -109,12 +109,50 @@ p {
   background-color: #ff4c4c;
 }
 
+/* Social Icons for Landing Page */
+.social-icons {
+  display: flex;
+  justify-content: center; /* Center the icons */
+  gap: 50px; /* Space between icons */
+  position: absolute; /* Ensure it's positioned relative to the hero section */
+  bottom: 230px; /* Place at the bottom of the hero section */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust centering alignment */
+}
+
+.social-icons a {
+  font-size: 24px; /* Icon size */
+  color: white; /* Default icon color */
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+}
+
+/* Individual Icon Colors */
+.social-icons a.fa-facebook {
+  color: white; /* Facebook Blue */
+}
+
+.social-icons a.fa-instagram {
+  color: white; /* Instagram Pink */
+}
+
+.social-icons a.fa-linkedin {
+  color: white; /* LinkedIn Blue */
+}
+
+.social-icons a.fa-github {
+  color: white; /* GitHub Dark Gray */
+}
+
+/* Hover Effect */
+.social-icons a:hover {
+  transform: scale(1.2); /* Enlarge slightly on hover */
+}
+
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
-
-
 
 /* Section Colors for Better Contrast */
 #about {
