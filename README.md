@@ -22,12 +22,13 @@ Welcome to the official website of **Robert Ruelas**. This website showcases a p
 1. Clone the repository:
    ```bash
    git clone https://github.com/username/robertruelas.com.git
-2.	Navigate to the project directory: cd robertruelas.com
-3.	Open the index.html file in your preferred browser or start a local server for testing: python -m http.server 8000 Or use a tool like Live Server for real-time updates.
+2. Navigate to the project directory: cd robertruelas.com
+3. Open the index.html file in your preferred browser or start a local server for testing: python -m http.server 8000 Or use a tool like Live Server for real-time updates.
 
 
 ## File Structure
 
+```plaintext
 robertruelas.com/
 ├── index.html        # Main homepage
 ├── assets/
@@ -41,6 +42,8 @@ robertruelas.com/
 ├── portfolio.html    # Portfolio page
 ├── README.md         # Project documentation
 
+```
+
 ## Deployment
 
 The website is hosted at https://robertruelas.com. Deployment is managed through https://easydns.com, ensuring high availability and optimal performance.
@@ -48,25 +51,26 @@ The website is hosted at https://robertruelas.com. Deployment is managed through
 ## Contribution
 
 Contributions are welcome! Please follow these steps:
-	1.	Fork the repository.
-	2.	Create a new branch for your feature or bugfix: git checkout -b feature-name
- 	3.	Commit your changes and push to your fork: git push origin feature-name
-  4.	Open a pull request on the main repository.
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix: git checkout -b feature-name
+3. Commit your changes and push to your fork: git push origin feature-name
+4. Open a pull request on the main repository.
 
 ## License
 
 This project is licensed under the MIT License.
 
-Contact
+## Contact
 
 Feel free to reach out for collaborations or inquiries:
-	•	Email: bobbyruelas@gmail.com
-	•	Website: https://robertruelas.com
-	•	Social Media: 
-            Github: https://github.com/oneironaught
-            Linkedin: https://www.linkedin.com/in/rruelas87/
-            Facebook: https://www.facebook.com/bobby.ruelas/
-            Instagram: https://www.instagram.com/andvenus/
+
+- **Email**: [bobbyruelas@gmail.com](mailto:bobbyruelas@gmail.com)
+- **Website**: [https://robertruelas.com](https://robertruelas.com)
+- **Social Media**:  
+  - **GitHub**: [https://github.com/oneironaught](https://github.com/oneironaught)  
+  - **LinkedIn**: [https://www.linkedin.com/in/rruelas87/](https://www.linkedin.com/in/rruelas87/)  
+  - **Facebook**: [https://www.facebook.com/bobby.ruelas/](https://www.facebook.com/bobby.ruelas/)  
+  - **Instagram**: [https://www.instagram.com/andvenus/](https://www.instagram.com/andvenus/)
  
 ---
 
