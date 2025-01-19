@@ -403,6 +403,25 @@ body.dark-mode #contact {
   position: relative; /* Ensure it stays at the bottom of the content */
 }
 
+/* Footer Social Icons */
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.footer-social-icons a {
+  text-decoration: none;
+  color: white; /* Dark gray for the footer */
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.footer-social-icons a:hover {
+  color: #0073e6; /* Blue on hover */
+}
+
 /* Home Button Styling */
 #backToTopBtn {
   position: fixed;
