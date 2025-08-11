@@ -198,52 +198,6 @@ p {
   display: block;
 }
 
-/* Dark Mode */
-body.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-
-body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode p {
-  color: #e0e0e0;
-}
-
-body.dark-mode.hero-section {
-  background-color: #10204d;
-}
-
-body.dark-mode.content-section {
-  background-color: #182c69;
-  color: #e0e0e0;
-}
-
-/* Dark Mode Section Backgrounds */
-body.dark-mode #about,
-body.dark-mode #skills,
-body.dark-mode #experience,
-body.dark-mode #education,
-body.dark-mode #projects,
-body.dark-mode #photos,
-body.dark-mode #contact {
-  background-color: #000; /* Change sections to black in dark mode */
-}
-
-/* Dark Mode Toggle */
-
-.dark-mode-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: #111;
-  color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-}
-
-.dark-mode-toggle:hover {
-  background-color: #ff4c4c;
-}
 
 /* Accordion Button Styling */
 .accordion-button {
