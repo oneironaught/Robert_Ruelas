@@ -1,120 +1,140 @@
-// AOS Initialization (Animate on Scroll)
-AOS.init();
+document.addEventListener('DOMContentLoaded', () => {
+    // AOS Initialization
+    AOS.init();
 
-// Toggle Mobile Navigation Menu
-function toggleMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
-}
-
-// Dark Mode Toggle Functionality
-const darkModeToggle = document.getElementById('dark-mode-toggle');
-darkModeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-});
-
-// Back to Top Button Functionality
-const backToTopBtn = document.getElementById('backToTopBtn');
-
-window.onscroll = function() {
-    scrollFunction();
-};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        backToTopBtn.style.display = 'block';
+    // Dark Mode Toggle
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', () => {
+            console.log('Dark mode toggle clicked');
+            document.body.classList.toggle('dark-mode');
+        });
     } else {
-        backToTopBtn.style.display = 'none';
+        console.warn('Dark mode toggle button not found in the DOM.');
     }
-}
 
-function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
-}
-
-// Toggle the mobile menu
-function toggleMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('open'); // Toggle the 'open' class to show/hide the menu
-}
-
-  // Function to open the modal and display the clicked image
-  function openModal(src, x, y) {
-    const modal = document.getElementById('photoModal');
-    const modalContent = document.querySelector('.modal-content');
-    const enlargedPhoto = document.getElementById('enlargedPhoto');
-
-    enlargedPhoto.src = src;
-    
-    // Display the modal
-    modal.style.display = 'flex'; // Ensure the modal is displayed
-    modal.style.opacity = '1'; // Make the modal visible
-
-    // Set initial position where the image was clicked
-    modalContent.style.transformOrigin = `${x}px ${y}px`; // Set the origin based on the click position
-    modalContent.style.transform = 'scale(1)'; // Reset the scale for the image
-
-    // Add the "show" class for smooth transition
-    setTimeout(() => {
-      modal.classList.add('show'); // Make the modal visible with transition
-      modalContent.classList.add('show'); // Make the image grow smoothly
-    }, 10); // Add a slight delay to ensure the display and opacity are applied before transition
-  }
-
-  // Function to close the modal
-  function closeModal() {
-    const modal = document.getElementById('photoModal');
-    const modalContent = document.querySelector('.modal-content');
-
-    modalContent.classList.remove('show'); // Hide the image smoothly
-
-    setTimeout(() => {
-      modal.style.opacity = '0'; // Fade out the modal
-      modal.style.display = 'none'; // Completely hide after transition
-    }, 300); // Delay matches the transition duration
-  }
-
-  // Add click event listeners to all images
-  const photoContainers = document.querySelectorAll('.photo-container');
-  photoContainers.forEach(container => {
-    container.addEventListener('click', function (event) {
-      const imgSrc = this.querySelector('img').src;
-      const x = event.clientX; // Get the X position of the click
-      const y = event.clientY; // Get the Y position of the click
-      openModal(imgSrc, x, y); // Pass the click position to the modal
-    });
-  });
-
-  // Close the modal when clicking outside of the image
-  const modal = document.getElementById('photoModal');
-  modal.addEventListener('click', function (event) {
-    const modalContent = document.querySelector('.modal-content');
-    if (!modalContent.contains(event.target)) {
-      closeModal(); // Close the modal if clicked outside the image
+    // Back to Top Button
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', topFunction);
+    } else {
+        console.warn('Back to top button not found in the DOM.');
     }
-  });
 
+    window.onscroll = function() {
+        scrollFunction();
+    };
 
+    function scrollFunction() {
+        if (backToTopBtn) {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        }
+    }
 
-  // Get all accordion buttons
-  const accordionButtons = document.querySelectorAll('.accordion-button');
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    }
 
-  // Loop through each button to add a click event listener
-  accordionButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      // Toggle the active class on the parent .accordion-item
-      const accordionItem = button.parentElement;
-      accordionItem.classList.toggle('active');
+    // Mobile Menu Toggle
+    const menuButton = document.getElementById('menu-toggle');
+    if (menuButton) {
+        menuButton.addEventListener('click', toggleMenu);
+    } else {
+        console.warn('Menu toggle button not found in the DOM.');
+    }
 
-      // Get the accordion content
-      const content = accordionItem.querySelector('.accordion-content');
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        if (navLinks) {
+            navLinks.classList.toggle('open');
+        } else {
+            console.warn('Navigation links not found in the DOM.');
+        }
+    }
 
-      // Check if the accordion item is active, adjust maxHeight accordingly
-      if (accordionItem.classList.contains('active')) {
-        content.style.maxHeight = content.scrollHeight + 'px'; // Expand content
-      } else {
-        content.style.maxHeight = 0; // Collapse content
-      }
+    // Modal Functionality
+    function openModal(src, x, y) {
+        const modal = document.getElementById('photoModal');
+        const modalContent = document.querySelector('.modal-content');
+        const enlargedPhoto = document.getElementById('enlargedPhoto');
+        if (modal && modalContent && enlargedPhoto) {
+            enlargedPhoto.src = src;
+            modal.style.display = 'flex';
+            modal.style.opacity = '1';
+            modalContent.style.transformOrigin = `${x}px ${y}px`;
+            modalContent.style.transform = 'scale(1)';
+            setTimeout(() => {
+                modal.classList.add('show');
+                modalContent.classList.add('show');
+            }, 10);
+        } else {
+            console.warn('Modal elements not found in the DOM.');
+        }
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('photoModal');
+        const modalContent = document.querySelector('.modal-content');
+        if (modal && modalContent) {
+            modalContent.classList.remove('show');
+            setTimeout(() => {
+                modal.style.opacity = '0';
+                modal.style.display = 'none';
+            }, 300);
+        }
+    }
+
+    const photoContainers = document.querySelectorAll('.photo-container');
+    photoContainers.forEach(container => {
+        container.addEventListener('click', function (event) {
+            if (event.target.tagName.toLowerCase() === 'a') {
+                return; // Allow default link behavior
+            }
+            event.stopPropagation();
+            const img = this.querySelector('img');
+            if (img) {
+                const imgSrc = img.src;
+                const x = event.clientX;
+                const y = event.clientY;
+                openModal(imgSrc, x, y);
+            }
+        });
     });
-  });
+
+    const modal = document.getElementById('photoModal');
+    if (modal) {
+        modal.addEventListener('click', function (event) {
+            const modalContent = document.querySelector('.modal-content');
+            if (modalContent && !modalContent.contains(event.target) && event.target.tagName.toLowerCase() !== 'a') {
+                closeModal();
+            }
+        });
+    } else {
+        console.warn('Photo modal not found in the DOM.');
+    }
+
+    // Accordion Functionality
+    const accordionButtons = document.querySelectorAll('.accordion-button');
+    accordionButtons.forEach((button) => {
+        button.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const accordionItem = button.parentElement;
+            accordionItem.classList.toggle('active');
+            const content = accordionItem.querySelector('.accordion-content');
+            if (content) {
+                if (accordionItem.classList.contains('active')) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                } else {
+                    content.style.maxHeight = '0';
+                }
+            } else {
+                console.warn('Accordion content not found for button:', button);
+            }
+        });
+    });
+});
