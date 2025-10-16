@@ -120,6 +120,7 @@ p {
   bottom: 230px; /* Place at the bottom of the hero section */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Adjust centering alignment */
+  max-width: 100%;
 }
 
 .social-icons a {
@@ -402,21 +403,74 @@ p {
   100% { opacity: 1; }
 }
 
+/* Base Styles (Desktop, >992px) */
+.hero-section {
+    padding: 50px;
+    text-align: center;
+    position: relative; /* Ensure relative positioning for child absolute elements */
+    min-height: 100vh; /* Full viewport height for hero */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 1200px; /* Max width for content on large screens */
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    font-size: 18px;
+    padding: 12px 30px;
+    margin: 10px;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    pointer-events: auto; /* Ensure clickability */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Reasonable gap for desktop */
+    margin-top: 20px; /* Place in document flow instead of absolute */
+}
+
+.social-icons a {
+    font-size: 24px;
+    text-decoration: none;
+    color: inherit; /* Adjust based on your theme */
+    pointer-events: auto; /* Ensure clickability */
+}
+
 /* Media Queries */
 
+/* Tablets and small laptops (≤992px) */
 @media (max-width: 992px) {
-  /* Styles for screens between 768px and 992px */
   .hero-section {
-    padding: 30px; /* Increase padding for smaller screens */
-    text-align: center; /* Center all text content */
+    padding: 30px;
+  }
+
+  .hero-content {
+    padding: 0 10px;
   }
 
   h1 {
-    font-size: 2.2rem; /* Reduce headline size */
+    font-size: 2.2rem;
   }
 
   p {
-    font-size: 1rem; /* Adjust paragraph size */
+    font-size: 1rem;
   }
 
   .cta-button {
@@ -425,250 +479,92 @@ p {
   }
 
   .social-icons {
-    display: flex;
-    justify-content: center; /* Center the icons */
-    gap: 50px; /* Space between icons */
-    position: absolute; /* Ensure it's positioned relative to the hero section */
-    bottom: 230px; /* Place at the bottom of the hero section */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust centering alignment */
+    gap: 30px;
+    bottom: 40px; /* Adjust to avoid overlap with buttons */
   }
 }
 
+/* Small tablets and large phones (≤768px) */
 @media (max-width: 768px) {
-  /* Styles for screens between 481px and 768px */
   .hero-section {
-    height: auto; /* Allow dynamic height adjustment */
-    padding: 20px; /* Add padding for better spacing */
+    padding: 20px;
+    min-height: auto;
+  }
+
+  .hero-content {
+    padding: 0 5px;
   }
 
   h1 {
-    font-size: 1.8rem; /* Further reduce headline size */
+    font-size: 1.8rem;
   }
 
   p {
-    font-size: 0.9rem; /* Reduce paragraph size */
+    font-size: 0.9rem;
   }
 
   .cta-button {
     font-size: 14px;
-    margin: 10px 5px; /* Reduce button spacing */
+    padding: 10px 20px;
+    margin: 8px 5px;
   }
 
   .social-icons {
-    display: flex;
-    justify-content: center; /* Center the icons */
-    gap: 50px; /* Space between icons */
-    position: absolute; /* Ensure it's positioned relative to the hero section */
-    bottom: 130px; /* Place at the bottom of the hero section */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust centering alignment */
+    gap: 25px;
+    bottom: 30px; /* Further adjust for smaller screens */
   }
 
-  .hero-section {
-    padding-bottom: 100px; /* Add padding to accommodate icons */
+  .social-icons a {
+    font-size: 20px;
   }
 }
 
-@media (max-width: 488px) {
-  /* Styles for screens 480px and narrower */
+/* Mobile devices (≤480px) */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 15px;
+  }
+
   .hero-content {
-    max-width: 100%; /* Content takes up full width */
+    padding: 0 5px;
   }
 
   h1 {
-    font-size: 1.5rem; /* Compact headline size */
+    font-size: 1.5rem;
   }
 
   p {
-    font-size: 0.8rem; /* Smaller paragraph size */
+    font-size: 0.8rem;
   }
 
   .cta-button {
     font-size: 12px;
-    padding: 8px 20px; /* Reduce padding */
+    padding: 8px 16px;
+    margin: 5px 3px;
   }
 
   .social-icons {
-    display: flex;
-    justify-content: center; /* Center the icons */
-    gap: 50px; /* Space between icons */
-    position: absolute; /* Ensure it's positioned relative to the hero section */
-    bottom: 600px; /* Place at the bottom of the hero section */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust centering alignment */
+    gap: 20px;
+    bottom: 20px; /* Minimum distance to avoid overlap */
   }
 
   .social-icons a {
-    font-size: 18px; /* Smaller icon size */
-  }
-
-  .hero-section {
-    padding-bottom: 100px; /* Add padding to accommodate icons */
+    font-size: 18px;
   }
 }
 
-@media (max-width: 430px) {
-  /* Styles for screens 480px and narrower */
-  .hero-content {
-    max-width: 100%; /* Content takes up full width */
-  }
-
-  h1 {
-    font-size: 1.5rem; /* Compact headline size */
-  }
-
-  p {
-    font-size: 0.8rem; /* Smaller paragraph size */
-  }
-
-  .cta-button {
-    font-size: 12px;
-    padding: 8px 20px; /* Reduce padding */
-  }
-
-  .social-icons {
-    display: flex;
-    justify-content: center; /* Center the icons */
-    gap: 50px; /* Space between icons */
-    position: absolute; /* Ensure it's positioned relative to the hero section */
-    bottom: 550px; /* Place at the bottom of the hero section */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust centering alignment */
-  }
-
-  .social-icons a {
-    font-size: 18px; /* Smaller icon size */
-  }
-
-  .hero-section {
-    padding-bottom: 100px; /* Add padding to accommodate icons */
-  }
-}
-
-@media (max-width: 415px) {
-  /* Styles for screens 480px and narrower */
-  .hero-content {
-    max-width: 100%; /* Content takes up full width */
-  }
-
-  h1 {
-    font-size: 1.5rem; /* Compact headline size */
-  }
-
-  p {
-    font-size: 0.8rem; /* Smaller paragraph size */
-  }
-
-  .cta-button {
-    font-size: 12px;
-    padding: 8px 20px; /* Reduce padding */
-  }
-
-  .social-icons {
-    display: flex;
-    justify-content: center; /* Center the icons */
-    gap: 50px; /* Space between icons */
-    position: absolute; /* Ensure it's positioned relative to the hero section */
-    bottom: 500px; /* Place at the bottom of the hero section */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust centering alignment */
-  }
-
-  .social-icons a {
-    font-size: 18px; /* Smaller icon size */
-  }
-
-  .hero-section {
-    padding-bottom: 100px; /* Add padding to accommodate icons */
-  }
-}
-
-@media (max-width: 390px) {
-  /* Adjust hero section */
-  .hero-section {
-    padding: 20px;
-    height: auto; /* Allow content to determine height */
-  }
-
-  /* Hero content */
-  .hero-content {
-    max-width: 100%; /* Full width for small screens */
-  }
-
-  h1 {
-    font-size: 1.4rem; /* Smaller font for headlines */
-  }
-
-  p {
-    font-size: 0.8rem; /* Smaller font for paragraphs */
-  }
-
-  .cta-button {
-    font-size: 12px; /* Smaller buttons */
-    padding: 8px 16px; /* Reduce padding */
-    margin: 5px 2px; /* Smaller margins */
-  }
-
-  /* Social icons */
-  .social-icons {
-    display: flex;
-    justify-content: center; /* Center the icons */
-    gap: 50px; /* Space between icons */
-    position: absolute; /* Ensure it's positioned relative to the hero section */
-    bottom: 500px; /* Place at the bottom of the hero section */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust centering alignment */
-  }
-
-  .social-icons a {
-    font-size: 18px; /* Reduce icon size */
-  }
-  .hero-section {
-    padding-bottom: 100px; /* Add padding to accommodate icons */
-  }
-}
-
+/* Very small devices (≤375px) */
 @media (max-width: 375px) {
-  /* Adjust hero section */
-  .hero-section {
-    padding: 20px;
-    height: auto; /* Allow content to determine height */
-  }
-
-  /* Hero content */
-  .hero-content {
-    max-width: 100%; /* Full width for small screens */
-  }
-
   h1 {
-    font-size: 1.4rem; /* Smaller font for headlines */
-  }
-
-  p {
-    font-size: 0.8rem; /* Smaller font for paragraphs */
+    font-size: 1.4rem;
   }
 
   .cta-button {
-    font-size: 12px; /* Smaller buttons */
-    padding: 8px 16px; /* Reduce padding */
-    margin: 5px 2px; /* Smaller margins */
+    padding: 8px 14px;
   }
 
-  /* Social icons */
   .social-icons {
-    display: flex;
-    justify-content: center; /* Center the icons */
-    gap: 50px; /* Space between icons */
-    position: absolute; /* Ensure it's positioned relative to the hero section */
-    bottom: 300px; /* Place at the bottom of the hero section */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust centering alignment */
-  }
-  .social-icons a {
-    font-size: 18px; /* Reduce icon size */
-  }
-  .hero-section {
-    padding-bottom: 100px; /* Add padding to accommodate icons */
+    gap: 15px;
+    bottom: 15px; /* Tighten for very small screens */
   }
 }
