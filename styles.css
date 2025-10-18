@@ -252,18 +252,28 @@ p {
 /* Projects Section */
 .projects-container {
   display: flex;
-  flex-wrap: wrap; /* Ensure items wrap to the next line if necessary */
-  justify-content: flex-start; /* Align items from left to right */
+  flex-wrap: wrap; /* Enforce single row */
+  justify-content: flex-start; /* Align items from left */
+  align-items: flex-start;
   gap: 20px; /* Space between the project cards */
   padding: 20px;
+  max-width: 100%; /* Prevent overflow beyond viewport */
+  overflow-x: auto; /* Allow horizontal scrolling if cards exceed width */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+  box-sizing: border-box; /* Include padding in width */
 }
 
 .project-card {
-  display: inline-block;
-  width: 30%;
-  margin: 15px;
+  display: inline-block; /* Keep as requested */
+  width: calc(30% - 14px); /* Adjusted for 3-4 cards with 20px gap */
+  margin: 20px 0; /* Vertical margins only */
   text-align: center;
   transition: transform 0.3s ease;
+  animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+  cursor: pointer; /* Make it look clickable */
+  box-sizing: border-box; /* Include padding in width */
+  /* Remove invalid justify-content */
 }
 
 .project-card img {
@@ -482,6 +492,10 @@ p {
     gap: 30px;
     bottom: 40px; /* Adjust to avoid overlap with buttons */
   }
+
+  .project-card {
+    width: calc(33.33% - 13.33px); /* Maintain 3 cards per row */
+  }
 }
 
 /* Small tablets and large phones (≤768px) */
@@ -517,6 +531,10 @@ p {
   .social-icons a {
     font-size: 20px;
   }
+
+  .project-card {
+    width: calc(50% - 10px); /* Adjust to 2 cards per row */
+  }
 }
 
 /* Mobile devices (≤480px) */
@@ -551,6 +569,10 @@ p {
   .social-icons a {
     font-size: 18px;
   }
+
+  .project-card {
+    width: calc(100% - 15px); /* Adjust to 1 card per row */
+  }
 }
 
 /* Very small devices (≤375px) */
@@ -566,5 +588,9 @@ p {
   .social-icons {
     gap: 15px;
     bottom: 15px; /* Tighten for very small screens */
+  }
+
+  .project-card {
+    width: calc(100% - 15px); /* Maintain 1 card per row */
   }
 }

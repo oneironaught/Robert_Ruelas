@@ -1,6 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // AOS Initialization
-    AOS.init();
+    // AOS Initialization with delay to ensure layout stability
+    AOS.init({
+        delay: 200, // Delay animations to allow layout to settle
+        once: true, // Animate only once to avoid reflow on scroll
+        startEvent: 'DOMContentLoaded' // Trigger on DOM ready
+    });
+
+    // Force reflow to ensure proper initial layout
+    const projectsContainer = document.querySelector('.projects-container');
+    if (projectsContainer) {
+        projectsContainer.style.display = 'none';
+        projectsContainer.offsetHeight; // Trigger reflow
+        projectsContainer.style.display = '';
+    }
 
     // Dark Mode Toggle
     const darkModeToggle = document.getElementById('dark-mode-toggle');
@@ -52,6 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const navLinks = document.querySelector('.nav-links');
         if (navLinks) {
             navLinks.classList.toggle('open');
+            // Ensure layout reflow after menu toggle
+            setTimeout(() => window.dispatchEvent(new Event('resize')), 300);
         } else {
             console.warn('Navigation links not found in the DOM.');
         }
@@ -85,6 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 modal.style.opacity = '0';
                 modal.style.display = 'none';
+                // Trigger reflow after modal closes
+                window.dispatchEvent(new Event('resize'));
             }, 300);
         }
     }
@@ -132,6 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     content.style.maxHeight = '0';
                 }
+                // Trigger reflow after accordion toggle
+                setTimeout(() => window.dispatchEvent(new Event('resize')), 300);
             } else {
                 console.warn('Accordion content not found for button:', button);
             }
