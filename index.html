@@ -1,467 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robert Ruelas</title>
-    <!-- Linking CSS -->
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <!-- Linking JavaScript -->
-    <script src="script.js" defer></script>
-    <!-- Load an icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--Calendly-->
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-    <!-- AOS Animation Library -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Welcome to my portfolio! I am a bilingual technical support professional with Apple, ecommerce, customer service, and web development experience, focused on growing into a Technical Account Manager role.">
+  <title>Robert Ruelas | Technical Account Manager Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/rr_favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
-<div>
+<body>
+  <header class="site-header" id="#top">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Robert Ruelas home">
+        <span class="brand-mark">RR</span>
+        <span>Robert Ruelas</span>
+      </a>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1>Welcome to Robert Ruelas' Portfolio</h1>
-            <p>Your one-stop solution for software development and technical consulting.</p>
-            <a href="#contact" class="cta-button">Get in Touch</a>
-            <a href="#about" class="cta-button">About me</a>
-            <a href="#skills" class="cta-button">Skills</a>
-            <a href="#experience" class="cta-button">Experience</a>
-            <a href="#education" class="cta-button">Education</a>
-            <a href="#projects" class="cta-button">Projects</a>
-            <a href="#photos" class="cta-button">Photos</a>
-        </div>
-        <div class="social-icons">
-            <a href="https://github.com/oneironaught" target="_blank" class="fa fa-github"></a>
-            <a href="https://www.linkedin.com/in/rruelas87/" target="_blank" class="fa fa-linkedin"></a>
-            <a href="https://www.facebook.com/bobby.ruelas/" target="_blank" class="fa fa-facebook"></a>
-            <a href="https://www.instagram.com/andvenus/" target="_blank" class="fa fa-instagram"></a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#value">TAM Value</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a class="nav-cta" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Technical Support • Customer Success • Future TAM</p>
+          <h1>Customer-first technical problem solver with Apple, ecommerce, and web support experience.</h1>
+          <p class="hero-text">
+            I help customers translate technical problems into clear next steps, partner with internal teams to resolve escalations, and document solutions that improve the customer experience.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View TAM-Relevant Work</a>
+            <a class="btn btn-secondary" href="#contact">Contact Me</a>
           </div>
+
+          <div class="trust-row" aria-label="Key qualifications">
+            <span>ACMT / ACiT Certified</span>
+            <span>Bilingual Support</span>
+            <span>HTML / CSS / JS</span>
+            <span>SwiftUI / Firebase</span>
+          </div>
+        </div>
+
+        <aside class="hero-card reveal">
+          <!-- Profile Photo -->
+          <img src="assets/robert-profile.png" alt="Robert Ruelas professional portrait" class="profile-photo">
+          <div class="profile-fallback" aria-hidden="true">RR</div>
+
+          <h2>Robert Ruelas</h2>
+          <p>Technical Support • Customer Success • Ecommerce • Web Development</p>
+
+          <div class="metric-stack">
+            <div>
+              <strong>6+ years</strong>
+              <span>Apple technical support and repair experience</span>
+            </div>
+            <div>
+              <strong>17+ years</strong>
+              <span>Customer service, leadership, and operations experience</span>
+            </div>
+            <div>
+              <strong>8+ projects</strong>
+              <span>Web, ecommerce, and app portfolio examples</span>
+            </div>
+          </div>
+        </aside>
+      </div>
     </section>
 
-    <!--About me section-->
-    <div class="content-section" id="about" data-aos="fade-up">
-        <h2>About Me</h2>
-        <p>My name is Robert Ruelas. I am a billingual results-driven professional with a Bachelor’s Degree in Psychology from The University of Texas-Pan American<br> 
-            that can help troubleshoot your hardware or elevate your next project. <br> 
-            I'm also the co-founder and creative director of And Venus, 
-            a musical project that provides insight into the psychology of music.<br>
-            Some of my hobbies are taking long walks with my dogs, reading books, and playing music.
-            I am passionate about driving results and fostering growth in team environments.<br> 
-            <br>
-            <br>
-            As a Certified Mac Technician, I provide expert technical support across all Apple products<br>
-            complemented by a diverse background spanning quantitative and qualitative data analysis, applied behavior analysis,<br> 
-            technology, computer hardware repair, software development, management, interpersonal communication, and mentorship.<br> 
-            <a href="mailto:bobbyruelas@gmail.com" style="color: rgb(24, 68, 157);">Contact me</a> today to learn more about how I can help you achieve your goals.
-        </p>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container two-column">
+        <div class="section-heading reveal">
+          <p class="eyebrow">About</p>
+          <h2>Built for the bridge between customers, support, product, and engineering.</h2>
+        </div>
+
+        <div class="content-card reveal">
+          <p>
+            I’m a bilingual technical support and customer experience professional with a background in Apple hardware/software troubleshooting, repair workflows, team leadership, web development, ecommerce, and behavioral psychology.
+          </p>
+          <p>
+            My strongest value as a Technical Account Manager will be to provide the ability to listen carefully, clarify complex issues, identify root causes, communicate status with empathy, and turn repeated problems into documented, repeatable solutions.
+          </p>
+          <p>
+            I bring hands-on technical depth from Apple Genius work, operational leadership from Starbucks management, and a growing portfolio of web and ecommerce projects that show I can understand both the customer experience and the technical system behind it.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAM VALUE -->
+    <section class="section section-muted" id="value">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow">TAM Value</p>
+          <h2>How I would support technical accounts</h2>
+          <p>
+            A Technical Account Manager needs more than technical skill. The role requires proactive communication, customer advocacy, clean documentation, and strong internal partnership.
+          </p>
+        </div>
+
+        <div class="value-grid">
+          <article class="value-card reveal">
+            <span class="icon">01</span>
+            <h3>Technical Discovery</h3>
+            <p>Ask targeted questions, map customer workflows, identify dependencies, and document environments before issues become blockers.</p>
+          </article>
+
+          <article class="value-card reveal">
+            <span class="icon">02</span>
+            <h3>Escalation Ownership</h3>
+            <p>Gather clear reproduction steps, prioritize business impact, communicate status, and partner with support, product, and engineering until resolution.</p>
+          </article>
+
+          <article class="value-card reveal">
+            <span class="icon">03</span>
+            <h3>Customer Enablement</h3>
+            <p>Translate technical guidance into customer-friendly training, best practices, runbooks, and post-resolution documentation.</p>
+          </article>
+
+          <article class="value-card reveal">
+            <span class="icon">04</span>
+            <h3>Business Impact</h3>
+            <p>Connect technical decisions to customer goals such as uptime, conversion, adoption, operational efficiency, and long-term account health.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Relevant</p>
+          <h2>Experience</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-date">2018 – 2024</div>
+            <div class="timeline-card">
+              <h3>Genius — Apple</h3>
+              <p class="role-summary">
+                Delivered technical support, diagnostics, repairs, customer education, and cross-functional issue resolution across Apple products and services.
+              </p>
+              <ul>
+                <li>Diagnosed hardware, software, account, and ecosystem issues while communicating clear next steps to customers.</li>
+                <li>Documented customer issues accurately to support repair decisions, trend analysis, and internal follow-up.</li>
+                <li>Partnered with teammates and leadership to resolve complex cases, improve workflows, and mentor newer team members.</li>
+                <li>Maintained confidentiality, data care, and high customer trust during sensitive technical interactions.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-date">2007 – Present</div>
+            <div class="timeline-card">
+              <h3>Manager — Starbucks</h3>
+              <p class="role-summary">
+                Led daily operations, customer connection, team coaching, scheduling, inventory, cash handling, and service recovery in a high-volume environment.
+              </p>
+              <ul>
+                <li>Coached partners on customer experience, operational standards, and performance expectations.</li>
+                <li>Balanced customer needs, staffing, inventory, and business priorities while maintaining service quality.</li>
+                <li>Resolved customer concerns with empathy, accountability, and practical next steps.</li>
+                <li>Volunteered with Starbucks at the RGV Food Bank, supporting community service and team engagement.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-date">2016 – 2018</div>
+            <div class="timeline-card">
+              <h3>Behavior Therapist — The Shape of Behavior</h3>
+              <p class="role-summary">
+                Applied behavioral analysis, data collection, family communication, and intervention planning in a highly detail-oriented care environment.
+              </p>
+              <ul>
+                <li>Used structured observation and data collection to support individualized treatment plans.</li>
+                <li>Communicated progress and behavior trends with caregivers and cross-functional therapy teams.</li>
+                <li>Built patience, active listening, and root-cause thinking that directly support customer-facing technical roles.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section section-muted" id="projects">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow">Projects</p>
+          <h2>Portfolio Projects</h2>
+          <p>These projects show web development, ecommerce thinking, customer journey design, platform setup, and technical documentation.</p>
+        </div>
+
+        <div class="project-controls reveal" aria-label="Project filters">
+          <button class="filter-btn active" type="button" data-filter="all">All</button>
+          <button class="filter-btn" type="button" data-filter="ecommerce">Ecommerce</button>
+          <button class="filter-btn" type="button" data-filter="web">Web</button>
+          <button class="filter-btn" type="button" data-filter="app">App</button>
+          <button class="filter-btn" type="button" data-filter="business">Business</button>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card reveal" data-category="app">
+            <div class="project-tag">SwiftUI • Firebase • Product Thinking</div>
+            <h3>Coffee Passport App</h3>
+            <p>A prototype app for logging, filtering, and tracking Starbucks coffees with authentication and real-time data support.</p>
+            <ul>
+              <li>User registration and login</li>
+              <li>Coffee tracking and filtering</li>
+              <li>Firebase Authentication and database integration</li>
+            </ul>
+            <a href="https://oneironaught.github.io/coffee_passport/" target="_blank" rel="noopener">View GitHub</a>
+          </article>
+
+          <article class="project-card reveal" data-category="ecommerce business">
+            <div class="project-tag">BigCommerce • Ecommerce • UX</div>
+            <h3>Leon & Leon Stud Earrings</h3>
+            <p>A modern ecommerce site with product presentation, cart experience, inventory considerations, and responsive storefront design.</p>
+            <ul>
+              <li>BigCommerce implementation experience</li>
+              <li>Customer shopping flow and product detail structure</li>
+              <li>Responsive design for desktop and mobile</li>
+            </ul>
+            <a href="https://www.leonleonstudearrings.com/" target="_blank" rel="noopener">View Site</a>
+          </article>
+
+          <article class="project-card reveal" data-category="business web">
+            <div class="project-tag">Service Website • Booking • Support</div>
+            <h3>Unified Tech Repair</h3>
+            <p>A professional service website for Apple repair, troubleshooting, and technology support services.</p>
+            <ul>
+              <li>Clear service categories and support path</li>
+              <li>Online booking flow</li>
+              <li>Customer-facing technical service copy</li>
+            </ul>
+            <a href="https://www.unifiedtechrepairs.com/" target="_blank" rel="noopener">View Site</a>
+          </article>
+
+          <article class="project-card reveal" data-category="web">
+            <div class="project-tag">HTML • CSS • JavaScript</div>
+            <h3>And Venus</h3>
+            <p>A responsive band website with a full-screen landing page, media presentation, gallery content, and contact experience.</p>
+            <ul>
+              <li>Responsive design and visual branding</li>
+              <li>Content structure for audience engagement</li>
+              <li>Contact and promotional flow</li>
+            </ul>
+            <a href="https://www.andvenus.com/" target="_blank" rel="noopener">View Site</a>
+          </article>
+
+          <article class="project-card reveal" data-category="business web">
+            <div class="project-tag">Client Website • Booking • Payments</div>
+            <h3>Black Lotus Tattoo Studio</h3>
+            <p>A client-facing website concept for studio services, artist presentation, booking, and secure deposit payment flow.</p>
+            <ul>
+              <li>Service presentation and appointment path</li>
+              <li>Portfolio gallery structure</li>
+              <li>Mobile-first user experience</li>
+            </ul>
+            <a href="https://oneironaught.github.io/black_lotus/" target="_blank" rel="noopener">View Project</a>
+          </article>
+
+          <article class="project-card reveal" data-category="web">
+            <div class="project-tag">JavaScript • Utility • UX</div>
+            <h3>Password Generator</h3>
+            <p>A small JavaScript utility focused on user inputs, generated outputs, and basic interaction logic.</p>
+            <ul>
+              <li>Form handling and conditional logic</li>
+              <li>Simple interface design</li>
+              <li>Practical JavaScript functionality</li>
+            </ul>
+            <a href="https://oneironaught.github.io/password-generator/" target="_blank" rel="noopener">View Project</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Skills</p>
+          <h2>Technical, customer-facing, and operational strengths</h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-group reveal">
+            <h3>Technical Support</h3>
+            <ul>
+              <li>Hardware and software troubleshooting</li>
+              <li>macOS, iOS, iPadOS, and Apple ecosystem support</li>
+              <li>Diagnostics, repair workflows, and issue documentation</li>
+              <li>Customer education and technical translation</li>
+            </ul>
+          </article>
+
+          <article class="skill-group reveal">
+            <h3>Customer Success / TAM</h3>
+            <ul>
+              <li>Account health mindset</li>
+              <li>Escalation management</li>
+              <li>Customer advocacy</li>
+              <li>Best-practice guidance and runbook documentation</li>
+            </ul>
+          </article>
+
+          <article class="skill-group reveal">
+            <h3>Web / Ecommerce</h3>
+            <ul>
+              <li>HTML, CSS, JavaScript, Sass</li>
+              <li>Bootstrap and responsive design</li>
+              <li>BigCommerce storefront familiarity</li>
+              <li>UX, cart flows, service pages, and contact forms</li>
+            </ul>
+          </article>
+
+          <article class="skill-group reveal">
+            <h3>Leadership</h3>
+            <ul>
+              <li>Team coaching and mentorship</li>
+              <li>Training and development</li>
+              <li>Operational planning and scheduling</li>
+              <li>Service recovery and customer communication</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section section-compact section-muted">
+      <div class="container education-card reveal">
+        <div>
+          <p class="eyebrow">Education</p>
+          <h2>B.A. Psychology</h2>
+          <p>University of Texas-Pan American • Minor in English</p>
+        </div>
+        <div>
+          <p>
+            Psychology and English strengthen my ability to understand customer behavior, communicate clearly, identify patterns, and write useful documentation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s connect about Technical Account Manager opportunities.</h2>
+          <p>
+            I’m especially interested in roles where I can combine customer success, technical troubleshooting, ecommerce, documentation, and cross-functional collaboration.
+          </p>
+        </div>
+
+        <form class="contact-card reveal" id="contactForm" action="https://formspree.io/f/mzdwvqew" method="POST">
+  <label for="name">Name</label>
+  <input id="name" name="name" type="text" placeholder="Your name" required>
+
+  <label for="email">Email</label>
+  <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" rows="5" placeholder="Tell me about the role or opportunity..." required></textarea>
+
+  <button class="btn btn-primary" type="submit" id="submitBtn">Send Message</button>
+
+  <p class="form-status" id="formStatus"></p>
+
+  <p class="form-note">
+    You can also email me directly:
+    <button class="copy-email" type="button" id="copyEmail">bobbyruelas@gmail.com</button>
+  </p>
+</form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+  <div class="container footer-grid">
+    <p>© <span id="year"></span> Robert Ruelas. All rights reserved.</p>
+
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/robertruelas87/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+        <span class="sr-only">LinkedIn</span>
+      </a>
+      <a href="https://github.com/oneironaught" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+        <i class="fa-brands fa-github"></i>
+        <span class="sr-only">GitHub</span>
+      </a>
+
+      <a href="#top" aria-label="Back to top" title="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+        <span class="sr-only">Back to top</span>
+      </a>
     </div>
+  </div>
+</footer>
 
-    <!-- Skills section -->
-    <div class="content-section" id="skills" data-aos="fade-up">
-        <h2>Skills</h2>
-        <ul>
-            <li>Effective team management and leadership skills</li>
-            <li>Excellent communication and organization skills</li>
-            <li>Attention to detail</li>
-            <li>Problem Solving</li>
-            <li>Deductive/Inductive Reasoning</li>
-            <li>Mentorship</li>
-            <li>Leadership</li>
-            <li>Customer Service</li>
-            <li>Management</li>
-            <li>Adaptability</li>
-            <li>Data Analysis</li>
-            <li>Statistical Analysis</li>
-            <li>Research Methodologies</li>
-            <li>Human interaction and human factors</li>
-            <li>Behavioral Psychology</li>
-            <li>Tests and measurements</li>
-            <li>Reinforcment Training</li>
-            <li>Autism Spectrum Disorder</li>
-            <li>AI/ML technologies</li>
-            <li>Agile Learning</li>
-            <li>Front-End Developer</li>
-            <li>Back-End Development</li>
-            <li>UX Design</li>
-            <li>Mac and iPhone Hardware Repair</li>
-            <li>ACMT and ACiT certified</li>
-            <li>Troublshooting all Apple Devices</li>
-            <li>Performance Arts</li>
-            <li>Music Theory</li>
-            <br>
-            <li style="text-decoration: underline;"><h2>Proficient in:</h2></li></ul>                
-                <li>HTML, CSS, Javascript</li>
-                <li>SwiftUI</li>
-                <li>SaSS</li>
-                <li>macOS and Microsoft</li>
-                <li>iOS and Android OS</li>
-                <li>Debugging macOS and iOS</li>
-                <li>SPSS and R</li>
-            <br>    
-    <h3>
-        Visit my 
-        <a href="https://github.com/oneironaught" target="_blank" style="text-decoration: none; color: inherit;">
-            Github <i class="fa fa-github" aria-hidden="true"></i></fa>
-        </a>
-    </h3>        
-    </div>
-
-
-<!-- Experience section -->
- <!-- Starbucks work -->
-    <div class="content-section" id="experience" data-aos="fade-up">
-        <div class="experience-card">
-            <a href="https://www.starbucks.com" target="_blank">
-            <img src="assets/images/starbucks_logo.jpeg" alt="Apple logo"></a>
-            <h3>Starbucks</h3>
-            <p>Manager</p>
-            <p>March 2007 - Present</p>
-            <div class="accordion-item">
-                <button class="accordion-button">View Duties</button>
-                <div class="accordion-content">
-                    <ul>
-                        <ul>Customer service and customer connection</ul>
-                        <ul>Staff training and development</ul>
-                        <ul>Inventory management and ordering supplies</ul>
-                        <ul>Scheduling and labor management</ul>
-                        <ul>Implementing company policies and procedures</ul>
-                        <ul>Managment</ul>
-                        <ul>Cash management and maintaining food quality control</ul>
-                        <ul>Ensuring a clean and positive work environment</ul>
-                        <ul>Mentoring employees for growth and advancement within the company</ul>
-                        <ul>Organizing and maintaining product flow in accordance with the planogram</ul>    
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<!--Apple work--> 
-    <div class="content-section" id="experience" data-aos="fade-up">
-        <h2>Experience</h2>
-        <div class="experience-card">
-            <a href="https://www.apple.com" target="_blank">
-            <img src="assets/images/apple_logo.jpeg" alt="Apple logo"></a>
-            <h3>Apple</h3>
-            <p>Genius</p>
-            <p>April 2018 - July 2024</p>
-            <div class="accordion-item">
-                <button class="accordion-button">View Duties</button>
-                <div class="accordion-content">
-                    <ul>
-                        <ul>Exceptional general and technical customer support for Apple products</ul>
-                        <ul>Hardware repairs and replacements</ul>
-                        <ul>Software-related assistance, including setup, configuration, and updates</ul>
-                        <ul>Accurate and confidential record-keeping to track trends and improve processes</ul>
-                        <ul>Practical use of SwiftUI/debugging</ul>
-                        <ul>Collaboration with cross-functional teams to resolve complex technical issues</ul>
-                        <ul>Providing training and mentorship to junior team members</ul>
-                        <ul>Staying up-to-date with the latest Apple products, services, and technologies</ul>
-                        <ul>Maintaining a clean and organized work environment</ul>
-                        <ul>Delivering exceptional customer service and support</ul>
-                        <ul>Meeting and exceeding performance metrics and goals</ul>
-                        <ul>Contributing to a positive team culture and work environment</ul>
-                        <ul>Staying current with industry trends and advancements in technology</ul>
-                        <ul>Participating in ongoing training and development opportunities</ul>
-                        <ul>Ensuring compliance with company policies and procedures</ul>
-                        <ul>Providing feedback and suggestions for process improvements</ul>
-                        <ul>Maintaining confidentiality and security of customer information</ul>
-                        <ul>Effective communication with customers and team members</ul>
-                        <ul>Technical Expertise</ul>
-                        <ul>Product Demonstrations</ul>
-                        <ul>Repair Maintanence</ul>
-                        <ul>Appointment Managment</ul>
-                        <ul>Inventory Managment</ul>
-                        <ul>Continous learning and training</ul>
-                        <ul>Selling Apple Products and Services</ul>
-                        <ul>Collaborate and mentor team</ul>
-                        <ul>ACMT and ACiT Certified</ul>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-  <!-- Shape of Behavior work -->
-  <div class="content-section" id="experience" data-aos="fade-up">
-    <div class="experience-card">
-        <a href="https://www.bluesprigautism.com/blog/blue-sprig-autism-acquires-the-shape-of-behavior/" target="_blank"> 
-        <img src="assets/images/the_shape_of_behavior_logo.jpeg" alt="Apple logo"></a>
-        <h3>The Shape of Behavior</h3>
-        <p>Behavior Therapist</p>
-        <p>April 2016 - April 2018</p>
-        <div class="accordion-item">
-            <button class="accordion-button">View Duties</button>
-            <div class="accordion-content">
-                <ul>
-                    <ul>Applied Behavioral Analysis (ABA) and Analytical Problem Solving</ul>
-                    <ul>Day Treatments</ul>
-                    <ul>Preference Assessment</ul>
-                    <ul>Parent Training</ul>
-                    <ul>Social Skills</ul>
-                    <ul>Shadowing & Inclusion</ul>
-                    <ul>EEG Biofeedback</ul>
-                    <ul>Speech & Occupational Therapy</ul> 
-                    <ul>Autism Therapy</ul>
-                    <ul>Data Collection Implementation (Catalyst Program)</ul>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--More experience-->
-    <div class="content-section" id="experience" data-aos="fade-up">
-        <div class="experience-card">
-            <h3>
-                More experience on 
-                <a href="https://www.linkedin.com/in/rruelas87/" target="_blank" style="text-decoration: none; color: rgb(53, 53, 239);">
-                    LinkedIn <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                </a>
-            </h3>
-            </div>
-        </div>
-
-
-    <!-- Education section -->
-    <div class="content-section" id="education" data-aos="fade-up">
-        <h2>Education</h2>
-        <a href="https://www.utrgv.edu" target="_blank">
-        <img src="assets/images/utpa_logo.jpeg" alt="UTPA Logo"></a>
-        <p>University of Texas Pan American-<br>
-            Bachelor of Arts in Psychology<br>
-            Minor in English<br>
-                       August 2014</p>
-        <br>                
-        <a href="https://whs.wisd.us" target="_blank"> 
-        <img src="assets/images/whs_logo.jpeg" alt="Weslaco High School Logo"></a>
-        <p>Weslaco High School<br>
-            August 2001 - May 2005</p>
-        </a>    
-    </div>
-
- <!-- Projects section -->
-<div class="content-section" id="projects" data-aos="fade-up">
-    <h2>Projects</h2>
-    <div class="projects-container">
-        <div class="project-card">
-            <a href="https://github.com/oneironaught/coffee_passport.git">
-                <img src="assets/images/Coffee_Passport_Icon.png" alt="Coffee Passport App Icon" class="image">
-            </a>
-            <div class="text">
-                <h3>Coffee Passport App</h3>
-                <p>This is a prototype application using SwiftUI that allows the client to log and track different styles of Starbucks Coffees.<br>Features: <br>
-                    User registration, login, coffee tracking, and filtering functionality.
-                    User authentication using Firebase Authentication.
-                    Real-time data synchronization using Firebase Realtime Database.
-                    Created using SwiftUI, Combine, and Firebase.
-                </p>
-            </div>
-        </div>
-        <div class="project-card">
-            <a href="https://www.andvenus.com">
-                <img src="assets/images/and_venus.jpeg" alt="And Venus" class="image">
-            </a>
-            <div class="text">
-                <h3>And Venus</h3>
-                <p>My band's official website.<br>
-                    This is a professional platform designed to showcase our music, skills, and services. It includes features like a responsive design, full-screen landing page, e-commerce store, image gallery, and contact form.<br>
-                    Features: <br>
-                    Responsive Design optimized for all devices.
-                    Full-Screen Landing Page with a floating navbar.
-                    Dynamic Portfolio Gallery to showcase our work.
-                    Contact Form for inquiries and feedback.
-                    Created using HTML, CSS, and Javascript.</p>
-            </div>
-        </div>
-        <div class="project-card">
-            <a href="https://www.unifiedtechrepairs.com">
-                <img src="assets/images/unified_tech_logo.jpeg" alt="Unified Tech Repairs" class="image">
-            </a>
-            <div class="text">
-                <h3>Unified Tech Repairs</h3>
-                <p>Unified Tech Repair is a professional service website that offers: Apple repair services, troubleshooting, and IT services. This is the official website for my business<br>
-                    Features:<br>
-                    Responsive Design optimized for all devices.
-                    Full-Screen Landing Page with a floating navbar.
-                    Dynamic Portfolio Gallery to showcase my work.
-                    Online Booking System for scheduling appointments.
-                    Created using HTML, CSS, and Javascript.</p>
-            </div>
-        </div>
-        <div class="project-card">
-            <img src="assets/images/image-12.jpg" alt="Portfolio" class="image">
-            <div class="text">
-                <h3>Portfolio</h3>
-                <p>My personal website.<br>
-                    This is a professional platform designed to showcase my work, skills, and services. It includes features like a responsive design, full-screen landing page, portfolio gallery, and contact form.<br>
-                    Features: <br>
-                    Responsive Design optimized for all devices.
-                    Full-Screen Landing Page with a floating navbar.
-                    Dynamic Portfolio Gallery to showcase my work.
-                    Contact Form for inquiries and feedback.
-                    Created using HTML, CSS, and Javascript.</p>
-            </div>
-        </div>
-        <div class="project-card">
-            <a href="https://oneironaught.github.io/black_lotus/">
-                <img src="assets/images/black_lotus_logo.jpg" alt="Black Lotus Tattoo Shop" class="image">
-            </a>
-            <div class="text">
-                <h3>Black Lotus Tattoo Studio</h3>
-                <p>This is a professional platform designed to showcase the studio's work, artists, and services. It includes features like a responsive design, full-screen landing page, portfolio gallery, online booking, and secure deposit payment integration.<br>
-                    Features: <br>
-                    Responsive Design optimized for all devices.
-                    Full-Screen Landing Page with a floating navbar.
-                    Dynamic Portfolio Gallery to showcase the studio's work.
-                    Online Booking System for scheduling appointments.
-                    Secure Deposit Payment Integration for booking appointments.
-                    Contact Form for inquiries and feedback.
-                    Created using HTML, CSS, and Javascript.</p>
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="container">
-                <a href="https://leonleonstudearrings.com"><img src="assets/images/image-36.jpg" alt="Leon Landing Logo" class="image"></a>
-            </div>
-            <div class="text">
-                <h3>Leon & Leon Stud Earrings Official Site</h3>
-                <p>Leon & Leon Stud Earrings is a modern e-commerce website specializing in premium stud earrings. The site combines elegant design, responsiveness, and functionality to deliver an intuitive shopping experience. This site was created using BigCommerce<br>
-                    Features:<br>
-                    Dynamic Cart System to manage user purchases.
-                    Inventory tracker
-                    Responsive Design optimized for all devices.
-                    Created using HTML, CSS, and Javascript.</p>
-            </div>
-        </div>
-        <div class="project-card">
-            <a href="https://oneironaught.github.io/leonleon/">
-                <img src="assets/images/leon_landing.jpg" alt="Leon Logo" class="image">
-            </a>
-            <div class="text">
-                <h3>Leon & Leon Stud Earrings Mock Up</h3>
-                <p>Leon & Leon Stud Earrings is a mock up e-commerce website that specializes in premium stud earrings. The site combines elegant design, responsiveness, and functionality to deliver an intuitive shopping experience.<br>
-                    Features: Elegant Full-Screen Landing Page with a transparent navbar.
-                    Dynamic Cart System to manage user purchases.
-                    Responsive Design optimized for all devices.
-                    Created using HTML, CSS, and Javascript.</p>
-            </div>
-        </div>
-        <div class="project-card">
-            <a href="https://oneironaught.github.io/krisp_gallery/">
-                <img src="assets/images/krisp_logo.jpg" alt="Krisp Gallery Logo" class="image">
-            </a>
-            <div class="text">
-                <h3>Krisp Gallery Bar Mock Up</h3>
-                <p>Krisp Gallery website is a mockup site for a local bar in Weslaco TX. Features: <br>
-                    Elegant Full-Screen Landing Page with a transparent navbar.
-                    Dynamic Portfolio Gallery to showcase the bar's work.
-                    Contact Form for inquiries and feedback.
-                    Created using HTML, CSS, and Javascript.<br>
-                </p>
-            </div>
-        </div>
-        <div class="project-card">
-            <a href="https://horiseon.on.fleek.co">
-                <img src="assets/images/horiseon.png" alt="Horiseon" class="image">
-            </a>
-            <div class="text">
-                <h3>Business Website Mockup</h3>
-                <p>This is a sample website that I created using HTML, CSS, and Javascript</p>
-            </div>
-        </div>
-        <div class="project-card">
-            <a href="https://oneironaught.github.io/run-buddy/">
-                <img src="assets/images/run_buddy.jpeg" alt="run_buddy" class="image">
-            </a>
-            <div class="text">
-                <h3>Run Buddy</h3>
-                <p>This is a sample website that I created using HTML, CSS, and Javascript</p>
-            </div>
-        </div>
-        <div class="project-card">
-            <a href="https://oneironaught.github.io/password-generator/">
-                <img src="assets/images/password_generator.jpeg" alt="password_generator" class="image">
-            </a>
-            <div class="text">
-                <h3>Password Generator</h3>
-                <p>This is a mini Password Generator that I created using HTML, CSS, and Javascript</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Photos section -->
-<div class="content-section" id="photos" data-aos="fade-up">
-    <h2>Photos</h2>
-    <div class="photos-container">
-        <div class="photo-container">
-            <img src="assets/images/self_1.jpeg" alt="Robert Photo" class="photos" loading="lazy">
-        </div>
-        <div class="photo-container">
-            <img src="assets/images/self_2.jpg" alt="Robert Photo2" class="photos" loading="lazy">
-        </div>
-        <div class="photo-container">
-            <img src="assets/images/self_3.jpg" alt="Robert Photo3" class="photos" loading="lazy">
-        </div>
-        <div class="photo-container">
-            <img src="assets/images/self_4.jpg" alt="Robert Photo4" class="photos" loading="lazy">
-        </div>
-        <div class="photo-container">
-            <img src="assets/images/self_5.jpg" alt="Robert Photo5" class="photos" loading="lazy">
-        </div>
-        <div class="photo-container">
-            <img src="assets/images/self_6.jpg" alt="Robert Photo6" class="photos" loading="lazy">
-        </div>
-        <div class="photo-container">
-            <img src="assets/images/self_7.jpg" alt="Robert Photo7" class="photos" loading="lazy">
-        </div>
-        <div class="photo-container">
-            <img src="assets/images/self_8.jpg" alt="Robert Photo8" class="photos" loading="lazy">
-        </div>
-    </div>
-</div>
-
-<!-- Modal for Enlarging Photos -->
-<div id="photoModal" class="modal">
-    <div class="modal-content">
-        <img id="enlargedPhoto" src="" alt="Enlarged Photo">
-    </div>
-</div>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="container">
-        <div id="contact" class="content-section">
-            <h2>Contact</h2>
-            <h3>Thank you for visiting! I'd love to hear from you! 
-                <br>If you have any questions, feedback, or would like to get in touch with me, 
-                <br>please use the form below or reach out <a href="mailto:bobbyruelas@gmail.com" style="color: gray;">via Email</a>.
-            </h3>
-            <div class="calendly-inline-widget" data-url="https://calendly.com/bobbyruelas" style="min-width:320px;height:630px;"></div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <footer class="footer">
-        <div class="footer-social-icons">
-            <a href="https://github.com/oneironaught" target="_blank" class="fa fa-github"></a>
-            <a href="https://www.linkedin.com/in/rruelas87/" target="_blank" class="fa fa-linkedin"></a>
-            <a href="https://www.facebook.com/bobby.ruelas/" target="_blank" class="fa fa-facebook"></a>
-            <a href="https://www.instagram.com/andvenus/" target="_blank" class="fa fa-instagram"></a>
-        </div>
-        <p>&copy; 2025 Robert Ruelas. All Rights Reserved.</p>
-    </footer>
-        <!-- Back to Top Button -->
-        <button onclick="topFunction()" id="backToTopBtn" title="Go to top">Home</button>
+  <script src="script.js"></script>
 </body>
-
 </html>
