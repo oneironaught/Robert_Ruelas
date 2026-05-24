@@ -1,78 +1,66 @@
-# robertruelas.com
+# Robert Ruelas Portfolio
 
-Welcome to the official website of **Robert Ruelas**. This website showcases a portfolio of projects, skills, and services while providing an interactive and modern web experience.
+A responsive personal portfolio website built to showcase my background in technical support, customer success, ecommerce, web development, and my career growth toward Technical Account Manager opportunities.
+
+## Overview
+
+This portfolio highlights my experience supporting customers, solving technical issues, documenting solutions, and building web-based projects. The goal of the site is to present my work in a clear, professional, and recruiter-friendly way for roles in technical account management, customer success, technical support, and ecommerce technology.
+
+## Live Site
+
+[Visit Portfolio](https://www.robertruelas.com/)
 
 ## Features
 
-- **Professional Design**: A sleek, modern, and responsive layout designed to be visually appealing and user-friendly across all devices.
-- **Interactive Elements**: Animations, dynamic content, and engaging interactions to enhance user experience.
-- **Portfolio Section**: Showcases projects and achievements.
-- **Contact Section**: Allows visitors to get in touch through a dedicated form.
-- **Integrated Social Links**: Direct access to social media profiles for better connectivity.
+- Responsive layout for desktop, tablet, and mobile
+- Modern portfolio design with animated section reveals
+- English and Spanish language toggle
+- Project filtering by category
+- Contact form integration with Formspree
+- Auto-clear form after successful submission
+- Footer social icons
+- Custom favicon and personal branding
+- Smooth scrolling navigation
+- Recruiter-focused content for TAM-related opportunities
 
-## Technologies Used
+## Built With
 
-- **Frontend**: HTML5, CSS3, JavaScript
-- **Framework**: Bootstrap 5.3.1
-- **Backend**: [Specify if applicable, e.g., Node.js, PHP]
-- **Hosting**: [Specify hosting platform, e.g., Netlify, Vercel, or others]
+- HTML5
+- CSS3
+- JavaScript
+- Font Awesome
+- Formspree
+- Responsive CSS Grid and Flexbox
 
-## Installation and Setup
+## Sections
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/username/robertruelas.com.git
-2. Navigate to the project directory: cd robertruelas.com
-3. Open the index.html file in your preferred browser or start a local server for testing: python -m http.server 8000 Or use a tool like Live Server for real-time updates.
+- Hero introduction
+- About
+- TAM Value
+- Experience
+- Projects
+- Skills
+- Education
+- Contact
 
+## Project Purpose
 
-## File Structure
+This website was created to better position my experience for Technical Account Manager and customer-facing technical roles. It connects my background in Apple technical support, customer service leadership, ecommerce, and web development into one professional portfolio.
 
-```plaintext
-robertruelas.com/
-├── index.html        # Main homepage
-├── assets/
-│   ├── css/
-│   │   └── style.css # Custom styles
-│   ├── js/
-│   │   └── script.js # Custom scripts
-│   ├── images/       # Media assets
-│   └── fonts/        # Web fonts
-├── contact.html      # Contact page
-├── portfolio.html    # Portfolio page
-├── README.md         # Project documentation
+## Key Focus Areas
 
-```
-
-## Deployment
-
-The website is hosted at https://robertruelas.com. Deployment is managed through https://easydns.com, ensuring high availability and optimal performance.
-
-## Contribution
-
-Contributions are welcome! Please follow these steps:
-1. Fork the repository.
-2. Create a new branch for your feature or bugfix: git checkout -b feature-name
-3. Commit your changes and push to your fork: git push origin feature-name
-4. Open a pull request on the main repository.
-
-## License
-
-This project is licensed under the MIT License.
+- Customer success
+- Technical troubleshooting
+- Escalation support
+- Ecommerce platforms
+- Web development
+- Documentation
+- Cross-functional communication
+- Bilingual customer support
 
 ## Contact
 
-Feel free to reach out for collaborations or inquiries:
-
-- **Email**: [bobbyruelas@gmail.com](mailto:bobbyruelas@gmail.com)
-- **Website**: [https://robertruelas.com](https://robertruelas.com)
-- **Social Media**:  
-  - **GitHub**: [https://github.com/oneironaught](https://github.com/oneironaught)  
-  - **LinkedIn**: [https://www.linkedin.com/in/rruelas87/](https://www.linkedin.com/in/rruelas87/)  
-  - **Facebook**: [https://www.facebook.com/bobby.ruelas/](https://www.facebook.com/bobby.ruelas/)  
-  - **Instagram**: [https://www.instagram.com/andvenus/](https://www.instagram.com/andvenus/)
- 
----
-
-Thank you for visiting robertruelas.com! Stay connected and explore more. 
-  
+**Robert Ruelas**  
+[LinkedIn](https://www.linkedin.com/in/robertruelas87/)  
+[GitHub](https://github.com/oneironaught)  
+[Portfolio](https://www.robertruelas.com/)
