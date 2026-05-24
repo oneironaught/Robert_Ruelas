@@ -160,6 +160,26 @@ ul {
   transition: transform 180ms ease, opacity 180ms ease;
 }
 
+.language-toggle {
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  font: inherit;
+  font-size: 0.94rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: color 180ms ease, background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.language-toggle:hover {
+  color: #06101d;
+  background: var(--brand);
+  border-color: var(--brand);
+  transform: translateY(-2px);
+}
+
 /* Hero Section */
 .hero {
   min-height: calc(100vh - 76px);
