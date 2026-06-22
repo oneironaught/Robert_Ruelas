@@ -137,12 +137,11 @@ const translations = {
 		navSkills: 'Skills',
 		navContact: 'Contact',
 
-		heroEyebrow:
-			'Starbucks Partner • Technical Support • Software Engineering Candidate',
+		heroEyebrow: 'Technical Support • Software Engineering • Customer Success',
 		heroTitle:
-			'Starbucks partner and former Apple Genius building toward software engineering roles that improve reliable technology experiences for partners, customers, and technical teams.',
+			'Technical support professional building toward software engineering and Technical Account Management roles.',
 		heroText:
-			'I help customers translate technical problems into clear next steps, partner with internal teams to resolve escalations, and document solutions that improve the customer experience.',
+			'I combine Apple technical support, Starbucks operations leadership, and hands-on web and iOS development projects to solve problems, support customers, and build reliable digital experiences.',
 		heroPrimaryBtn: 'View TAM-Relevant Work',
 		heroSecondaryBtn: 'Contact Me',
 
@@ -343,12 +342,11 @@ const translations = {
 		navSkills: 'Habilidades',
 		navContact: 'Contacto',
 
-		heroEyebrow:
-			'Partner de Starbucks • Soporte Técnico • Candidato de Ingeniería de Software',
+		heroEyebrow: 'Soporte Técnico • Ingeniería de Software • Éxito del Cliente',
 		heroTitle:
-			'Partner de Starbucks y ex Apple Genius en crecimiento hacia roles de ingeniería de software que mejoran experiencias tecnológicas confiables para partners, clientes y equipos técnicos.',
+			'Profesional de soporte técnico en crecimiento hacia roles de ingeniería de software y Technical Account Management.',
 		heroText:
-			'Ayudo a los clientes a convertir problemas técnicos en próximos pasos claros, colaborar con equipos internos para resolver escalaciones y documentar soluciones que mejoran la experiencia del cliente.',
+			'Combino experiencia en soporte técnico en Apple, liderazgo operativo en Starbucks y proyectos prácticos de desarrollo web e iOS para resolver problemas, apoyar a clientes y crear experiencias digitales confiables.',
 		heroPrimaryBtn: 'Ver trabajo relevante para TAM',
 		heroSecondaryBtn: 'Contáctame',
 
