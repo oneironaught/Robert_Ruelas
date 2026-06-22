@@ -178,23 +178,23 @@ const translations = {
 		contactButton: 'Send Message',
 		contactNote: 'You can also email me directly:',
 
-		valueEyebrow: 'TAM Value',
-		valueTitle: 'How I would support technical accounts',
+		valueEyebrow: 'Role Fit',
+		valueTitle: 'Where my experience fits',
 		valueText:
-			'A Technical Account Manager needs more than technical skill. The role requires proactive communication, customer advocacy, clean documentation, and strong internal partnership.',
+			'My background connects technical troubleshooting, software development, customer success, and operational leadership.',
 
-		valueCardOneTitle: 'Technical Discovery',
+		valueCardOneTitle: 'Software Engineering',
 		valueCardOneText:
-			'Ask targeted questions, map customer workflows, identify dependencies, and document environments before issues become blockers.',
-		valueCardTwoTitle: 'Escalation Ownership',
+			'I build practical web and iOS projects using SwiftUI, Firebase, HTML, CSS, and JavaScript, with a focus on usability, clean structure, and continuous improvement. I’m actively expanding my technical skills and eager to apply them in customer-facing technical roles.',
+		valueCardTwoTitle: 'Technical Support and Escalation Management',
 		valueCardTwoText:
-			'Gather clear reproduction steps, prioritize business impact, communicate status, and partner with support, product, and engineering until resolution.',
-		valueCardThreeTitle: 'Customer Enablement',
+			'My Apple Genius experience strengthened my ability to diagnose issues, document findings, protect customer data, and explain technical solutions clearly. Gather clear reproduction steps, prioritize business impact, communicate status, and partner with support, product, and engineering until resolution.',
+		valueCardThreeTitle: 'Technical Account Management',
 		valueCardThreeText:
-			'Translate technical guidance into customer-friendly training, best practices, runbooks, and post-resolution documentation.',
-		valueCardFourTitle: 'Business Impact',
+			'I bring customer advocacy, communication, documentation, and relationship-building skills that align with TAM, customer success, and solutions-focused roles. Translate technical guidance into clear training, best practices, how-to guides, and post-resolution documentation.',
+		valueCardFourTitle: 'Operations & Leadership',
 		valueCardFourText:
-			'Connect technical decisions to customer goals such as uptime, conversion, adoption, operational efficiency, and long-term account health.',
+			'My Starbucks leadership background gives me experience supporting teams, improving workflows, training partners, and solving problems in fast-paced environments. Connect technical decisions to customer goals like availability, conversion, adoption, operational efficiency, and long-term account health.',
 
 		experienceEyebrow: 'Experience',
 		experienceTitle: 'Relevant experience for a Technical Account Manager role',
