@@ -246,7 +246,7 @@ const translations = {
 		coffeeTag: 'SwiftUI • Firebase • Product Thinking',
 		coffeeTitle: 'Coffee Passport App',
 		coffeeText:
-			'A prototype app for logging, filtering, and tracking Starbucks coffees with authentication and real-time data support.',
+			'An iOS app concept built with SwiftUI and Firebase that helps users explore, save, filter, and track coffee experiences. The project demonstrates authentication, data handling, user-focused design, and my ability to connect product ideas with practical software development.',
 		coffeeBulletOne: 'User registration and login',
 		coffeeBulletTwo: 'Coffee tracking and filtering',
 		coffeeBulletThree: 'Firebase Authentication and database integration',
@@ -262,7 +262,7 @@ const translations = {
 		utrTag: 'Service Website • Booking • Support',
 		utrTitle: 'Unified Tech Repair',
 		utrText:
-			'A professional service website for Apple repair, troubleshooting, and technology support services.',
+			'A service-focused website and app concept for a technical repair business, designed around clear service information, appointment flow, customer trust, and practical support needs.',
 		utrBulletOne: 'Clear service categories and support path',
 		utrBulletTwo: 'Online booking flow',
 		utrBulletThree: 'Customer-facing technical service copy',
@@ -394,12 +394,12 @@ const translations = {
 		valueCardTwoTitle: 'Soporte Técnico y Gestión de Escalaciones',
 		valueCardTwoText:
 			'Mi experiencia como Apple Genius fortaleció mi capacidad para diagnosticar problemas, documentar hallazgos, proteger datos de clientes y explicar soluciones técnicas con claridad. Recolectar pasos de reproducción claros, priorizar impacto en el negocio, comunicar avances y colaborar con soporte, producto e ingeniería hasta la resolución.',
-		valueCardThreeTitle: 'Capacitación del Cliente',
+		valueCardThreeTitle: 'Technical Account Management',
 		valueCardThreeText:
 			'Aporto habilidades de defensa del cliente, comunicación, documentación y construcción de relaciones que se alinean con roles de TAM, éxito del cliente y soluciones técnicas. Traducir orientación técnica en capacitación clara, mejores prácticas, guías de uso y documentación posterior a la resolución.',
-		valueCardFourTitle: 'Impacto en el Negocio',
+		valueCardFourTitle: 'Operaciones y Liderazgo',
 		valueCardFourText:
-			'Conectar decisiones técnicas con objetivos del cliente como disponibilidad, conversión, adopción, eficiencia operativa y salud de la cuenta a largo plazo.',
+			'Mi experiencia de liderazgo en Starbucks me dio experiencia apoyando equipos, mejorando flujos de trabajo, capacitando partners y resolviendo problemas en ambientes dinámicos. Conectar decisiones técnicas con objetivos del cliente como disponibilidad, conversión, adopción, eficiencia operativa y salud de cuenta a largo plazo.',
 
 		experienceEyebrow: 'Experiencia',
 		experienceTitle:
@@ -452,7 +452,7 @@ const translations = {
 		coffeeTag: 'SwiftUI • Firebase • Pensamiento de Producto',
 		coffeeTitle: 'Coffee Passport App',
 		coffeeText:
-			'Una app prototipo para registrar, filtrar y dar seguimiento a cafés de Starbucks con autenticación y soporte de datos en tiempo real.',
+			'Concepto de aplicación iOS creado con SwiftUI y Firebase que ayuda a los usuarios a explorar, guardar, filtrar y registrar experiencias de café. El proyecto demuestra autenticación, manejo de datos, diseño centrado en el usuario y mi capacidad para conectar ideas de producto con desarrollo de software práctico.',
 		coffeeBulletOne: 'Registro e inicio de sesión de usuarios',
 		coffeeBulletTwo: 'Seguimiento y filtrado de cafés',
 		coffeeBulletThree:
@@ -470,7 +470,7 @@ const translations = {
 		utrTag: 'Sitio de Servicios • Reservas • Soporte',
 		utrTitle: 'Unified Tech Repair',
 		utrText:
-			'Un sitio profesional de servicios para reparación Apple, solución de problemas y soporte tecnológico.',
+			'Sitio web y concepto de aplicación para un negocio de reparación técnica, diseñado alrededor de información clara de servicios, flujo de citas, confianza del cliente y necesidades prácticas de soporte.',
 		utrBulletOne: 'Categorías de servicio claras y ruta de soporte',
 		utrBulletTwo: 'Flujo de reserva en línea',
 		utrBulletThree: 'Texto técnico de servicio orientado al cliente',
