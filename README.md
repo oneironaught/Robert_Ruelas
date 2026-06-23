@@ -22,6 +22,7 @@ This portfolio highlights my experience supporting customers, solving technical 
 - Custom favicon and personal branding
 - Smooth scrolling navigation
 - Recruiter-focused content for TAM-related opportunities
+- Recruiter-focused content for Software Engineering opportunities
 
 ## Built With
 
