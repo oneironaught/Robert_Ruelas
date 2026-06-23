@@ -1,10 +1,10 @@
 # Robert Ruelas Portfolio
 
-A responsive personal portfolio website built to showcase my background in technical support, customer success, ecommerce, web development, and my career growth toward Technical Account Manager opportunities.
+A responsive personal portfolio website built to showcase my background in technical support, customer success, ecommerce, web development, and my career growth toward Technical opportunities.
 
 ## Overview
 
-This portfolio highlights my experience supporting customers, solving technical issues, documenting solutions, and building web-based projects. The goal of the site is to present my work in a clear, professional, and recruiter-friendly way for roles in technical account management, customer success, technical support, and ecommerce technology.
+This portfolio highlights my experience supporting customers, solving technical issues, documenting solutions, and building web-based projects. The goal of the site is to present my work in a clear, professional, and recruiter-friendly way for roles in software engineering, technical account management, customer success, technical support, and ecommerce technology.
 
 ## Live Site
 
@@ -36,7 +36,7 @@ This portfolio highlights my experience supporting customers, solving technical 
 
 - Hero introduction
 - About
-- TAM Value
+- Values
 - Experience
 - Projects
 - Skills
@@ -45,7 +45,7 @@ This portfolio highlights my experience supporting customers, solving technical 
 
 ## Project Purpose
 
-This website was created to better position my experience for Technical Account Manager and customer-facing technical roles. It connects my background in Apple technical support, customer service leadership, ecommerce, and web development into one professional portfolio.
+This website was created to better position my experience for Technical roles. It connects my background in Apple technical support, customer service leadership, ecommerce, and web development into one professional portfolio.
 
 ## Key Focus Areas
 
