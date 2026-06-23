@@ -138,7 +138,8 @@ const translations = {
 		navContact: 'Contact',
 
 		heroEyebrow: 'Technical Support • Software Engineering • Customer Success',
-		heroTitle: 'Technical support professional building toward Technical roles',
+		heroTitle:
+			'People-focused technology. Reliable support. Practical software solutions.',
 		heroText:
 			'I combine Apple technical support, Starbucks operations leadership, and hands-on web and iOS development projects to solve problems, support customers, and build reliable digital experiences.',
 		heroPrimaryBtn: 'View TAM-Relevant Work',
@@ -343,7 +344,7 @@ const translations = {
 
 		heroEyebrow: 'Soporte Técnico • Ingeniería de Software • Éxito del Cliente',
 		heroTitle:
-			'Profesional de soporte técnico en crecimiento hacia roles de Tecnología',
+			'Tecnología centrada en las personas. Soporte confiable. Soluciones prácticas.',
 		heroText:
 			'Combino experiencia en soporte técnico en Apple, liderazgo operativo en Starbucks y proyectos prácticos de desarrollo web e iOS para resolver problemas, apoyar a clientes y crear experiencias digitales confiables.',
 		heroPrimaryBtn: 'Ver trabajo relevante para TAM',
