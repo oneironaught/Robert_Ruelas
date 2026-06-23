@@ -138,8 +138,7 @@ const translations = {
 		navContact: 'Contact',
 
 		heroEyebrow: 'Technical Support • Software Engineering • Customer Success',
-		heroTitle:
-			'Technical support professional building toward software engineering and Technical Account Management roles.',
+		heroTitle: 'Technical support professional building toward Technical roles',
 		heroText:
 			'I combine Apple technical support, Starbucks operations leadership, and hands-on web and iOS development projects to solve problems, support customers, and build reliable digital experiences.',
 		heroPrimaryBtn: 'View TAM-Relevant Work',
@@ -344,7 +343,7 @@ const translations = {
 
 		heroEyebrow: 'Soporte Técnico • Ingeniería de Software • Éxito del Cliente',
 		heroTitle:
-			'Profesional de soporte técnico en crecimiento hacia roles de ingeniería de software y Technical Account Management.',
+			'Profesional de soporte técnico en crecimiento hacia roles de Tecnología',
 		heroText:
 			'Combino experiencia en soporte técnico en Apple, liderazgo operativo en Starbucks y proyectos prácticos de desarrollo web e iOS para resolver problemas, apoyar a clientes y crear experiencias digitales confiables.',
 		heroPrimaryBtn: 'Ver trabajo relevante para TAM',
@@ -384,20 +383,20 @@ const translations = {
 		contactButton: 'Enviar mensaje',
 		contactNote: 'También puedes enviarme un correo directamente:',
 
-		valueEyebrow: 'Valor TAM',
-		valueTitle: 'Cómo apoyaría cuentas técnicas',
+		valueEyebrow: 'Compatibilidad Profesional',
+		valueTitle: 'Dónde encaja mi experiencia',
 		valueText:
-			'Un Technical Account Manager necesita más que habilidad técnica. El rol requiere comunicación proactiva, defensa del cliente, documentación clara y una fuerte colaboración interna.',
+			'Mi experiencia conecta soporte técnico, desarrollo de software, éxito del cliente y liderazgo operativo.',
 
-		valueCardOneTitle: 'Descubrimiento Técnico',
+		valueCardOneTitle: 'Ingeniería de Software',
 		valueCardOneText:
-			'Hacer preguntas estratégicas, entender los flujos de trabajo del cliente, identificar dependencias y documentar entornos antes de que los problemas se conviertan en bloqueos.',
-		valueCardTwoTitle: 'Manejo de Escalaciones',
+			'Creo proyectos prácticos web e iOS usando SwiftUI, Firebase, HTML, CSS y JavaScript, con enfoque en usabilidad, estructura clara y mejora continua.',
+		valueCardTwoTitle: 'Soporte Técnico y Gestión de Escalaciones',
 		valueCardTwoText:
-			'Reunir pasos claros para reproducir problemas, priorizar el impacto del negocio, comunicar avances y colaborar con soporte, producto e ingeniería hasta llegar a una resolución.',
+			'Mi experiencia como Apple Genius fortaleció mi capacidad para diagnosticar problemas, documentar hallazgos, proteger datos de clientes y explicar soluciones técnicas con claridad. Recolectar pasos de reproducción claros, priorizar impacto en el negocio, comunicar avances y colaborar con soporte, producto e ingeniería hasta la resolución.',
 		valueCardThreeTitle: 'Capacitación del Cliente',
 		valueCardThreeText:
-			'Traducir la orientación técnica en capacitación clara, mejores prácticas, guías de uso y documentación posterior a la resolución.',
+			'Aporto habilidades de defensa del cliente, comunicación, documentación y construcción de relaciones que se alinean con roles de TAM, éxito del cliente y soluciones técnicas. Traducir orientación técnica en capacitación clara, mejores prácticas, guías de uso y documentación posterior a la resolución.',
 		valueCardFourTitle: 'Impacto en el Negocio',
 		valueCardFourText:
 			'Conectar decisiones técnicas con objetivos del cliente como disponibilidad, conversión, adopción, eficiencia operativa y salud de la cuenta a largo plazo.',
