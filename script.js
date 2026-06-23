@@ -1,4 +1,4 @@
-// Robert Ruelas - TAM Portfolio Scripts
+// Robert Ruelas - Portfolio Scripts
 
 const navToggle = document.querySelector('#navToggle');
 const navMenu = document.querySelector('#navMenu');
@@ -131,7 +131,7 @@ const languageToggle = document.querySelector('#languageToggle');
 const translations = {
 	en: {
 		navAbout: 'About',
-		navValue: 'TAM Value',
+		navValue: 'Values',
 		navExperience: 'Experience',
 		navProjects: 'Projects',
 		navSkills: 'Skills',
@@ -142,7 +142,7 @@ const translations = {
 			'People-focused technology. Reliable support. Practical software solutions.',
 		heroText:
 			'I combine Apple technical support, Starbucks operations leadership, and hands-on web and iOS development projects to solve problems, support customers, and build reliable digital experiences.',
-		heroPrimaryBtn: 'View TAM-Relevant Work',
+		heroPrimaryBtn: 'View Relevant Work',
 		heroSecondaryBtn: 'Contact Me',
 
 		heroCardSubtitle:
@@ -336,7 +336,7 @@ const translations = {
 
 	es: {
 		navAbout: 'Sobre mí',
-		navValue: 'Valor TAM',
+		navValue: 'Valor profesional',
 		navExperience: 'Experiencia',
 		navProjects: 'Proyectos',
 		navSkills: 'Habilidades',
@@ -347,7 +347,7 @@ const translations = {
 			'Tecnología centrada en las personas. Soporte confiable. Soluciones prácticas.',
 		heroText:
 			'Combino experiencia en soporte técnico en Apple, liderazgo operativo en Starbucks y proyectos prácticos de desarrollo web e iOS para resolver problemas, apoyar a clientes y crear experiencias digitales confiables.',
-		heroPrimaryBtn: 'Ver trabajo relevante para TAM',
+		heroPrimaryBtn: 'Ver trabajo relevante',
 		heroSecondaryBtn: 'Contáctame',
 
 		heroCardSubtitle:
