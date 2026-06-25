@@ -168,8 +168,7 @@ const translations = {
 			'I bring hands-on technical depth from Apple Genius work, operational leadership from Starbucks management, and a growing portfolio of web and ecommerce projects that show I can understand both the customer experience and the technical system behind it.',
 
 		contactEyebrow: 'Contact',
-		contactTitle:
-			'Let’s connect about Technical Account Manager opportunities.',
+		contactTitle: 'Let’s connect about opportunities.',
 		contactText:
 			'I’m especially interested in roles where I can combine customer success, technical troubleshooting, ecommerce, documentation, and cross-functional collaboration.',
 		contactName: 'Name',
@@ -197,7 +196,7 @@ const translations = {
 			'My Starbucks leadership background gives me experience supporting teams, improving workflows, training partners, and solving problems in fast-paced environments. Connect technical decisions to customer goals like availability, conversion, adoption, operational efficiency, and long-term account health.',
 
 		experienceEyebrow: 'Experience',
-		experienceTitle: 'Relevant experience for a Technical Account Manager role',
+		experienceTitle: 'Relevant experience for a Technical role',
 
 		appleTitle: 'Genius — Apple',
 		appleSummary:
@@ -374,8 +373,7 @@ const translations = {
 			'Aporto profundidad técnica práctica por mi experiencia como Apple Genius, liderazgo operativo por mi trayectoria en Starbucks y un portafolio en crecimiento de proyectos web y ecommerce que demuestran que entiendo tanto la experiencia del cliente como el sistema técnico detrás de ella.',
 
 		contactEyebrow: 'Contacto',
-		contactTitle:
-			'Conectemos sobre oportunidades de Technical Account Manager.',
+		contactTitle: 'Hablemos sobre oportunidades profesionales.',
 		contactText:
 			'Estoy especialmente interesado en roles donde pueda combinar éxito del cliente, solución de problemas técnicos, ecommerce, documentación y colaboración con equipos multifuncionales.',
 		contactName: 'Nombre',
@@ -403,8 +401,7 @@ const translations = {
 			'Mi experiencia de liderazgo en Starbucks me dio experiencia apoyando equipos, mejorando flujos de trabajo, capacitando partners y resolviendo problemas en ambientes dinámicos. Conectar decisiones técnicas con objetivos del cliente como disponibilidad, conversión, adopción, eficiencia operativa y salud de cuenta a largo plazo.',
 
 		experienceEyebrow: 'Experiencia',
-		experienceTitle:
-			'Experiencia relevante para un rol de Technical Account Manager',
+		experienceTitle: 'Experiencia relevante para roles técnicos',
 
 		appleTitle: 'Genius — Apple',
 		appleSummary:
